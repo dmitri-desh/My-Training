@@ -11,7 +11,7 @@ namespace Orders
         public string ClientName { get; set; }
 
         public DateTime Created { get; set; }
-        public List<OrderRow> OrderRows { get; protected set; }
+        public List<OrderRow> OrderRows { get; set; }
         
         public void PrintDoc(int docType)
         {
