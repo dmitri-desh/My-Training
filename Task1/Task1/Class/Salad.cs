@@ -8,10 +8,15 @@ namespace Task1
 {
     public class Salad : ICollection<Ingredient>
     {
-        public String Name;
+        public string Name;
         private ICollection<Ingredient> _ingredients;
+
+        public Salad (string v)
+        {
+            this.Name = v;
+        }
         
-        public Salad(String name,ICollection<Ingredient> ingredients)
+        public Salad(string name,ICollection<Ingredient> ingredients)
         {
             Name = name;
             _ingredients = ingredients;

@@ -14,6 +14,10 @@ namespace Task1
         public double Fats { get; set; }
         public double Carbohydrates { get; set; }
 
+     public Ingredient()
+        {
+
+        }
     public Ingredient (string name, double calorie, double weight, double proteins, double fats, double carbohydrates)
         {
             Name = name;

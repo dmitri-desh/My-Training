@@ -7,7 +7,7 @@ namespace Task1
 {
     public interface ISalad : ICollection<Ingredient>
     {
-        String Name { get; }
+        string Name { get; }
         ICollection<Ingredient> _ingredients { get; }
         Double TotalCalories { get; }
       //  void FindBy();
