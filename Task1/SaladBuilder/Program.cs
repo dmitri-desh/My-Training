@@ -11,7 +11,7 @@ namespace SaladBuilder
     {
         static void Main(string[] args)
         {
-            Salad salad = new Salad("Салат Оливье", new ICollection<Ingredient>());
+            Salad salad = new Salad("Салат Оливье");
             CustomSaladBuilder builder = new CustomSaladBuilder(salad);
             builder.Build();
 
