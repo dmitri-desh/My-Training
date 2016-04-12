@@ -62,7 +62,7 @@ namespace SaladBuilder
                       );
             _salad.Add(new Ingredient()
             {
-                Name = "Горошек зелёный консервированный",
+                Name = "Горошек зелёный",
                 Calorie = 55,
                 Weight = 100,
                 Proteins = 3.6,
