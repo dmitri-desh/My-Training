@@ -9,17 +9,19 @@ namespace Task1
     public class Salad : ICollection<Ingredient>
     {
         public string Name;
-        private ICollection<Ingredient> _ingredients;
+        private List<Ingredient> _ingredients;
 
-        public Salad (string v)
+        public Salad (string value) // : this(value, new List<Ingredient>())
         {
-            this.Name = v;
+            this.Name = value;
+            _ingredients = new List<Ingredient>();
+           
         }
         
-        public Salad(string name,ICollection<Ingredient> ingredients)
+        public Salad(string name, ICollection<Ingredient> ingredients)
         {
             Name = name;
-            _ingredients = ingredients;
+            _ingredients = new List<Ingredient>(ingredients);
         }
               
         public Double TotalCalories
@@ -28,7 +30,7 @@ namespace Task1
             {
                 if (_ingredients != null)
                 {
-                    return _ingredients.Sum(x => x.Calorie * x.Weight);
+                    return _ingredients.Sum(x => x.Calorie/100 * x.Weight);
                 }
                 else
                 {
@@ -36,7 +38,39 @@ namespace Task1
                 }
             }
         }
+        public void PrintIngredients()
+        {
+           if (_ingredients != null)
+            {
+                foreach (var cur in _ingredients)
+                {
+                    Console.WriteLine(cur.Name.PadRight(16, ' ')
+                                               + "\t" + cur.Calorie.ToString("N2").PadLeft(14,' ') 
+                                               + "\t" + cur.Weight.ToString("N2").PadLeft(6,' ') 
+                                               + "\t" + cur.Proteins.ToString("N2").PadLeft(6,' ')
+                                               + "\t" + cur.Fats.ToString("N2").PadLeft(6,' ')
+                                               + "\t" + cur.Carbohydrates.ToString("N2").PadLeft(6,' ')
+                                     );
+                }
+            } 
+        }
 
+        public void SelectCalorieBetween(double _from, double _to)
+        {
+            var ingredients = from cur in _ingredients
+                              where cur.Calorie >= _from && cur.Calorie <= _to
+                              select cur.Name.PadRight(17,' ')+" - "+cur.Calorie.ToString("N2").PadLeft(6,' ');
+            Console.WriteLine("От "+_from.ToString("N2")+" до "+_to.ToString("N2")+" ккал содержат:");
+            foreach (var ingredient in ingredients)
+            {
+                Console.WriteLine(ingredient);
+            }
+        }
+        public void Sort()
+        {
+            _ingredients.Sort();
+        }
+        
         public int Count
         {
             get
@@ -50,7 +84,7 @@ namespace Task1
         {
             get
             {
-                return _ingredients.IsReadOnly;
+                return (_ingredients as ICollection<Ingredient>).IsReadOnly;
                 //throw new NotImplementedException();
             }
         }
