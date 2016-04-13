@@ -44,12 +44,13 @@ namespace Task1
             {
                 foreach (var cur in _ingredients)
                 {
-                    Console.WriteLine(cur.Name.PadRight(16, ' ')
-                                               + "\t" + cur.Calorie.ToString("N2").PadLeft(14,' ') 
-                                               + "\t" + cur.Weight.ToString("N2").PadLeft(6,' ') 
-                                               + "\t" + cur.Proteins.ToString("N2").PadLeft(6,' ')
-                                               + "\t" + cur.Fats.ToString("N2").PadLeft(6,' ')
-                                               + "\t" + cur.Carbohydrates.ToString("N2").PadLeft(6,' ')
+                    Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}",
+                                          cur.Name.PadRight(16, ' '),
+                                          cur.Calorie.ToString("N2").PadLeft(14,' '), 
+                                          cur.Weight.ToString("N2").PadLeft(6,' '), 
+                                          cur.Proteins.ToString("N2").PadLeft(6,' '),
+                                          cur.Fats.ToString("N2").PadLeft(6,' '),
+                                          cur.Carbohydrates.ToString("N2").PadLeft(6,' ')
                                      );
                 }
             } 
@@ -60,7 +61,7 @@ namespace Task1
             var ingredients = from cur in _ingredients
                               where cur.Calorie >= _from && cur.Calorie <= _to
                               select cur.Name.PadRight(17,' ')+" - "+cur.Calorie.ToString("N2").PadLeft(6,' ');
-            Console.WriteLine("От "+_from.ToString("N2")+" до "+_to.ToString("N2")+" ккал содержат:");
+            Console.WriteLine("От {0} до {1} ккал содержат:", _from.ToString("N2"), _to.ToString("N2"));
             foreach (var ingredient in ingredients)
             {
                 Console.WriteLine(ingredient);

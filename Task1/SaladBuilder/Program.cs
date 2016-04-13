@@ -23,7 +23,7 @@ namespace SaladBuilder
                                +"\t"+"Жиры,г".PadRight(7,' ')+"\t"+"Углеводы,г");
             salad.PrintIngredients();
             Console.WriteLine();
-            Console.WriteLine("Калорийность "+salad.Name+": "+salad.TotalCalories.ToString("N3"));
+            Console.WriteLine("Калорийность {0}: {1} ккал", salad.Name, salad.TotalCalories.ToString("N3"));
             Console.WriteLine();
 
             Console.WriteLine("Сортировка по весу:");
