@@ -1,0 +1,6 @@
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\Task1\bin\Debug\Task01.pdb
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\Task1\obj\Debug\Library.csprojResolveAssemblyReference.cache
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\Task1\obj\Debug\Task01.pdb
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\Task1\bin\Debug\Task01.dll.config
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\Task1\bin\Debug\Task01.dll
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\Task1\obj\Debug\Task01.dll

@@ -6,78 +6,16 @@ using System.Text;
 
 namespace Task1
 {
-    public class Salad : ICollection<Ingredient>
+    public class Salad : ICollection<Item>
     {
         public string Name;
-        private List<Ingredient> _ingredients;
+        private List<Item> Items;
 
-        public Salad (string value) // : this(value, new List<Ingredient>())
-        {
-            this.Name = value;
-            _ingredients = new List<Ingredient>();
-           
-        }
-        
-        public Salad(string name, ICollection<Ingredient> ingredients)
-        {
-            Name = name;
-            _ingredients = new List<Ingredient>(ingredients);
-        }
-              
-        public Double TotalCalories
-        {
-            get
-            {
-                if (_ingredients != null)
-                {
-                    return _ingredients.Sum(x => x.Calorie/100 * x.Weight);
-                }
-                else
-                {
-                    throw new NullReferenceException("Ingredients cannot be null.");
-                }
-            }
-        }
-        public void PrintIngredients()
-        {
-           if (_ingredients != null)
-            {
-                foreach (var cur in _ingredients)
-                {
-                    Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}",
-                                          cur.Name.PadRight(16, ' '),
-                                          cur.Calorie.ToString("N2").PadLeft(14,' '), 
-                                          cur.Weight.ToString("N2").PadLeft(6,' '), 
-                                          cur.Proteins.ToString("N2").PadLeft(6,' '),
-                                          cur.Fats.ToString("N2").PadLeft(6,' '),
-                                          cur.Carbohydrates.ToString("N2").PadLeft(6,' ')
-                                     );
-                }
-            } 
-        }
-
-        public void SelectCalorieBetween(double _from, double _to)
-        {
-            var ingredients = from cur in _ingredients
-                              where cur.Calorie >= _from && cur.Calorie <= _to
-                              select cur.Name.PadRight(17,' ')+" - "+cur.Calorie.ToString("N2").PadLeft(6,' ');
-            Console.WriteLine("От {0} до {1} ккал содержат:", _from.ToString("N2"), _to.ToString("N2"));
-            foreach (var ingredient in ingredients)
-            {
-                Console.WriteLine(ingredient);
-            }
-        }
-        public void Sort()
-        {
-            _ingredients.Sort();
-        }
-        
         public int Count
         {
             get
             {
-                return _ingredients.Count;
-                //throw new NotImplementedException();
+                return ((ICollection<Item>)Items).Count;
             }
         }
 
@@ -85,81 +23,91 @@ namespace Task1
         {
             get
             {
-                return (_ingredients as ICollection<Ingredient>).IsReadOnly;
-                //throw new NotImplementedException();
+                return ((ICollection<Item>)Items).IsReadOnly;
             }
         }
 
-        public void Add(Ingredient ingredient)
+        public Salad(string value) // : this(value, new List<Ingredient>())
         {
-            if (ingredient != null)
+            this.Name = value;
+            Items = new List<Item>();
+
+        }
+
+        public Salad(string name, ICollection<Item> items)
+        {
+            Name = name;
+            Items = new List<Item>(items);
+        }
+
+        public Double GetTotalCalories
+        {
+            get
             {
-                _ingredients.Add(ingredient);
+                if (Items != null)
+                {
+                    return Items.Where(t => t is IHasCaloriesAndCarbohydrates && t is IHasWeight).Sum(t => (t as IHasCaloriesAndCarbohydrates).Calories / 100 * (t as IHasWeight).Weight);
+                }
+
+                return 0;
+            }
+        }
+
+        public void Add(Item item)
+        {
+            if (item != null)
+            {
+                Items.Add(item);
             }
             else
             {
                 throw new NotImplementedException();
             }
+        }
+       
+        public IEnumerable<Item> GetItems()
+        {
+            return Items.ToList();
+        }
+
+        public IEnumerable<Item> GetCalorieBetween(double from, double to)
+        {
+            return Items.Where(t => t is IHasCaloriesAndCarbohydrates && (t as IHasCaloriesAndCarbohydrates).Calories >= from && (t as IHasCaloriesAndCarbohydrates).Calories <= to);
+        }
+        public void SortByWeight()
+        {
+          // Items = Items.OrderBy(x => x is IHasWeight ? (x as IHasWeight).Weight : 0).ToList();
+            Items = Items.OrderBy(x => x.Weight).ToList();
         }
 
         public void Clear()
         {
-            if (_ingredients.Count > 0)
-            {
-                _ingredients.Clear();
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
+            ((ICollection<Item>)Items).Clear();
         }
 
-        public bool Contains(Ingredient ingredient)
+        public bool Contains(Item item)
         {
-            if (ingredient != null)
-            {
-                return _ingredients.Contains(ingredient);
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
+            return ((ICollection<Item>)Items).Contains(item);
         }
 
-        public void CopyTo(Ingredient[] array, int arrayIndex)
+        public void CopyTo(Item[] array, int arrayIndex)
         {
-            if (array != null)
-            {
-                _ingredients.CopyTo(array, arrayIndex);
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
+            ((ICollection<Item>)Items).CopyTo(array, arrayIndex);
         }
 
-        public IEnumerator<Ingredient> GetEnumerator()
+        public bool Remove(Item item)
         {
-            return _ingredients.GetEnumerator();
-            //throw new NotImplementedException();
+            return ((ICollection<Item>)Items).Remove(item);
         }
 
-        public bool Remove(Ingredient ingredient)
+        public IEnumerator<Item> GetEnumerator()
         {
-            if (ingredient != null)
-            {
-                return _ingredients.Remove(ingredient);
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
+            return ((ICollection<Item>)Items).GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return this.GetEnumerator();
-            //throw new NotImplementedException();
+            return ((ICollection<Item>)Items).GetEnumerator();
         }
-    }
+    }   
 }

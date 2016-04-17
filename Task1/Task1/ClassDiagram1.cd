@@ -1,33 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Task1.Ingredient">
-    <Position X="3.25" Y="0.5" Width="1.5" />
+  <Class Name="Task1.Item">
+    <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAABQAACAAABAAAAAABAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Item.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Task1.Ingredient">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAEAAAAABQAACAAABAAAAAAAAAEAAA=</HashCode>
       <FileName>Class\Ingredient.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Task1.Salad">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="2.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAABCQAAAABAQAAAAAAAAEAAAAAABQIAQ=</HashCode>
+      <HashCode>AAIAAAAAAAAACDBQAAAABAQAAAAAAgAEAAAgAABQIAA=</HashCode>
       <FileName>Class\Salad.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="Task1.IIngredient">
-    <Position X="5" Y="1.5" Width="1.5" />
+  <Class Name="Task1.Sugar">
+    <Position X="4.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAABQAACAAABAAAAAABAAEAAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAEAAAAAAQAACAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Class\Sugar.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Task1.Salt">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Salt.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Task1.IHasCaloriesAndCarbohydrates">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Interface\IHasCaloriesAndCarbohydrates.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Task1.IHasOtherProperties">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IHasOtherProperties.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Task1.IIngredient">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interface\IIngredient.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Task1.ISalad">
-    <Position X="2.25" Y="3.75" Width="1.5" />
+  <Interface Name="Task1.IHasName">
+    <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAAAQAAAAAAAAAAAAAAAAAAAQ=</HashCode>
-      <FileName>Interface\ISalad.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IHasName.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Task1.ISugar">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\ISugar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Task1.IHasWeight">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IHasWeight.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Task1.ISalt">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\ISalt.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

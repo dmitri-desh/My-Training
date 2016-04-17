@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{712FCF93-56D8-46EC-AD70-686358E4A114}</ProjectGuid>
+    <ProjectGuid>{7F6C5582-0A93-4382-9DEC-0067D473748C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SaladBuilder</RootNamespace>
@@ -32,10 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Task1\Task1.csproj">
-      <Project>{938301c3-8dba-482d-a242-9129dfaa00fa}</Project>
+      <Project>{a4d23898-dee0-4d92-9fc2-054d98cd63f1}</Project>
       <Name>Task1</Name>
     </ProjectReference>
   </ItemGroup>

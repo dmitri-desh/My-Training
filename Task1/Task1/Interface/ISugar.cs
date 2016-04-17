@@ -5,9 +5,7 @@ using System.Text;
 
 namespace Task1
 {
-    public interface IIngredient : IHasCaloriesAndCarbohydrates, IHasOtherProperties
+    public interface ISugar : IHasName, IHasWeight, IHasCaloriesAndCarbohydrates
     {
-       
-       
     }
 }

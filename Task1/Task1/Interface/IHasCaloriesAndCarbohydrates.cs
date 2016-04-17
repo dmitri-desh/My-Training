@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Task1
 {
-    public interface IIngredient : IHasCaloriesAndCarbohydrates, IHasOtherProperties
+    public interface IHasCaloriesAndCarbohydrates
     {
-       
-       
+        double Calories { get; }
+        double Carbohydrates { get; }
     }
 }

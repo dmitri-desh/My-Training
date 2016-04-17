@@ -10,8 +10,6 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            //Ingredient[] ingredients = new Ingredient[5]
-           // ICollection<Ingredient> ingredients = new Ingredient("Соль", 0, 0.015, 0, 0, 0);
         }
     }
 }

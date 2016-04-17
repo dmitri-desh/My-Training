@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Task1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DDGroup")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Task1")]
-[assembly: AssemblyCopyright("Copyright © DDGroup 2016")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("938301c3-8dba-482d-a242-9129dfaa00fa")]
+[assembly: Guid("a4d23898-dee0-4d92-9fc2-054d98cd63f1")]
 
 // Version information for an assembly consists of the following four values:
 //
