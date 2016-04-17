@@ -9,11 +9,11 @@ namespace Task1
     {
         public new string Name { get; protected set; }
 
-      //  public double Weight { get; protected set; }
+     
         public Salt(string name, double weight) : base (name, weight)
         {
             this.Name = name;
-        //    this.Weight = weight;
+    
         }
 
         public override string ToString()

@@ -11,12 +11,11 @@ namespace Task1
         public double Carbohydrates { get; protected set; }
         public double Proteins { get; protected set; }
         public double Fats { get; protected set; }
-    //    public double Weight { get; protected set; }
+   
         public double Calories { get; protected set; }
         public Ingredient (string name, double weight, double calories, double carbohydrates, double proteins, double fats) : base (name, weight)
         {
             this.Name = name;
-         //   this.Weight = weight;
             this.Calories = calories;
             this.Carbohydrates = carbohydrates;
             this.Proteins = proteins;

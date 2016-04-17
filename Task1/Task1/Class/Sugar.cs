@@ -9,13 +9,12 @@ namespace Task1
     {
         public new string Name { get; protected set; }
         public double Carbohydrates { get; protected set; }
-      //  public double Weight { get; protected set; }
+     
 
         public double Calories { get; protected set; }
         public Sugar(string name, double weight, double calories, double carbohydrates) : base (name, weight)
         {
             this.Name = name;
-         //   this.Weight = weight;
             this.Calories = calories;
             this.Carbohydrates = carbohydrates;
             
