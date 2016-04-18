@@ -7,7 +7,7 @@ namespace Task1
 {
     public class Ingredient : Item, IIngredient
     {
-        public new string Name { get; protected set; }
+      //  public new string Name { get; protected set; }
         public double Carbohydrates { get; protected set; }
         public double Proteins { get; protected set; }
         public double Fats { get; protected set; }
@@ -15,7 +15,7 @@ namespace Task1
         public double Calories { get; protected set; }
         public Ingredient (string name, double weight, double calories, double carbohydrates, double proteins, double fats) : base (name, weight)
         {
-            this.Name = name;
+         //   this.Name = name;
             this.Calories = calories;
             this.Carbohydrates = carbohydrates;
             this.Proteins = proteins;

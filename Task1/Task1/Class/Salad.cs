@@ -46,7 +46,7 @@ namespace Task1
             {
                 if (Items != null)
                 {
-                    return Items.Where(t => t is IHasCaloriesAndCarbohydrates && t is IHasWeight).Sum(t => (t as IHasCaloriesAndCarbohydrates).Calories / 100 * (t as IHasWeight).Weight);
+                    return Items.Where(t => t is IHasCaloriesAndCarbohydrates).Sum(t => (t as IHasCaloriesAndCarbohydrates).Calories / 100 * t.Weight);
                 }
 
                 return 0;

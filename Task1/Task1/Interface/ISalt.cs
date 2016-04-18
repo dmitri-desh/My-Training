@@ -1,6 +1,6 @@
 ﻿namespace Task1
 {
-    public interface ISalt : IHasName, IHasWeight
+    public interface ISalt // : IHasName, IHasWeight
     {
     }
 }
