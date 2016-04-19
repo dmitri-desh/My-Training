@@ -1,6 +1,0 @@
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Orders\Orders\bin\Debug\Orders.exe.config
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Orders\Orders\bin\Debug\Orders.exe
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Orders\Orders\bin\Debug\Orders.pdb
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Orders\Orders\obj\Debug\Orders.csprojResolveAssemblyReference.cache
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Orders\Orders\obj\Debug\Orders.exe
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Orders\Orders\obj\Debug\Orders.pdb
