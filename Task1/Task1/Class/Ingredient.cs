@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Task1
 {
-    public class Ingredient : Item, IIngredient
+    public class Ingredient : Item, IHasCalories
     {
       //  public new string Name { get; protected set; }
         public double Carbohydrates { get; protected set; }

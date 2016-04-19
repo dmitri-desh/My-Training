@@ -61,7 +61,7 @@ namespace SaladBuilder
             Console.WriteLine("От {0} до {1} ккал. содержат:", weight1, weight2);
             foreach(Item item in calories)
             {
-                Console.WriteLine(item.Name.PadRight(17, ' ') + " - " + (item as IHasCaloriesAndCarbohydrates).Calories.ToString("N2").PadLeft(7, ' '));
+                Console.WriteLine(item.Name.PadRight(17, ' ') + " - " + (item as IHasCalories).Calories.ToString("N2").PadLeft(7, ' '));
             }
 
             Console.ReadLine();

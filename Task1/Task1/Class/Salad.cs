@@ -15,15 +15,7 @@ namespace Task1
         {
             get
             {
-                return ((ICollection<Item>)Items).Count;
-            }
-        }
-
-        public bool IsReadOnly
-        {
-            get
-            {
-                return ((ICollection<Item>)Items).IsReadOnly;
+                return Items.Count;
             }
         }
 
@@ -46,10 +38,18 @@ namespace Task1
             {
                 if (Items != null)
                 {
-                    return Items.Where(t => t is IHasCaloriesAndCarbohydrates).Sum(t => (t as IHasCaloriesAndCarbohydrates).Calories / 100 * t.Weight);
+                    return Items.Where(t => t is IHasCalories).Sum(t => (t as IHasCalories).Calories / 100 * t.Weight);
                 }
 
                 return 0;
+            }
+        }
+
+        public bool IsReadOnly
+        {
+            get
+            {
+                throw new NotImplementedException();
             }
         }
 
@@ -72,7 +72,7 @@ namespace Task1
 
         public IEnumerable<Item> GetCalorieBetween(double from, double to)
         {
-            return Items.Where(t => t is IHasCaloriesAndCarbohydrates && (t as IHasCaloriesAndCarbohydrates).Calories >= from && (t as IHasCaloriesAndCarbohydrates).Calories <= to);
+            return Items.Where(t => t is IHasCalories && (t as IHasCalories).Calories >= from && (t as IHasCalories).Calories <= to);
         }
         public void SortByWeight()
         {
@@ -82,32 +82,32 @@ namespace Task1
 
         public void Clear()
         {
-            ((ICollection<Item>)Items).Clear();
+            Items.Clear();
         }
 
         public bool Contains(Item item)
         {
-            return ((ICollection<Item>)Items).Contains(item);
+            return Items.Contains(item);
         }
 
         public void CopyTo(Item[] array, int arrayIndex)
         {
-            ((ICollection<Item>)Items).CopyTo(array, arrayIndex);
+            Items.CopyTo(array, arrayIndex);
         }
 
         public bool Remove(Item item)
         {
-            return ((ICollection<Item>)Items).Remove(item);
+            return Items.Remove(item);
         }
 
         public IEnumerator<Item> GetEnumerator()
         {
-            return ((ICollection<Item>)Items).GetEnumerator();
+            return Items.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((ICollection<Item>)Items).GetEnumerator();
+            return Items.GetEnumerator();
         }
     }   
 }

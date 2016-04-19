@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Task1
 {
-    public class Salt : Item //, ISalt
+    public class Salt : Item 
     {
       //  public new string Name { get; protected set; }
 
