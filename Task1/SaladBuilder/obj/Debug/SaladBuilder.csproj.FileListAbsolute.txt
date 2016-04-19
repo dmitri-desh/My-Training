@@ -1,8 +1,0 @@
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\SaladBuilder\bin\Debug\SaladBuilder.exe.config
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\SaladBuilder\bin\Debug\SaladBuilder.exe
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\SaladBuilder\bin\Debug\SaladBuilder.pdb
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\SaladBuilder\obj\Debug\SaladBuilder.csprojResolveAssemblyReference.cache
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\SaladBuilder\obj\Debug\SaladBuilder.exe
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\SaladBuilder\obj\Debug\SaladBuilder.pdb
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\SaladBuilder\bin\Debug\Task1.dll
-S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task1\SaladBuilder\bin\Debug\Task1.pdb
