@@ -5,9 +5,8 @@ using System.Text;
 
 namespace Task1
 {
-    public interface IHasCalories
+    public enum CuttingMethods
     {
-        double Calories { get; }
-        double GetCaloriesCalculated();
+        Dicing = 1, Strips
     }
 }

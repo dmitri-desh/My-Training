@@ -9,39 +9,13 @@ namespace Task1
     public class Salad : ICollection<Item>
     {
         public string Name;
-        private List<Item> Items;
+        private List<Item> _items;
 
         public int Count
         {
             get
             {
-                return Items.Count;
-            }
-        }
-
-        public Salad(string value) // : this(value, new List<Ingredient>())
-        {
-            this.Name = value;
-            Items = new List<Item>();
-
-        }
-
-        public Salad(string name, ICollection<Item> items)
-        {
-            Name = name;
-            Items = new List<Item>(items);
-        }
-
-        public Double GetTotalCalories
-        {
-            get
-            {
-                if (Items != null)
-                {
-                    return Items.Where(t => t is IHasCalories).Sum(t => (t as IHasCalories).Calories / 100 * t.Weight);
-                }
-
-                return 0;
+                return _items.Count;
             }
         }
 
@@ -52,62 +26,77 @@ namespace Task1
                 throw new NotImplementedException();
             }
         }
-
-        public void Add(Item item)
+        public Double GetTotalCalories
         {
-            if (item != null)
+            get
             {
-                Items.Add(item);
-            }
-            else
-            {
-                throw new NotImplementedException();
+                if (_items != null)
+                {
+                    return _items.Where(t => t is IHasCalories).Sum(t => (t as IHasCalories).GetCaloriesCalculated());
+                }
+
+                return 0;
             }
         }
-       
         public IEnumerable<Item> GetItems()
         {
-            return Items.ToList();
+            return _items.ToList();
         }
 
-        public IEnumerable<Item> GetCalorieBetween(double from, double to)
+        public IEnumerable<Item> GetCaloriesBetween(double from, double to)
         {
-            return Items.Where(t => t is IHasCalories && (t as IHasCalories).Calories >= from && (t as IHasCalories).Calories <= to);
+            return _items.Where(t => t is IHasCalories && (t as IHasCalories).Calories >= from && (t as IHasCalories).Calories <= to);
         }
         public void SortByWeight()
         {
-          // Items = Items.OrderBy(x => x is IHasWeight ? (x as IHasWeight).Weight : 0).ToList();
-            Items = Items.OrderBy(x => x.Weight).ToList();
+           
+            _items = _items.OrderBy(x => x is IHasWeight ? (x as IHasWeight).GetWeightCalculated() : 0).ToList();
+        }
+
+        public Salad (string name, ICollection<Item> items)
+        {
+            this.Name = name;
+            _items = new List<Item>(items);
+        }
+        public Salad(string name)
+        {
+            this.Name = name;
+            _items = new List<Item>();
+        }
+
+        public void Add(Item item)
+        {
+            _items.Add(item);
         }
 
         public void Clear()
         {
-            Items.Clear();
+            _items.Clear();
         }
 
         public bool Contains(Item item)
         {
-            return Items.Contains(item);
+            return _items.Contains(item);
         }
 
         public void CopyTo(Item[] array, int arrayIndex)
         {
-            Items.CopyTo(array, arrayIndex);
+            _items.CopyTo(array);
         }
 
         public bool Remove(Item item)
         {
-            return Items.Remove(item);
+            return _items.Remove(item);
         }
 
         public IEnumerator<Item> GetEnumerator()
         {
-            return Items.GetEnumerator();
+            return _items.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return Items.GetEnumerator();
+            return _items.GetEnumerator();
         }
-    }   
+    }
 }

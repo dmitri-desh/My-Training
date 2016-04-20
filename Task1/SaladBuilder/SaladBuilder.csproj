@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F6C5582-0A93-4382-9DEC-0067D473748C}</ProjectGuid>
+    <ProjectGuid>{E6EF97CD-1138-42CE-B742-7451D2F92B86}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SaladBuilder</RootNamespace>
@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Task1\Task1.csproj">
-      <Project>{a4d23898-dee0-4d92-9fc2-054d98cd63f1}</Project>
+      <Project>{dd486b30-8ae7-4ede-bd69-56333663e17b}</Project>
       <Name>Task1</Name>
     </ProjectReference>
   </ItemGroup>
