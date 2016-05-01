@@ -1,0 +1,7 @@
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\ConsoleApplication5\obj\Debug\Task2.csprojResolveAssemblyReference.cache
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\Task2\obj\Debug\Task2.csprojResolveAssemblyReference.cache
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\Task2\bin\Debug\Task2.pdb
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\Task2\obj\Debug\Task2.pdb
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\Task2\bin\Debug\Task2.dll.config
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\Task2\bin\Debug\Task2.dll
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\Task2\obj\Debug\Task2.dll
