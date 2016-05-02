@@ -1,0 +1,8 @@
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\TextBuilder1\bin\Debug\TextBuilder1.exe.config
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\TextBuilder1\bin\Debug\TextBuilder1.exe
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\TextBuilder1\bin\Debug\TextBuilder1.pdb
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\TextBuilder1\bin\Debug\Task2.dll
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\TextBuilder1\bin\Debug\Task2.pdb
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\TextBuilder1\obj\Debug\TextBuilder1.csprojResolveAssemblyReference.cache
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\TextBuilder1\obj\Debug\TextBuilder1.exe
+S:\Dropbox\Users\14010\Documents\Visual Studio 2015\Projects\Training\Task2\TextBuilder1\obj\Debug\TextBuilder1.pdb
