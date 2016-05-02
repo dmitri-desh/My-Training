@@ -52,7 +52,9 @@ namespace TextBuilder1
             Console.WriteLine("Ordered sentences >>>");
             Result.GetOrderedSentences();
             Console.WriteLine("Interrogation sentences >>>");
-            Result.GetWordsInInterrogationSentences(9);
+            int length;
+            Int32.TryParse(ConfigurationManager.AppSettings["lengthWord"], out length);
+            Result.GetWordsInInterrogationSentences(length);
         }
     }
 }
