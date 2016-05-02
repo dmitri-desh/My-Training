@@ -1,0 +1,11 @@
+Object-oriented programming is an approach to software development in which the structure of the software
+is based on objects interacting with each other to accomplish a task. This interaction takes the form of
+messages passing back and forth between the objects. In response to a message, an object can perform an action.
+If you look at how you accomplish tasks in the world around you, you can see that you interact in an object-oriented
+world. If you want to go to the store, for example, you interact with a car object. A car object consists of
+other objects that interact with each other to accomplish the task of getting you to the store. You put the key
+object in the ignition object and turn it. This in turn sends a message (through an electrical signal) to the
+starter object, which interacts with the engine object to start the car. As a driver, you are isolated from the
+logic of how the objects of the system work together to start the car. You just initiate the sequence of events
+by executing the start method of the ignition object with the key. You then wait for a response (message) of success
+or failure.

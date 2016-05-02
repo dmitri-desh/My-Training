@@ -109,8 +109,10 @@ namespace Task2
                 curSource = curSource.Substring(curPunctuation.Length);
                
             }
-
-             sentenceResult.Add(this.ParseSentenceItem(words[words.Count()-1]));
+            if (words.Count() > 0)
+            {
+                sentenceResult.Add(this.ParseSentenceItem(words[words.Count() - 1]));
+            }
             if (curSource.Length > 0)
             {
                 curPunctuation = curSource.Substring(words[words.Count() - 1].Length);
