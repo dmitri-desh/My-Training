@@ -49,25 +49,25 @@ namespace Task2
         {
 
             var sentences = from sentence in TextResult.Sentences
-                            where sentence.LastOrDefault().ToString().Trim() == "?"
-                          // where sentence.LastOrDefault(x => (x is IPunctuation ? (x as IPunctuation).ToString().Trim():" ") == "?")
+                            where sentence.Count() > 0 && sentence.LastOrDefault().ToString().Trim() == "?"
                             select sentence;
-            
-            var words = from sentence in sentences
-                        where sentence.ToList().ToString().Length == length
-                        select sentence.ToList().Distinct();
-           foreach (var word in words)
-            {
-                Console.Write("{0} ", word.ToString());
-            }
-            
-           /*
             foreach (var sentence in sentences)
             {
                 ShowSentence(sentence);
             }
-            */
             Console.WriteLine();
+            
+
+            var words = from sentence in sentences
+                       // where sentence.ToList().ToString().Length == length
+                        select sentence.GetEnumerator();
+
+        
+            foreach (var word in words)
+            {
+                Console.Write("{0}", word.ToString());
+            }
+       
         }
 
 
