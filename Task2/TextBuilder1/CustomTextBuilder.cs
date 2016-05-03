@@ -40,7 +40,7 @@ namespace TextBuilder1
             finally
             {
                 if (reader != null)
-                    reader.Close();
+                    reader.Dispose();
             }
         }
        
