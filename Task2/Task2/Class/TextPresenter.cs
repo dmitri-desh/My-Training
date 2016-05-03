@@ -60,7 +60,7 @@ namespace Task2
 
             var words = from sentence in sentences
                        // where sentence.ToList().ToString().Length == length
-                        select sentence.GetEnumerator();
+                        select sentence.ToList().ToString().Distinct();
 
         
             foreach (var word in words)
