@@ -59,7 +59,7 @@ namespace Task2
 
 
             var words = from sentence in sentences
-                        where sentence.ToList().Any(x => x.ToString().Length  == length) 
+                        where sentence.ToList().Any(x => (x is IWord ? (x as IWord).ToString().Length : 0)== length) 
                         select sentence.ToList().Distinct().ToString();
 
             foreach (var word in words)
