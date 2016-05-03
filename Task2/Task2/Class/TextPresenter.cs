@@ -48,7 +48,7 @@ namespace Task2
         public void GetWordsInInterrogationSentences (int length)
         {
             var sentences = from sentence in TextResult.Sentences
-                           // where sentence.LastOrDefault().ToString().Trim() == "?"
+                         //   where sentence.LastOrDefault().ToString().Trim() == "?"
                             select sentence;
             var words = from sentence in sentences
                        // where sentence.ToList().ToString().Length == length
