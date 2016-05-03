@@ -64,12 +64,23 @@ namespace Task2
 
             foreach (var word in words)
             {
-                Console.Write("{0}", word);
+                Console.Write("{0} ", word);
             }
-       
+      
         }
+     // ToDo   
+        public void RemoveWordsBy (int length)
+        {
+            string pattern = @"\b^[b-d f-h j-n p-t v-x z]*\b";
+            string target = " ";
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
 
+        }
+ // ToDo
+        public void ReplaceSubstring (string substr)
+        {
 
+        }
 
     }
 }
