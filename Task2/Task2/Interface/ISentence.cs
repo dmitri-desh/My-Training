@@ -10,5 +10,5 @@ namespace Task2
         void Add(ISentenceItem item);
         bool Remove(ISentenceItem item);
         int Count { get; }
-    }
+    } 
 }
