@@ -8,15 +8,16 @@ namespace Task2
     public class Sentence : ISentence
     {
         private ICollection<ISentenceItem> items = new List<ISentenceItem>();
-       
+      
         public Sentence()
         {
-        
+           
         }
 
         public Sentence(ICollection<ISentenceItem> source) 
         {
             items = source;
+          
         }
         
         public void Add(ISentenceItem item)
