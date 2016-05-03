@@ -49,23 +49,22 @@ namespace Task2
         {
 
             var sentences = from sentence in TextResult.Sentences
-                            where sentence.Count() > 0 && sentence.LastOrDefault().ToString().Trim() == "?"
+                            where sentence.Count() > 0 && sentence.Last().ToString().Trim() == "?"
                             select sentence;
             foreach (var sentence in sentences)
             {
                 ShowSentence(sentence);
             }
             Console.WriteLine();
-            
+
 
             var words = from sentence in sentences
-                        //where sentence.ToList().ToString().Length == length
+                        where sentence.ToList().Any(x => x.ToString().Length  == length) 
                         select sentence.ToList().Distinct().ToString();
 
-        
             foreach (var word in words)
             {
-                Console.Write("{0}", word.ToString());
+                Console.Write("{0}", word);
             }
        
         }
