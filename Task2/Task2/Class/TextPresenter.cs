@@ -55,10 +55,10 @@ namespace Task2
             
             var words = from sentence in sentences
                         where sentence.ToList().ToString().Length == length
-                        select sentence.Distinct();
+                        select sentence.ToList().Distinct();
            foreach (var word in words)
             {
-                Console.Write("{0} ", word);
+                Console.Write("{0} ", word.ToString());
             }
             
            /*
