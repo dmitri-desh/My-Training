@@ -10,7 +10,7 @@
   <Class Name="Billing.Contract">
     <Position X="3.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAQAAAQAABAAABAAAAAEAAAAA=</HashCode>
+      <HashCode>ACAAAAAAEAAAAAAAAAAAQAAAQAABAAABAAAABEAAAAA=</HashCode>
       <FileName>Contract.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,8 +31,15 @@
   <Class Name="Billing.Account">
     <Position X="3.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAgAAAACAAAAACAAAAAAIAAAAAAA=</HashCode>
       <FileName>Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billing.AccountRefill">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>AccountRefill.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Billing.BillingType">
