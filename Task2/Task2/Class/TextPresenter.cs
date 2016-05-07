@@ -60,9 +60,12 @@ namespace Task2
 
             var words = from sentence in sentences
                         where sentence.ToList().Any(x => (x is IWord ? (x as IWord).ToString().Length : 0)== length) 
-                        select sentence.ToList().Distinct().ToString();
+                        select sentence.ToList().ToString();
 
-            foreach (var word in words)
+            var distinctWords = from word in words
+                                select word.Distinct();
+
+            foreach (var word in distinctWords)
             {
                 Console.Write("{0} ", word);
             }
@@ -71,10 +74,17 @@ namespace Task2
      // ToDo   
         public void RemoveWordsBy (int length)
         {
-            string pattern = @"\b^[b-d f-h j-n p-t v-x z]*\b";
-            string target = " ";
+            /*
+            string pattern = @"[b-d f-h j-n p-t v-x z]";
+            string target = "~";
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-
+            
+            var sentences = from sentence in TextResult.Sentences
+                            select sentence;
+            var words = from sentence in sentences
+                            where sentence.ToList().Any(x => (x is IWord ? (x as IWord).ToString().Length : 0) == length)
+                            select sentence.ToList().ToString();
+         */
         }
  // ToDo
         public void ReplaceSubstring (string substr)

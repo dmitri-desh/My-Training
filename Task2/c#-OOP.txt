@@ -16,7 +16,7 @@ the button object interacts with a printer object, which interacts with the actu
 printing the page.
 OOP concepts started surfacing in the mid-1960s with a programming language called Simula and further evolved 
 in the 1970s with advent of Smalltalk. Although software developers did not overwhelmingly embrace these early advances
-in OOP languages, object-oriented methodologies continued to evolve. In the mid-1980s there was a resurgence of interest
+in OOP languages, object-oriented methodologies continued to evolve? In the mid-1980s there was a resurgence of interest
 in object-oriented methodologies. Specifically, OOP languages such as C++ and Eiffel became popular with mainstream
 computer programmers. OOP continued to grow in popularity in the 1990s, most notably with the advent of Java and the huge
 following it attracted. And in 2002, in conjunction with the release       of the .NET Framework, Microsoft introduced a new
