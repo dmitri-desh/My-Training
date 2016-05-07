@@ -7,9 +7,11 @@ namespace Billing
 {
     public class Account
     {
+        public int AccountId { get; protected set; }
         public Customer Customer { get; protected set; }
         public List<Contract> Contracts = new List<Contract>();
-        public List<CallInfoFull> CallsHistory = new List<CallInfoFull>();
-        public List<BillingPlan> BillingPlanHistory = new List<BillingPlan>();
+        public decimal Amount { get; protected set; }
+
+        public List<AccountRefill> AccountRefillHistory = new List<AccountRefill>();
     }
 }
