@@ -22,10 +22,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Billing.CallInfoFull">
-    <Position X="1.25" Y="4.25" Width="1.5" />
+    <Position X="0.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgACAAAAAAAAACCAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CallInfoFull.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billing.Account">
+    <Position X="3.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAA=</HashCode>
+      <FileName>Account.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Billing.BillingType">
