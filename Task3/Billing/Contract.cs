@@ -14,6 +14,8 @@ namespace Billing
         public DateTime ExpirationDate { get; protected set; }
         public PhoneNumber PhoneNumber { get; protected set; }
         public BillingPlan CurBillingPlan { get; protected set; }
+        public List<BillingPlan> BillingPlanHistory = new List<BillingPlan>();
+        public List<CallInfoFull> CallsHistory = new List<CallInfoFull>();
         public Contract(string name, DateTime expirationDate, PhoneNumber phoneNumber, BillingPlan billingPlan)
         {
             this.ContractNumber = name;
