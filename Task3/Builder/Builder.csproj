@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE549320-1B87-4FC5-BBF1-0AE35DBCC7A5}</ProjectGuid>
+    <ProjectGuid>{09634A35-ADA2-4614-9058-C2EC95E71E24}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Task3</RootNamespace>
-    <AssemblyName>Task3</AssemblyName>
+    <RootNamespace>Builder</RootNamespace>
+    <AssemblyName>Builder</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,31 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CallInfo.cs" />
-    <Compile Include="DisconnectRequest.cs" />
-    <Compile Include="IncomingCallRequest.cs" />
-    <Compile Include="IPort.cs" />
-    <Compile Include="IShouldClearEventHandlers.cs" />
-    <Compile Include="IStation.cs" />
-    <Compile Include="ITerminal.cs" />
-    <Compile Include="OutgoingCallRequest.cs" />
-    <Compile Include="PhoneNumber.cs" />
-    <Compile Include="Port.cs" />
-    <Compile Include="PortState.cs" />
+    <Compile Include="Builder.cs" />
+    <Compile Include="CustomBuilder.cs" />
+    <Compile Include="Director.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Request.cs" />
-    <Compile Include="Respond.cs" />
-    <Compile Include="RespondState.cs" />
-    <Compile Include="Station.cs" />
-    <Compile Include="Terminal.cs" />
-    <Compile Include="TestPort.cs" />
-    <Compile Include="TestStation.cs" />
-    <Compile Include="TestTerminal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Billing\Billing.csproj">
+      <Project>{bbcd79a7-a3bc-4ad7-9adc-8bfedc68f3ca}</Project>
+      <Name>Billing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task3\AutomaticStation.csproj">
+      <Project>{ae549320-1b87-4fc5-bbf1-0ae35dbcc7a5}</Project>
+      <Name>AutomaticStation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

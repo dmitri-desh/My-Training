@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Task3
+namespace AutomaticStation
 {
     public class PhoneNumber : IEquatable<PhoneNumber>
     {

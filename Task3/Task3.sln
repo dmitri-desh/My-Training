@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3", "Task3\Task3.csproj", "{AE549320-1B87-4FC5-BBF1-0AE35DBCC7A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomaticStation", "Task3\AutomaticStation.csproj", "{AE549320-1B87-4FC5-BBF1-0AE35DBCC7A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billing", "Billing\Billing.csproj", "{BBCD79A7-A3BC-4AD7-9ADC-8BFEDC68F3CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.csproj", "{09634A35-ADA2-4614-9058-C2EC95E71E24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BBCD79A7-A3BC-4AD7-9ADC-8BFEDC68F3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBCD79A7-A3BC-4AD7-9ADC-8BFEDC68F3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBCD79A7-A3BC-4AD7-9ADC-8BFEDC68F3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09634A35-ADA2-4614-9058-C2EC95E71E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09634A35-ADA2-4614-9058-C2EC95E71E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09634A35-ADA2-4614-9058-C2EC95E71E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09634A35-ADA2-4614-9058-C2EC95E71E24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

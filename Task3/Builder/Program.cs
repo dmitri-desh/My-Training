@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutomaticStation;
 
-namespace Task3
+namespace Builder
 {
     class Program
     {
@@ -28,6 +29,14 @@ namespace Task3
             terminals[1].Drop();
             Console.ReadLine();
 
+            Builder builder = new CustomBuilder();
+            Director director = new Director(builder);
+            director.Construct();
+            builder.GetResult();
+
+
+
+            Console.ReadLine();
         }
     }
 }

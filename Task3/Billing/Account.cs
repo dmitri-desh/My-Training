@@ -13,5 +13,9 @@ namespace Billing
         public decimal Amount { get; protected set; }
 
         public List<AccountRefill> AccountRefillHistory = new List<AccountRefill>();
+        public Account(int accountId)
+        {
+            this.AccountId = accountId;
+        }
     }
 }

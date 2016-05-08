@@ -4,14 +4,29 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BBCD79A7-A3BC-4AD7-9ADC-8BFEDC68F3CA}</ProjectGuid>
+    <ProjectGuid>{AE549320-1B87-4FC5-BBF1-0AE35DBCC7A5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Billing</RootNamespace>
-    <AssemblyName>Billing</AssemblyName>
+    <RootNamespace>AutomaticStation</RootNamespace>
+    <AssemblyName>AutomaticStation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,25 +61,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="AccountRefill.cs" />
-    <Compile Include="BillingPlan.cs" />
-    <Compile Include="BillingType.cs" />
-    <Compile Include="CallInfoFull.cs" />
-    <Compile Include="Contract.cs" />
-    <Compile Include="Customer.cs" />
+    <Compile Include="CallInfo.cs" />
+    <Compile Include="DisconnectRequest.cs" />
+    <Compile Include="IncomingCallRequest.cs" />
+    <Compile Include="IPort.cs" />
+    <Compile Include="IShouldClearEventHandlers.cs" />
+    <Compile Include="IStation.cs" />
+    <Compile Include="ITerminal.cs" />
+    <Compile Include="OutgoingCallRequest.cs" />
+    <Compile Include="PhoneNumber.cs" />
+    <Compile Include="Port.cs" />
+    <Compile Include="PortState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="Respond.cs" />
+    <Compile Include="RespondState.cs" />
+    <Compile Include="Station.cs" />
+    <Compile Include="Terminal.cs" />
+    <Compile Include="TestPort.cs" />
+    <Compile Include="TestStation.cs" />
+    <Compile Include="TestTerminal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="BillingClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Task3\AutomaticStation.csproj">
-      <Project>{ae549320-1b87-4fc5-bbf1-0ae35dbcc7a5}</Project>
-      <Name>AutomaticStation</Name>
-    </ProjectReference>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
