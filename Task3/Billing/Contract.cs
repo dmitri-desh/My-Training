@@ -14,17 +14,32 @@ namespace Billing
         public DateTime ExpirationDate { get; protected set; }
         public PhoneNumber PhoneNumber { get; protected set; }
         public BillingPlan CurBillingPlan { get; protected set; }
-        public List<BillingPlan> BillingPlanHistory = new List<BillingPlan>();
-        public List<CallInfoFull> CallsHistory = new List<CallInfoFull>();
-        public Contract(string name, DateTime expirationDate, PhoneNumber phoneNumber, BillingPlan billingPlan)
+        public ICollection<BillingPlan> BillingPlanLog { get; protected set; }
+        public ICollection<CallInfoFull> CallsLog { get; protected set; }
+        public Contract(string name, PhoneNumber phoneNumber, BillingPlan billingPlan)
         {
             this.ContractNumber = name;
             this.Date = DateTime.Now;
             this.StartDate = DateTime.Now;
-            this.ExpirationDate = expirationDate;
             this.PhoneNumber = phoneNumber;
             this.CurBillingPlan = billingPlan;
+            this.BillingPlanLog = new List<BillingPlan>();
+            this.CallsLog = new List<CallInfoFull>();
         }
-
+        public void ChangeBillingPlan(BillingType billingType, decimal amount)
+        {
+            if (amount >= 0)
+            {
+                this.CurBillingPlan = new BillingPlan(billingType, amount);
+                this.BillingPlanLog.Add(this.CurBillingPlan);
+            }
+        }
+        public void AddCallToLog(CallInfoFull callInfo)
+        {
+            if (callInfo !=null)
+            {
+                this.CallsLog.Add(callInfo);
+            }
+        }
     }
 }

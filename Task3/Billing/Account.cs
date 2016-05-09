@@ -9,13 +9,28 @@ namespace Billing
     {
         public int AccountId { get; protected set; }
         public Customer Customer { get; protected set; }
-        public List<Contract> Contracts = new List<Contract>();
+        
+        public ICollection<Contract> Contracts { get; protected set; }
         public decimal Amount { get; protected set; }
 
-        public List<AccountRefill> AccountRefillHistory = new List<AccountRefill>();
-        public Account(int accountId)
+        public ICollection<AccountRefill> AccountRefillLog { get; protected set; }
+        public Account(int accountId, Customer customer)
         {
             this.AccountId = accountId;
+            this.Contracts = new List<Contract>();
+            this.Customer = customer;
+            this.Amount = 0;
+            this.AccountRefillLog = new List<AccountRefill>();
+        }
+
+        public Account()
+        {
+        }
+        public void FillAccount(decimal amount)
+        {
+            if (amount > 0)
+            this.Amount += amount;
+            this.AccountRefillLog.Add(new AccountRefill(amount));
         }
     }
 }

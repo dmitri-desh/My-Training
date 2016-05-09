@@ -61,7 +61,7 @@
     <None Include="BillingClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Task3\AutomaticStation.csproj">
+    <ProjectReference Include="..\AutomaticStation\AutomaticStation.csproj">
       <Project>{ae549320-1b87-4fc5-bbf1-0ae35dbcc7a5}</Project>
       <Name>AutomaticStation</Name>
     </ProjectReference>

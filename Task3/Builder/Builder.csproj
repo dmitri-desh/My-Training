@@ -57,7 +57,7 @@
       <Project>{bbcd79a7-a3bc-4ad7-9adc-8bfedc68f3ca}</Project>
       <Name>Billing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Task3\AutomaticStation.csproj">
+    <ProjectReference Include="..\AutomaticStation\AutomaticStation.csproj">
       <Project>{ae549320-1b87-4fc5-bbf1-0ae35dbcc7a5}</Project>
       <Name>AutomaticStation</Name>
     </ProjectReference>
