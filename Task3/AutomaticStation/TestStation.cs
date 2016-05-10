@@ -11,7 +11,7 @@ namespace AutomaticStation
         {
         }
 
-        /// <summary>
+         /// <summary>
         /// event handlers
         /// </summary>
         /// <param name="sender"></param>
