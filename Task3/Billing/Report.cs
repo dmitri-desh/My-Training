@@ -8,10 +8,25 @@ namespace Billing
 {
     public class Report
     {
-        public Account Result { get; }
-        public Report(Account account)
+        public BillingDataBase Result { get; }
+        public Report(BillingDataBase dataBase)
         {
-            Result = account;
+            Result = dataBase;
+        }
+        public void ShowAllAccounts ()
+        {
+            foreach (var account in Result.Accounts)
+            {
+                Console.WriteLine(account.Customer.Name + " Баланс: " + account.Amount.ToString());
+                ShowContracts(account);
+            }
+        }
+        public void ShowContracts (Account account )
+        {
+            foreach (var contract in account.Contracts)
+            {
+                Console.WriteLine(contract.ContractNumber + " от " + contract.Date.ToString("dd.mm.yyyy") + " Тел.: " + contract.PhoneNumber.Value);
+            }
         }
         //ToDo
         public void GetMonthlyReport(DateTime month)
