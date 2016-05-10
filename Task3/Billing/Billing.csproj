@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="AccountRefill.cs" />
+    <Compile Include="BillingDataBase.cs" />
     <Compile Include="BillingPlan.cs" />
     <Compile Include="BillingType.cs" />
     <Compile Include="CallInfoFull.cs" />
