@@ -18,8 +18,6 @@ namespace Builder
             director.Construct();
             builder.GetResult();
 
-
-
             Console.ReadLine();
         }
     }

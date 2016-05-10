@@ -16,7 +16,7 @@ namespace Builder
         public void Construct()
         {
             builder.Initialize();
-            builder.ReadFile();
+            builder.Emulate();
 
         }
     }
