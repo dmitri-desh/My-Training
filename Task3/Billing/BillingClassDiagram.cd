@@ -10,7 +10,7 @@
   <Class Name="Billing.Contract">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAQAAAYAABAAABAAAAAEAABAA=</HashCode>
+      <HashCode>AAAAEAAAEAAAAAAAAAAAQAAAYAABAAABAEAAAEAABAA=</HashCode>
       <FileName>Contract.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,7 +31,7 @@
   <Class Name="Billing.Account">
     <Position X="2.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAgAAAACAAABAAAAAAAAIAAAAAAA=</HashCode>
+      <HashCode>AAEBAAAAAAAAAAAAAgAAAACAAABAAAAAAAAIAAAAAAA=</HashCode>
       <FileName>Account.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -43,10 +43,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Billing.Report">
-    <Position X="7.25" Y="1.75" Width="1.5" />
+    <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAAAAEAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billing.BillingDataBase">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>BillingDataBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Billing.BillingType">
