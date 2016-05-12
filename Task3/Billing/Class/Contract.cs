@@ -26,19 +26,32 @@ namespace Billing
             this.BillingPlanLog = new List<BillingPlan>();
             this.CallsLog = new List<CallInfoFull>();
         }
-        public void ChangeBillingPlan(BillingType billingType, decimal amount)
+        public bool ChangeBillingPlan(BillingType billingType, decimal amount)
         {
             if (amount >= 0)
             {
-                this.CurBillingPlan = new BillingPlan(billingType, amount);
-                this.BillingPlanLog.Add(this.CurBillingPlan);
+                if (this.CurBillingPlan == null)
+                {
+                    this.CurBillingPlan = new BillingPlan(billingType, amount);
+                    this.BillingPlanLog.Add(this.CurBillingPlan);
+                    return true;
+                }
+                else if (this.CurBillingPlan != null && this.CurBillingPlan.LastChange <= DateTime.Now.AddMonths(-1))
+                {
+                    this.CurBillingPlan = new BillingPlan(billingType, amount);
+                    this.BillingPlanLog.Add(this.CurBillingPlan);
+                    return true;
+                }
+                else return false;
             }
+            else return false;
         }
-        public void AddCallToLog(CallInfoFull callInfo)
+        public void AddCallToLog(CallInfo callInfo)
         {
             if (callInfo !=null)
             {
-                this.CallsLog.Add(callInfo);
+               var callInfoFull = new CallInfoFull(callInfo, this.CurBillingPlan.CalculateAmount(callInfo.Duration));
+               this.CallsLog.Add(callInfoFull);
             }
         }
     }
