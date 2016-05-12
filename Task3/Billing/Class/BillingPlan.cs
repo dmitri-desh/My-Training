@@ -16,5 +16,17 @@ namespace Billing
             this.CurBillingType = billingType;
             this.Amount = amount;
         }
+        public decimal CalculateAmount (TimeSpan duration)
+        {
+            if (this.CurBillingType == BillingType.PerSecond)
+            {
+                return (decimal)Math.Truncate(duration.TotalSeconds) * this.Amount;
+            }
+            else if (this.CurBillingType == BillingType.PerMinute)
+            {
+                return (decimal)Math.Ceiling(duration.TotalMinutes) * this.Amount;
+            }
+            else return 0;
+        }
     }
 }
