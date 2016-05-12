@@ -19,7 +19,7 @@ namespace Builder
         public DateTime now;
         public TimeSpan span;
        
-        public void AccelerateTime(int times) //эмулируем время, ускоренное в times раз
+        public void AccelerateTime(int times) // emulate the acceleration time "times" times
         {
             if (start != null)
             {
@@ -117,13 +117,15 @@ namespace Builder
        
         public override void Emulate()
         {
-            int times = 100;
-            start = DateTime.Now;
-            Console.WriteLine("Start: {0}", start.ToString());
+            int times = 10000;
+           
             foreach (var t in terminals)
             {
                 t.Plug();
             }
+
+            start = DateTime.Now;
+            Console.WriteLine("Start: {0}", start.ToString());
 
             terminals[0].Call(new PhoneNumber("11-111-11-11"));
             AccelerateTime(times);
