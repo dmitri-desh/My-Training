@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutomaticStation;
 using Billing;
+using System.Configuration;
 
 namespace Builder
 {
@@ -117,8 +118,10 @@ namespace Builder
        
         public override void Emulate()
         {
-            int times = 10000;
-           
+            int times;
+            Int32.TryParse(ConfigurationManager.AppSettings["times"], out times);
+
+
             foreach (var t in terminals)
             {
                 t.Plug();
