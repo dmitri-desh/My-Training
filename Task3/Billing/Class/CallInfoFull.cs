@@ -17,6 +17,14 @@ namespace Billing
             this.Duration = duration;
             this.Amount = amount;
         }
+        public CallInfoFull(CallInfo callInfo, decimal amount)
+        {
+            this.Source = callInfo.Source;
+            this.Target = callInfo.Target;
+            this.Started = callInfo.Started;
+            this.Duration = callInfo.Duration;
+            this.Amount = amount;
+        }
         public new PhoneNumber Source { get; protected set; }
         public new PhoneNumber Target { get; protected set; }
         public new DateTime Started { get; protected set; }
