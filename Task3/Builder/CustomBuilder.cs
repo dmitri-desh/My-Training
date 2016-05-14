@@ -32,13 +32,13 @@ namespace Builder
         public override void Initialize()
         {
            dataBase = new BillingDataBase();
+            ports = new List<IPort>() { new TestPort(), new TestPort() };
+            terminals = new List<ITerminal>() { };
+            station = new TestStation(terminals, ports);
 
-           ports = new List<IPort>() { new TestPort(), new TestPort() };
-           terminals = new List<ITerminal>() { };
-           station = new TestStation(terminals, ports);
 
            #region Customer 1  
-           var customer    = new Customer("Иванов И.И.");
+            var customer    = new Customer("Иванов И.И.");
            var account     = new Account(1, customer);
            var billingPlan1 = new BillingPlan(BillingType.PerSecond, 50);
            var phoneNumber1 = new PhoneNumber("00-000-00-00");
@@ -114,6 +114,8 @@ namespace Builder
             dataBase.Accounts.Add(account);
             #endregion
 
+       
+
         }
        
         public override void Emulate()
@@ -131,6 +133,7 @@ namespace Builder
             Console.WriteLine("Start: {0}", start.ToString());
 
             terminals[0].Call(new PhoneNumber("11-111-11-11"));
+          //  terminals[0].Call(station.);
             AccelerateTime(times);
             terminals[0].Answer();
             AccelerateTime(times);
