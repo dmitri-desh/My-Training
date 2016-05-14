@@ -80,8 +80,10 @@ namespace Builder
                                    );
             account.FillAccount(15000);
             station.Add(new TestTerminal(phoneNumber1));
+           
             station.Add(new TestTerminal(phoneNumber2));
             dataBase.Accounts.Add(account);
+            
             #endregion
             
            #region Customer 3
@@ -127,8 +129,9 @@ namespace Builder
             foreach (var t in terminals)
             {
                 t.Plug();
+                Console.WriteLine("Plug terminal {0}", t.Number.Value.ToString());
             }
-
+            Console.WriteLine();
             start = DateTime.Now;
             Console.WriteLine("Start: {0}", start.ToString());
 
@@ -139,11 +142,16 @@ namespace Builder
             AccelerateTime(times);
             terminals[1].Drop();
             AccelerateTime(times);
+            
         }
         public override void GetResult()
         {
            Report result = new Report(dataBase);
             result.ShowAllAccounts();
+            result.GetMonthlyReport(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Иванов И.И."), new DateTime(2016, 5, 1));
+            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Петров П.П."), new DateTime(2016, 5, 16, 17, 0, 0), new DateTime(2016, 5, 16, 17, 20, 30));
+            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Сидоров С.С."), 5000, 10000);
+            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Васин В.В."), new PhoneNumber("11-111-11-11"));
         }
     }
 }
