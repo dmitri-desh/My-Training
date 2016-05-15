@@ -20,15 +20,7 @@ namespace Builder
         public DateTime now;
         public TimeSpan span;
        
-        public void AccelerateTime(int times) // emulate the acceleration time "times" times
-        {
-            if (start != null)
-            {
-                span = DateTime.Now.Subtract(start);
-                now = start.AddSeconds(span.TotalSeconds * times);
-                Console.WriteLine("Now: {0}", now.ToString());
-            }
-        }
+       
         public override void Initialize()
         {
            dataBase = new BillingDataBase();
@@ -128,8 +120,7 @@ namespace Builder
        
         public override void Emulate()
         {
-            int times;
-            Int32.TryParse(ConfigurationManager.AppSettings["times"], out times);
+           
 
 
             foreach (var t in terminals)
@@ -143,11 +134,11 @@ namespace Builder
             Console.WriteLine("Start: {0}", start.ToString());
 
             terminals[0].Call(new PhoneNumber("11-111-11-11"));
-            AccelerateTime(times);
+            
             terminals[0].Answer();
-            AccelerateTime(times);
+          
             terminals[1].Drop();
-            AccelerateTime(times);
+            
          
         }
         public override void GetResult()

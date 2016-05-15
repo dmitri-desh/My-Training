@@ -52,6 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -81,6 +82,7 @@
     <Compile Include="Class\TestPort.cs" />
     <Compile Include="Class\TestStation.cs" />
     <Compile Include="Class\TestTerminal.cs" />
+    <Compile Include="Class\TimeAccelerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

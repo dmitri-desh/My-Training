@@ -95,6 +95,13 @@
       <FileName>Class\TestTerminal.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="AutomaticStation.TimeAccelerator">
+    <Position X="5.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\TimeAccelerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="AutomaticStation.IPort" Collapsed="true">
     <Position X="2.75" Y="2" Width="1.5" />
     <TypeIdentifier>

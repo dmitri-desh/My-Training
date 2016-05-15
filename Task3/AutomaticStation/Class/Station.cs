@@ -21,6 +21,8 @@ namespace AutomaticStation
         private ICollection<ITerminal> _terminalCollection;
         private ICollection<IPort> _portCollection;
         private IDictionary<PhoneNumber, IPort> _portMapping;
+       
+       
 
         protected ITerminal GetTerminalByPhoneNumber(PhoneNumber number)
         {
@@ -43,12 +45,14 @@ namespace AutomaticStation
                     Target = request.Target,
                     Started = DateTime.Now
                 };
+                
 
                 ITerminal targetTerminal = GetTerminalByPhoneNumber(request.Target);
                 IPort targetPort = GetPortByPhoneNumber(request.Target);
 
                 if (targetPort.State == PortState.Free)
                 {
+                    
                     _connectionCollection.Add(callInfo);
                     targetPort.State = PortState.Busy;
                     targetTerminal.IncomingRequestFrom(request.Source);
@@ -140,10 +144,13 @@ namespace AutomaticStation
 
         protected void InterruptActiveCall(CallInfo callInfo)
         {
-            callInfo.Duration = DateTime.Now - callInfo.Started;
+            //callInfo.Duration = DateTime.Now - callInfo.Started;
+            callInfo.Duration = TimeAccelerator.AccelerateTime(callInfo.Started);
             this._callCollection.Remove(callInfo);
             SetPortStateWhenConnectionInterrupted(callInfo.Source, callInfo.Target);
             OnCallInfoPrepared(this, callInfo);
+
+           //ToDo  link with BillingDataBase for logging calls
         }
 
         public void OnIncomingCallRespond(object sender, Respond respond)
