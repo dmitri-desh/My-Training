@@ -138,7 +138,7 @@ namespace Builder
             terminals[0].Answer();
           
             terminals[1].Drop();
-            
+         
          
         }
         public override void GetResult()

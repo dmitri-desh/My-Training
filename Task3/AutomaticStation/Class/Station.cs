@@ -149,8 +149,7 @@ namespace AutomaticStation
             this._callCollection.Remove(callInfo);
             SetPortStateWhenConnectionInterrupted(callInfo.Source, callInfo.Target);
             OnCallInfoPrepared(this, callInfo);
-
-           //ToDo  link with BillingDataBase for logging calls
+        
         }
 
         public void OnIncomingCallRespond(object sender, Respond respond)
