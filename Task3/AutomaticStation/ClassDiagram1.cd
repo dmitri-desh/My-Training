@@ -36,8 +36,8 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AutomaticStation.Port" Collapsed="true">
-    <Position X="6.5" Y="5" Width="1.5" />
+  <Class Name="AutomaticStation.Port">
+    <Position X="7" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAAAAAAAACAAAAAAAAAAEAAAABAEIQCA=</HashCode>
       <FileName>Class\Port.cs</FileName>
@@ -58,7 +58,7 @@
       <FileName>Class\Respond.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AutomaticStation.Station" Collapsed="true">
+  <Class Name="AutomaticStation.Station">
     <Position X="3.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEIAAIgAAAAAQFAAEABQBAAAACCgAKAEAAABAoCICAA=</HashCode>
@@ -74,15 +74,15 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="AutomaticStation.TestPort" Collapsed="true">
-    <Position X="6.5" Y="6.25" Width="1.5" />
+  <Class Name="AutomaticStation.TestPort">
+    <Position X="8.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAA=</HashCode>
       <FileName>Class\TestPort.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AutomaticStation.TestStation" Collapsed="true">
-    <Position X="3.25" Y="6.25" Width="1.5" />
+  <Class Name="AutomaticStation.TestStation">
+    <Position X="5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Class\TestStation.cs</FileName>
@@ -96,7 +96,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="AutomaticStation.TimeAccelerator">
-    <Position X="5.25" Y="7.25" Width="1.5" />
+    <Position X="9" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class\TimeAccelerator.cs</FileName>
@@ -116,8 +116,8 @@
       <FileName>Interface\IShouldClearEventHandlers.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="AutomaticStation.IStation" Collapsed="true">
-    <Position X="0.5" Y="2" Width="1.5" />
+  <Interface Name="AutomaticStation.IStation">
+    <Position X="0.5" Y="2" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Interface\IStation.cs</FileName>
@@ -130,7 +130,7 @@
       <FileName>Interface\ITerminal.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="AutomaticStation.PortState">
+  <Enum Name="AutomaticStation.PortState" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
@@ -138,10 +138,10 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="AutomaticStation.RespondState" Collapsed="true">
-    <Position X="7.25" Y="2.75" Width="1.5" />
+    <Position X="7.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Class\RespondState.cs</FileName>
+      <FileName>Enum\RespondState.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
