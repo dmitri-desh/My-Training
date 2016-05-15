@@ -20,5 +20,12 @@ namespace AutomaticStation
             this.Started = started;
             this.Duration = duration;
         }
+        public CallInfo(PhoneNumber source, PhoneNumber target, DateTime started)
+        {
+            this.Source = source;
+            this.Target = target;
+            this.Started = started;
+           
+        }
     }
 }

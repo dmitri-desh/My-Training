@@ -32,13 +32,14 @@ namespace Builder
         public override void Initialize()
         {
            dataBase = new BillingDataBase();
-            ports = new List<IPort>() { new TestPort(), new TestPort() };
+            
+            ports = new List<IPort>() { new TestPort(), new TestPort(), new TestPort(), new TestPort() };
             terminals = new List<ITerminal>() { };
             station = new TestStation(terminals, ports);
-
+            
 
            #region Customer 1  
-            var customer    = new Customer("Иванов И.И.");
+           var customer    = new Customer("Иванов И.И.");
            var account     = new Account(1, customer);
            var billingPlan1 = new BillingPlan(BillingType.PerSecond, 50);
            var phoneNumber1 = new PhoneNumber("00-000-00-00");
@@ -58,7 +59,9 @@ namespace Builder
             account.FillAccount(10000);
             station.Add(new TestTerminal(phoneNumber1));
             station.Add(new TestTerminal(phoneNumber2));
+       
             dataBase.Accounts.Add(account);
+           
             #endregion
 
            #region Customer 2
@@ -80,43 +83,46 @@ namespace Builder
                                    );
             account.FillAccount(15000);
             station.Add(new TestTerminal(phoneNumber1));
-           
             station.Add(new TestTerminal(phoneNumber2));
+           
             dataBase.Accounts.Add(account);
             
             #endregion
             
            #region Customer 3
-            customer = new Customer("Сидоров С.С.");
-            account = new Account(3, customer);
-            billingPlan1 = new BillingPlan(BillingType.PerSecond, 30);
-            phoneNumber1 = new PhoneNumber("44-444-44-44");
-            account.Contracts.Add(new Contract("№444",
-                                                       phoneNumber1,
-                                                       billingPlan1
-                                               )
-                                   );
-            account.FillAccount(16000);
-            station.Add(new TestTerminal(phoneNumber1));
+               customer = new Customer("Сидоров С.С.");
+               account = new Account(3, customer);
+               billingPlan1 = new BillingPlan(BillingType.PerSecond, 30);
+               phoneNumber1 = new PhoneNumber("44-444-44-44");
+               account.Contracts.Add(new Contract("№444",
+                                                          phoneNumber1,
+                                                          billingPlan1
+                                                  )
+                                      );
+               account.FillAccount(16000);
+               station.Add(new TestTerminal(phoneNumber1));
+            terminals.Add(new TestTerminal(phoneNumber1));
+            
             dataBase.Accounts.Add(account);
-            #endregion
+               #endregion
 
            #region Customer 4
-            customer = new Customer("Васин В.В.");
-            account = new Account(4, customer);
-            billingPlan1 = new BillingPlan(BillingType.PerMinute, 330);
-            phoneNumber1 = new PhoneNumber("55-555-55-55");
-            account.Contracts.Add(new Contract("№555",
-                                                       phoneNumber1,
-                                                       billingPlan1
-                                               )
-                                   );
-            account.FillAccount(20000);
+               customer = new Customer("Васин В.В.");
+               account = new Account(4, customer);
+               billingPlan1 = new BillingPlan(BillingType.PerMinute, 330);
+               phoneNumber1 = new PhoneNumber("55-555-55-55");
+               account.Contracts.Add(new Contract("№555",
+                                                          phoneNumber1,
+                                                          billingPlan1
+                                                  )
+                                      );
+               account.FillAccount(20000);
             station.Add(new TestTerminal(phoneNumber1));
+            terminals.Add(new TestTerminal(phoneNumber1));
             dataBase.Accounts.Add(account);
-            #endregion
+               #endregion
 
-       
+             
 
         }
        
@@ -131,27 +137,30 @@ namespace Builder
                 t.Plug();
                 Console.WriteLine("Plug terminal {0}", t.Number.Value.ToString());
             }
+           
             Console.WriteLine();
             start = DateTime.Now;
             Console.WriteLine("Start: {0}", start.ToString());
 
             terminals[0].Call(new PhoneNumber("11-111-11-11"));
-          //  terminals[0].Call(station.);
             AccelerateTime(times);
             terminals[0].Answer();
             AccelerateTime(times);
             terminals[1].Drop();
             AccelerateTime(times);
-            
+         
         }
         public override void GetResult()
         {
            Report result = new Report(dataBase);
+           
             result.ShowAllAccounts();
+            result.ShowCallsLogFull(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Иванов И.И."));
             result.GetMonthlyReport(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Иванов И.И."), new DateTime(2016, 5, 1));
             result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Петров П.П."), new DateTime(2016, 5, 16, 17, 0, 0), new DateTime(2016, 5, 16, 17, 20, 30));
-            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Сидоров С.С."), 5000, 10000);
-            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Васин В.В."), new PhoneNumber("11-111-11-11"));
+            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Иванов И.И."), 5000, 10000);
+            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Петров П.П."), new PhoneNumber("11-111-11-11"));
+         
         }
     }
 }

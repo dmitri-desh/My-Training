@@ -21,14 +21,28 @@ namespace Billing
                 ShowContracts(account);
             }
         }
-        public void ShowContracts (Account account )
+        public void ShowContracts (Account account)
         {
             foreach (var contract in account.Contracts)
             {
                 Console.WriteLine(contract.ContractNumber + " от " + contract.Date.ToString("dd.mm.yyyy") + " Тел.: " + contract.PhoneNumber.Value);
             }
         }
-       
+       public void ShowCallsLogFull (Account account)
+        {
+            Console.WriteLine("Full Report for {0}", account.Customer.Name);
+            decimal sum = 0;
+            foreach (var contract in account.Contracts)
+            {
+                var calls = from call in contract.CallsLog
+                            orderby call.Started
+                            select call;
+                ShowCalls(calls);
+                sum += calls.Sum(s => s.Amount);
+            }
+            Console.WriteLine("Total Amount: {0}", sum);
+        }
+
         public void GetMonthlyReport(Account account, DateTime month)
         {
             Console.WriteLine("Monthly {1}.{2} Report for {0}", account.Customer.Name, month.Month.ToString(), month.Year.ToString());
