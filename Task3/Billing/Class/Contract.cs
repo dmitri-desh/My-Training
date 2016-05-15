@@ -46,7 +46,7 @@ namespace Billing
             }
             else return false;
         }
-        public void AddCallToLog(CallInfo callInfo)
+        public void AddCallToLog(object sender, CallInfo callInfo)
         {
             if (callInfo !=null)
             {
@@ -54,5 +54,6 @@ namespace Billing
                this.CallsLog.Add(callInfoFull);
             }
         }
+        
     }
 }

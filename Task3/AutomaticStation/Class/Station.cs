@@ -100,6 +100,8 @@ namespace AutomaticStation
         /// <summary>
         /// raise when the station generates a new CallInfo for billing 
         /// </summary>
+        /// 
+        
         public event EventHandler<CallInfo> CallInfoPrepared;
 
         protected virtual void OnCallInfoPrepared(object sender, CallInfo callInfo)
@@ -107,6 +109,7 @@ namespace AutomaticStation
             if (CallInfoPrepared != null)
             {
                 CallInfoPrepared(sender, callInfo);
+
             }
         }
 
