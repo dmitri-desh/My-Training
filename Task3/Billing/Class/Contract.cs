@@ -46,7 +46,7 @@ namespace Billing
             }
             else return false;
         }
-        public void AddCallToLog(object sender, CallInfo callInfo)
+        public void AddCallToLog(CallInfo callInfo)
         {
             if (callInfo !=null)
             {
