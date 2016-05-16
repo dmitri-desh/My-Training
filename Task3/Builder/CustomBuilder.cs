@@ -121,7 +121,7 @@ namespace Builder
 
         private void Station_CallInfoPrepared(object sender, CallInfo e)
         {
-            dataBase.Accounts.FirstOrDefault().Contracts.FirstOrDefault(x => x.PhoneNumber.Value.ToString() == e.Source.Value.ToString()).AddCallToLog(e);
+            dataBase.Accounts.FirstOrDefault().Contracts.SingleOrDefault(x => x.PhoneNumber.Value.ToString() == e.Source.Value.ToString()).AddCallToLog(e);
            // throw new NotImplementedException();
         }
 
@@ -141,7 +141,6 @@ namespace Builder
             Console.WriteLine("Start: {0}", start.ToString());
 
             terminals[0].Call(new PhoneNumber("11-111-11-11"));
-            
             terminals[0].Answer();
           
             terminals[1].Drop();
