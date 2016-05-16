@@ -121,7 +121,7 @@ namespace Builder
 
         private void Station_CallInfoPrepared(object sender, CallInfo e)
         {
-            dataBase.Accounts.SingleOrDefault().Contracts.FirstOrDefault(x => x.PhoneNumber.Value.ToString() == e.Source.Value.ToString()).AddCallToLog(e);
+            dataBase.Accounts.FirstOrDefault().Contracts.FirstOrDefault(x => x.PhoneNumber.Value.ToString() == e.Source.Value.ToString()).AddCallToLog(e);
            // throw new NotImplementedException();
         }
 
