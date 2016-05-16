@@ -28,9 +28,10 @@ namespace Builder
             ports = new List<IPort>() { new TestPort(), new TestPort(), new TestPort(), new TestPort() };
             terminals = new List<ITerminal>() { };
             station = new TestStation(terminals, ports);
-            
 
-           #region Customer 1  
+            station.CallInfoPrepared += Station_CallInfoPrepared;
+
+            #region Customer 1  
            var customer    = new Customer("Иванов И.И.");
            var account     = new Account(1, customer);
            var billingPlan1 = new BillingPlan(BillingType.PerSecond, 50);
@@ -117,7 +118,13 @@ namespace Builder
              
 
         }
-       
+
+        private void Station_CallInfoPrepared(object sender, CallInfo e)
+        {
+            dataBase.Accounts.SingleOrDefault().Contracts.FirstOrDefault(x => x.PhoneNumber.Value.ToString() == e.Source.Value.ToString()).AddCallToLog(e);
+           // throw new NotImplementedException();
+        }
+
         public override void Emulate()
         {
            
@@ -138,7 +145,8 @@ namespace Builder
             terminals[0].Answer();
           
             terminals[1].Drop();
-         
+
+        
          
         }
         public override void GetResult()
