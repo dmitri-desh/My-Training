@@ -143,12 +143,12 @@ namespace Builder
             terminals[0].Call(new PhoneNumber("11-111-11-11"));
             terminals[0].Answer();
             terminals[1].Drop();
-
-          
-            terminals[0].Call(new PhoneNumber("11-111-11-11"));
+                     
+            terminals[0].Call(new PhoneNumber("22-222-22-22"));
             terminals[0].Answer();
             terminals[1].Drop();
-
+            
+            
 
         }
         public override void GetResult()

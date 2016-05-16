@@ -108,6 +108,7 @@ namespace AutomaticStation
         {
             if (CallInfoPrepared != null)
             {
+              
                 callInfo.Duration = TimeAccelerator.AccelerateTime(callInfo.Started);
                 CallInfoPrepared(sender, callInfo);
 
