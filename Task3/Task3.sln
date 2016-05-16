@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billing", "Billing\Billing.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.csproj", "{09634A35-ADA2-4614-9058-C2EC95E71E24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefLibrary", "RefLibrary\RefLibrary.csproj", "{65D3FF82-DA34-46ED-AC90-3C0EAF7E6E39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{09634A35-ADA2-4614-9058-C2EC95E71E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09634A35-ADA2-4614-9058-C2EC95E71E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09634A35-ADA2-4614-9058-C2EC95E71E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D3FF82-DA34-46ED-AC90-3C0EAF7E6E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D3FF82-DA34-46ED-AC90-3C0EAF7E6E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D3FF82-DA34-46ED-AC90-3C0EAF7E6E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D3FF82-DA34-46ED-AC90-3C0EAF7E6E39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
