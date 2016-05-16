@@ -11,9 +11,9 @@ namespace AutomaticStation
        
         public static TimeSpan AccelerateTime(DateTime start) // emulate the acceleration time "times" times
         {
-            int times = 10000;
+            int times;
             TimeSpan span = new TimeSpan();
-           // Int32.TryParse(ConfigurationManager.AppSettings["times"], out times);
+            Int32.TryParse(ConfigurationManager.AppSettings["times"], out times);
             if (start != null)
             {
                span = DateTime.Now.Subtract(start);
