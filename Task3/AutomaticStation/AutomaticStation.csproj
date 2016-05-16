@@ -85,7 +85,6 @@
     <Compile Include="Class\TimeAccelerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
