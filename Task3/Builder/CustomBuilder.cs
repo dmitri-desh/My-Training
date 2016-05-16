@@ -158,9 +158,9 @@ namespace Builder
             result.ShowAllAccounts();
             result.ShowCallsLogFull(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Иванов И.И."));
             result.GetMonthlyReport(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Иванов И.И."), new DateTime(2016, 5, 1));
-            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Петров П.П."), new DateTime(2016, 5, 16, 17, 0, 0), new DateTime(2016, 5, 16, 17, 20, 30));
+            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Иванов И.И."), new DateTime(2016, 5, 16, 17, 0, 0), new DateTime(2016, 5, 16, 17, 20, 30));
             result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Иванов И.И."), 5000, 10000);
-            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Петров П.П."), new PhoneNumber("11-111-11-11"));
+            result.GetReportBy(dataBase.Accounts.SingleOrDefault(x => x.Customer.Name == "Иванов И.И."), new PhoneNumber("11-111-11-11"));
          
         }
     }
