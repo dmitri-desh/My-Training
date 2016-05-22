@@ -53,12 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\AbstractModelRepository.cs" />
     <Compile Include="Class\Customer.cs" />
-    <Compile Include="Interface\IModelRepository.cs" />
     <Compile Include="Class\Manager.cs" />
     <Compile Include="Class\Product.cs" />
     <Compile Include="Class\Order.cs" />
+    <Compile Include="Class\GenericDALRepository.cs" />
+    <Compile Include="Class\ContextFactory.cs" />
+    <Compile Include="Interface\IDataContextFactory.cs" />
+    <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

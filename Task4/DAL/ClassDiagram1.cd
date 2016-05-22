@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="DAL.AbstractModelRepository&lt;T&gt;">
-    <Position X="2.5" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Class\AbstractModelRepository.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="DAL.Manager">
     <Position X="0.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
@@ -29,17 +22,40 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DAL.Order">
-    <Position X="6" Y="3.5" Width="1.5" />
+    <Position X="0.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAECAAAAAAAAAAAAAIAIAACAAAAABBAAAAAAAAAAAAA=</HashCode>
       <FileName>Class\Order.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="DAL.IModelRepository&lt;T&gt;">
+  <Class Name="DAL.GenericDALRepository&lt;DTO, Entity, Context&gt;">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAAAAIACAgBAAAAAAABAAAAAAAAAAAAgAEAAAAAAA=</HashCode>
+      <FileName>Class\GenericDALRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DAL.ContextFactory">
+    <Position X="5.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\ContextFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DAL.IRepository&lt;DTO, Entity&gt;">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAYAAAAAAAAACAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Interface\IModelRepository.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DAL.IDataContextFactory&lt;Context&gt;">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IDataContextFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
