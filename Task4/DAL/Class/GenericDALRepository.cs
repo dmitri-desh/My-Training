@@ -29,7 +29,16 @@ namespace DAL
                 _context.Set<Entity>().Add(entity);
             }
         }
-
+        public void Update(DTO obj)
+        {
+            Entity entity = ToEntity(obj);
+            
+            if (entity != null)
+            {
+                _context.Entry<Entity>(entity).State = System.Data.Entity.EntityState.Modified;
+            }
+            
+        }
         public void Dispose()
         {
             if (_context != null)
