@@ -7,8 +7,8 @@
     <ProjectGuid>{A3F747A6-9A25-486E-AFC8-D86E3962193B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Client.Service</RootNamespace>
-    <AssemblyName>Client.Service</AssemblyName>
+    <RootNamespace>ClientService</RootNamespace>
+    <AssemblyName>ClientService</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -63,12 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BL\BL.csproj">
-      <Project>{8aa9aa46-7ad5-40c3-82af-50602f5df4cf}</Project>
-      <Name>BL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
