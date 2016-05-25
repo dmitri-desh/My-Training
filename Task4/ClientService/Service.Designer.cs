@@ -1,4 +1,4 @@
-﻿namespace Client.Service
+﻿namespace ClientService
 {
     partial class Service
     {
@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.ServiceName = "Service1";
+            // 
+            // Service
+            // 
+            this.ServiceName = "Service";
+
         }
 
         #endregion
