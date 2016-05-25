@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{4271FB4A-697C-43DB-B009-D1ABB73FFA8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApplication", "Client.Application\ClientApplication.csproj", "{F95FB506-1DE1-4A46-895E-799E605A2A32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApplication", "ClientApplication\ClientApplication.csproj", "{F95FB506-1DE1-4A46-895E-799E605A2A32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{8AA9AA46-7AD5-40C3-82AF-50602F5DF4CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientService", "Client.Service\ClientService.csproj", "{A3F747A6-9A25-486E-AFC8-D86E3962193B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientService", "ClientService\ClientService.csproj", "{A3F747A6-9A25-486E-AFC8-D86E3962193B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
