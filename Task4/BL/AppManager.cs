@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    public class Manager : IDisposable
+    public class AppManager : IDisposable
     {
         private System.IO.FileSystemWatcher _watcher;
-        public Manager(System.IO.FileSystemWatcher watcher)
+        public AppManager(System.IO.FileSystemWatcher watcher)
         {
             _watcher = watcher;
             _watcher.Created += this.OnWatcherCreated;
@@ -43,7 +43,7 @@ namespace BL
                 _watcher = null;
             }
         }
-        ~Manager()
+        ~AppManager()
         {
             Dispose();
         }
