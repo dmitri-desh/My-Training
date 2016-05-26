@@ -12,6 +12,7 @@ namespace ClientService
 {
     public partial class Service : ServiceBase
     {
+        private BL.AppManager appManager;
         public Service()
         {
             InitializeComponent();
@@ -19,10 +20,21 @@ namespace ClientService
 
         protected override void OnStart(string[] args)
         {
+            var watchPath = System.Configuration.ConfigurationManager.AppSettings["DirectoryWatching"];
+            appManager = new BL.AppManager(new System.IO.FileSystemWatcher(watchPath, "*.csv"));
+            appManager.Run();
         }
 
         protected override void OnStop()
         {
+            try
+            {
+                appManager.Stop();
+            }
+            finally
+            {
+                appManager.Dispose();
+            }
         }
     }
 }
