@@ -20,6 +20,7 @@ namespace ClientService
                 new Service()
             };
             ServiceBase.Run(ServicesToRun);
+         
         }
     }
 }

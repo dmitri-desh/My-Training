@@ -13,25 +13,28 @@ namespace BL
     {
         private FileSystemWatcher _watcher;
         private BlockingCollection<CancellationToken> cancelTokenCollection = new BlockingCollection<CancellationToken>();
+      
         public AppManager(FileSystemWatcher watcher)
         {
             _watcher = watcher;
-            _watcher.Created += this.OnWatcherCreated;
-        }
+            _watcher.Created += new FileSystemEventHandler(OnWatcherCreated); 
+         }
 
         public void OnWatcherCreated(object sender, FileSystemEventArgs e)
         {
+           // Console.WriteLine("File: " + e.FullPath + " " + e.ChangeType);
+         
             try
             {
                 CancellationToken token = new CancellationToken();
-
                 Action createTaskAction = () =>
                 {
+                    
                     using (var stream = new FileStream(e.FullPath, FileMode.Open, FileAccess.Read, FileShare.None))
                     {
                         using (var reader = new StreamReader(stream))
                         {
-                            ParseCsv(reader, token);
+                            ParseCsv(e.Name, reader, token);
                         }
                     }
                 };
@@ -52,23 +55,28 @@ namespace BL
                 // Sql Server 2008 R2
             }
         }
-        protected void ParseCsv(TextReader reader, CancellationToken token)
+      
+        protected void ParseCsv(string name, TextReader reader, CancellationToken token)
         {
-
             try
             {
-                string current = null;
-                while ((current = reader.ReadLine()) != null && !token.IsCancellationRequested)
+                var curName = name.Substring(0, name.IndexOf('_'));
+                string curRow = null;
+                while ((curRow = reader.ReadLine()) != null && !token.IsCancellationRequested)
                 {
+                    var columns = curRow.Split(',').ToList();
+                    for (int i = 0; i < columns.Count(); i++)
+                    {
+                        Console.Write("{0} ", columns[i]);
+                    }
                     // Parse string
                     // add records to data context
 
                     // add Order
-
-
+                  //  Console.WriteLine();
                 }
 
-                if (current != null && token.IsCancellationRequested)
+                if (curRow != null && token.IsCancellationRequested)
                 {
                     // Rollback
                 }
@@ -102,6 +110,7 @@ namespace BL
             if (_watcher != null && _watcher.EnableRaisingEvents)
             {
                 _watcher.EnableRaisingEvents = false;
+                
             }
         }
         public void Dispose()

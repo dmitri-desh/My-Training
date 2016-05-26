@@ -10,6 +10,13 @@ namespace Client.Application
     {
         static void Main(string[] args)
         {
+            var watchPath = System.Configuration.ConfigurationManager.AppSettings["DirectoryWatching"];
+            Console.WriteLine("Directory watched: {0}", watchPath);
+            var appManager = new BL.AppManager(new System.IO.FileSystemWatcher(watchPath, "*.csv"));
+           
+            appManager.Run();
+            Console.ReadLine();
+            appManager.Stop();
         }
     }
 }
