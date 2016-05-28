@@ -22,7 +22,7 @@ namespace BL
 
         public void OnWatcherCreated(object sender, FileSystemEventArgs e)
         {
-           // Console.WriteLine("File: " + e.FullPath + " " + e.ChangeType);
+           Console.WriteLine("File: " + e.FullPath + " " + e.ChangeType);
          
             try
             {
@@ -62,28 +62,49 @@ namespace BL
             {
                 var curName = name.Substring(0, name.IndexOf('_'));
                 string curRow = null;
+                var customers = new List<string>();
+                var products = new List<string>();
                 while ((curRow = reader.ReadLine()) != null && !token.IsCancellationRequested)
                 {
                     var columns = curRow.Split(',').ToList();
+                    customers.Add(columns[1]);
+                    products.Add(columns[2]);
+/*
                     for (int i = 0; i < columns.Count(); i++)
                     {
-                        Console.Write("{0} ", columns[i]);
+                        Console.Write("{0}|", columns[i]);
                     }
                     // Parse string
                     // add records to data context
 
                     // add Order
-                  //  Console.WriteLine();
+                    Console.WriteLine();
+                    */
                 }
-
+                var customersUniq = customers.Distinct();
+                var productsUniq = products.Distinct();
+                foreach (var customer in customersUniq)
+                {
+                  //  Console.Write("{0}|", customer);
+                }
+                Console.WriteLine();
+              
+                foreach (var product in productsUniq)
+                {
+                   // Console.Write("{0}|", product);
+                }
+                Console.WriteLine();
+                
                 if (curRow != null && token.IsCancellationRequested)
                 {
                     // Rollback
+                    Dispose();
                 }
             }
             catch (IOException e)
             {
                 //Rollback
+                Dispose();
             }
 
 
@@ -109,8 +130,9 @@ namespace BL
         {
             if (_watcher != null && _watcher.EnableRaisingEvents)
             {
+                _watcher.Created -= OnWatcherCreated;
                 _watcher.EnableRaisingEvents = false;
-                
+              
             }
         }
         public void Dispose()
