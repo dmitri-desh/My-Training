@@ -15,7 +15,7 @@ namespace Model
     public partial class Order
     {
         public int Id { get; set; }
-        public DateTime PurchaseDate { get; set; }
+        public System.DateTime PurchaseDate { get; set; }
         public decimal Amount { get; set; }
         public int ManagerId { get; set; }
         public int CustomerId { get; set; }
