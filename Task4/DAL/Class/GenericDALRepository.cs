@@ -55,7 +55,8 @@ namespace DAL
 
         public IEnumerable<DTO> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Set<DTO>();
+            //throw new NotImplementedException();
         }
 
         public IEnumerable<DTO> GetMany(Expression<Func<DTO, bool>> condition)

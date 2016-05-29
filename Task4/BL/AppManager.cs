@@ -37,7 +37,7 @@ namespace BL
                         using (var reader = new StreamReader(stream))
                         {
                             ParseCsv(e.Name, reader, token);
-                            Add();
+                            AddToDAL();
                         }
                     }
                 };
@@ -56,6 +56,7 @@ namespace BL
             finally
             {
                 // Sql Server 2008 R2
+                Dispose();
             }
         }
       
@@ -92,14 +93,13 @@ namespace BL
                     Console.WriteLine();
                     */
                 }
-                //var customersUniq = customers.Distinct();
-                //var productsUniq = products.Distinct();
+              
                 foreach (var customer in customers.Distinct())
                 {
                     customersUniq.Add(customer);
-                    Console.Write("{0}|", customer);
+                 //   Console.Write("{0}|", customer);
                 }
-                Console.WriteLine();
+               // Console.WriteLine();
               
                 foreach (var product in products.Distinct())
                 {
@@ -124,7 +124,7 @@ namespace BL
         }
         private object orderSyncObj = new object();
 
-        public void Add()
+        public void AddToDAL()
         {
             // create repository
             lock (orderSyncObj)
