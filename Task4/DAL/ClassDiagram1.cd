@@ -31,7 +31,7 @@
   <Class Name="DAL.GenericDALRepository&lt;DTO, Entity, Context&gt;">
     <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAIAAAAIACAgBAAAAAAABAAAAAAAAAAAAgAEAAAAAAA=</HashCode>
+      <HashCode>gAYAAAAIACAgBAAAAAAABAAAAAAAAAAAAgAEAAAAAAA=</HashCode>
       <FileName>Class\GenericDALRepository.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -44,10 +44,17 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="DAL.CustomerRepository&lt;DTO, Entity, Context&gt;">
+    <Position X="4.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Class\CustomerRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="DAL.IRepository&lt;DTO, Entity&gt;">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>gAYAAAAIAAAgAAAAAAAABAAAAAAAAAAAAgAEAAAAAAA=</HashCode>
       <FileName>Interface\IRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>

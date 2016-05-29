@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAL
 {
-    interface IDataContextFactory<Context> where Context : System.Data.Entity.DbContext
+  public interface IDataContextFactory<Context> where Context : System.Data.Entity.DbContext
     {
         Context ContextObject { get; }
     }

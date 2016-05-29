@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DAL
 {
-    internal abstract class GenericDALRepository<DTO, Entity, Context> : IRepository<DTO, Entity>
+    public abstract class GenericDALRepository<DTO, Entity, Context> : IRepository<DTO, Entity>
         where DTO : class
         where Entity : class
         where Context : System.Data.Entity.DbContext
@@ -50,6 +50,7 @@ namespace DAL
 
         public IEnumerable<DTO> FirstOrDefault(Expression<Func<DTO, bool>> condition)
         {
+          //  return _context.Set<DTO>().FirstOrDefault(x => x.Equals(condition.));
             throw new NotImplementedException();
         }
 
@@ -61,6 +62,7 @@ namespace DAL
 
         public IEnumerable<DTO> GetMany(Expression<Func<DTO, bool>> condition)
         {
+          //  return _context.Set<DTO>().AsEnumerable<DTO>();
             throw new NotImplementedException();
         }
 

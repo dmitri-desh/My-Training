@@ -59,6 +59,7 @@
     <Compile Include="Class\Order.cs" />
     <Compile Include="Class\GenericDALRepository.cs" />
     <Compile Include="Class\ContextFactory.cs" />
+    <Compile Include="Class\CustomerRepository.cs" />
     <Compile Include="Interface\IDataContextFactory.cs" />
     <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

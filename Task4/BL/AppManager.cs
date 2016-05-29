@@ -13,9 +13,9 @@ namespace BL
     {
         private FileSystemWatcher _watcher;
         private BlockingCollection<CancellationToken> cancelTokenCollection = new BlockingCollection<CancellationToken>();
-        private IList<string> customersUniq = new List<string>();
-        private IList<string> productsUniq = new List<string>();
-        private IList<Order> orders = new List<Order>();
+      //  private IList<string> customersUniq = new List<string>();
+     //   private IList<string> productsUniq = new List<string>();
+     //   private IList<Order> orders = new List<Order>();
         public AppManager(FileSystemWatcher watcher)
         {
             _watcher = watcher;
@@ -37,7 +37,7 @@ namespace BL
                         using (var reader = new StreamReader(stream))
                         {
                             ParseCsv(e.Name, reader, token);
-                            AddToDAL();
+                           
                         }
                     }
                 };
@@ -56,7 +56,7 @@ namespace BL
             finally
             {
                 // Sql Server 2008 R2
-                Dispose();
+               
             }
         }
       
@@ -66,8 +66,8 @@ namespace BL
             {
                 var curName = name.Substring(0, name.IndexOf('_'));
                 string curRow = null;
-                var customers = new List<string>();
-                var products = new List<string>();
+              //  var customers = new List<string>();
+              //  var products = new List<string>();
                 IFormatProvider culture = new System.Globalization.CultureInfo("ru-RU", true);
                 DateTime dateVal;
                 while ((curRow = reader.ReadLine()) != null && !token.IsCancellationRequested)
@@ -78,9 +78,11 @@ namespace BL
                         columns[0] = "0" + columns[0];
                     }
                     dateVal = DateTime.ParseExact(columns[0], columns[0].Substring(4,1) == "-" ? "yyyy-MM-dd HH:mm:ss" : "dd.MM.yyyy HH:mm:ss", culture);
-                    customers.Add(columns[1]);
-                    products.Add(columns[2]);
-                    orders.Add(new Order(dateVal, curName, columns[1], columns[2], columns[3]));
+                    //    customers.Add(columns[1]);
+                    //   products.Add(columns[2]);
+                    //   orders.Add(new Order(dateVal, curName, columns[1], columns[2], columns[3]));
+                    
+                    AddToDAL(new Order(dateVal, curName, columns[1], columns[2], columns[3]));
 /*
                     for (int i = 0; i < columns.Count(); i++)
                     {
@@ -94,7 +96,7 @@ namespace BL
                     */
                 }
               
-                foreach (var customer in customers.Distinct())
+            /*    foreach (var customer in customers.Distinct())
                 {
                     customersUniq.Add(customer);
                  //   Console.Write("{0}|", customer);
@@ -107,7 +109,7 @@ namespace BL
                   // Console.Write("{0}|", product);
                 }
                 Console.WriteLine();
-                
+              */  
                 if (curRow != null && token.IsCancellationRequested)
                 {
                     // Rollback
@@ -124,12 +126,14 @@ namespace BL
         }
         private object orderSyncObj = new object();
 
-        public void AddToDAL()
+        public void AddToDAL(Order order)
         {
             // create repository
             lock (orderSyncObj)
             {
-
+             //   var customerRepository = new DAL.CustomerRepository(new DAL.ContextFactory());
+                //  var customersList = customerRepository.GetMany(x => x.SecondName == order.CustomerName);
+              //  customerRepository.SaveChanges();
             }
         }
         public void Run()
