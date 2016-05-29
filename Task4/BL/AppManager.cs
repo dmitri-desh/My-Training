@@ -13,7 +13,9 @@ namespace BL
     {
         private FileSystemWatcher _watcher;
         private BlockingCollection<CancellationToken> cancelTokenCollection = new BlockingCollection<CancellationToken>();
-      
+        private IList<string> customersUniq = new List<string>();
+        private IList<string> productsUniq = new List<string>();
+        private IList<Order> orders = new List<Order>();
         public AppManager(FileSystemWatcher watcher)
         {
             _watcher = watcher;
@@ -35,6 +37,7 @@ namespace BL
                         using (var reader = new StreamReader(stream))
                         {
                             ParseCsv(e.Name, reader, token);
+                            Add();
                         }
                     }
                 };
@@ -64,11 +67,19 @@ namespace BL
                 string curRow = null;
                 var customers = new List<string>();
                 var products = new List<string>();
+                IFormatProvider culture = new System.Globalization.CultureInfo("ru-RU", true);
+                DateTime dateVal;
                 while ((curRow = reader.ReadLine()) != null && !token.IsCancellationRequested)
                 {
                     var columns = curRow.Split(',').ToList();
+                    if (columns[0].Substring(1,1) == ".")
+                    {
+                        columns[0] = "0" + columns[0];
+                    }
+                    dateVal = DateTime.ParseExact(columns[0], columns[0].Substring(4,1) == "-" ? "yyyy-MM-dd HH:mm:ss" : "dd.MM.yyyy HH:mm:ss", culture);
                     customers.Add(columns[1]);
                     products.Add(columns[2]);
+                    orders.Add(new Order(dateVal, curName, columns[1], columns[2], columns[3]));
 /*
                     for (int i = 0; i < columns.Count(); i++)
                     {
@@ -81,17 +92,19 @@ namespace BL
                     Console.WriteLine();
                     */
                 }
-                var customersUniq = customers.Distinct();
-                var productsUniq = products.Distinct();
-                foreach (var customer in customersUniq)
+                //var customersUniq = customers.Distinct();
+                //var productsUniq = products.Distinct();
+                foreach (var customer in customers.Distinct())
                 {
-                  //  Console.Write("{0}|", customer);
+                    customersUniq.Add(customer);
+                    Console.Write("{0}|", customer);
                 }
                 Console.WriteLine();
               
-                foreach (var product in productsUniq)
+                foreach (var product in products.Distinct())
                 {
-                   // Console.Write("{0}|", product);
+                    productsUniq.Add(product);
+                  // Console.Write("{0}|", product);
                 }
                 Console.WriteLine();
                 
@@ -111,7 +124,7 @@ namespace BL
         }
         private object orderSyncObj = new object();
 
-        public void Add(Order order)
+        public void Add()
         {
             // create repository
             lock (orderSyncObj)
