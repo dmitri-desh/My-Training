@@ -16,6 +16,7 @@ namespace DAL
         public CustomerRepository(IDataContextFactory<Context> factory) : base(factory)
         {
             _context = factory.ContextObject;
+           
         }
                 
         public override Entity ToEntity(DTO source)
