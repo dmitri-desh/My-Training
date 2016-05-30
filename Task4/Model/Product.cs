@@ -19,7 +19,10 @@ namespace Model
         {
             this.Order = new HashSet<Order>();
         }
-    
+        public Product(string name)
+        {
+            this.Name = name;
+        }
         public int Id { get; set; }
         public string Name { get; set; }
     

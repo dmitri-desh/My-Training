@@ -131,11 +131,56 @@ namespace BL
             // create repository
             lock (orderSyncObj)
             {
-               
                var customerFactory = new DAL.ContextFactory();
-              // var customerRepository = new DAL.CustomerRepository<DTO, Entity, Context>(customerFactory);
-              // customerRepository.AddContext();
+                customerFactory.ContextObject.CustomerSet.Add(new Model.Customer()
+                {
+                    SecondName = order.CustomerName
+                });
+                customerFactory.ContextObject.SaveChanges();
+                // var customerRepository = new DAL.CustomerRepository<DTO, Entity, Context>(customerFactory);
+                // customerRepository.AddContext();
+            }
+            
+            lock (orderSyncObj)
+            {
+                var productFactory = new DAL.ContextFactory();
+                productFactory.ContextObject.ProductSet.Add(new Model.Product()
+                {
+                    Name = order.ProductName
+                });
+                productFactory.ContextObject.SaveChanges();
+            }
 
+            lock (orderSyncObj)
+            {
+                var productFactory = new DAL.ContextFactory();
+                productFactory.ContextObject.ProductSet.Add(new Model.Product()
+                {
+                    Name = order.ProductName
+                });
+                productFactory.ContextObject.SaveChanges();
+            }
+            lock (orderSyncObj)
+            {
+                var managerFactory = new DAL.ContextFactory();
+                managerFactory.ContextObject.ManagerSet.Add(new Model.Manager()
+                {
+                    SecondName = order.ManagerName
+                });
+                managerFactory.ContextObject.SaveChanges();
+            }
+            lock (orderSyncObj)
+            {
+                var orderFactory = new DAL.ContextFactory();
+                orderFactory.ContextObject.OrderSet.Add(new Model.Order()
+                {
+                    PurchaseDate = order.PurchaseDate,
+                    Amount = order.Amount,
+                    Manager = new Model.Manager(order.ManagerName),
+                    Customer = new Model.Customer(order.CustomerName),
+                    Product = new Model.Product(order.ProductName)
+                });
+                orderFactory.ContextObject.SaveChanges();
             }
         }
         public void Run()

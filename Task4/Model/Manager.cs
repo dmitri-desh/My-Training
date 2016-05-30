@@ -19,7 +19,10 @@ namespace Model
         {
             this.Order = new HashSet<Order>();
         }
-    
+        public Manager(string name)
+        {
+            this.SecondName = name;
+        }
         public int Id { get; set; }
         public string SecondName { get; set; }
     
