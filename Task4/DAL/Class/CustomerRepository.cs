@@ -18,6 +18,13 @@ namespace DAL
             _context = factory.ContextObject;
            
         }
+        public void AddContext()
+        {
+            var connectStr = System.Configuration.ConfigurationManager.ConnectionStrings["AppContext"].ToString();
+            var context = new System.Data.Entity.DbContext(connectStr);
+            
+            context.SaveChanges();
+        }
                 
         public override Entity ToEntity(DTO source)
         {

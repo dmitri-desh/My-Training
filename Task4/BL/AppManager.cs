@@ -131,10 +131,11 @@ namespace BL
             // create repository
             lock (orderSyncObj)
             {
-                var customerFactory = new DAL.ContextFactory();
-                var customerRepository = new DAL.CustomerRepository<DTO, Entity, Context>(customerFactory);
-                //  var customersList = customerRepository.GetMany(x => x.SecondName == order.CustomerName);
-              //  customerRepository.SaveChanges();
+               
+               var customerFactory = new DAL.ContextFactory();
+              // var customerRepository = new DAL.CustomerRepository<DTO, Entity, Context>(customerFactory);
+              // customerRepository.AddContext();
+
             }
         }
         public void Run()
