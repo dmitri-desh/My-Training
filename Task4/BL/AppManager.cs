@@ -153,15 +153,6 @@ namespace BL
 
             lock (orderSyncObj)
             {
-                var productFactory = new DAL.ContextFactory();
-                productFactory.ContextObject.ProductSet.Add(new Model.Product()
-                {
-                    Name = order.ProductName
-                });
-                productFactory.ContextObject.SaveChanges();
-            }
-            lock (orderSyncObj)
-            {
                 var managerFactory = new DAL.ContextFactory();
                 managerFactory.ContextObject.ManagerSet.Add(new Model.Manager()
                 {
