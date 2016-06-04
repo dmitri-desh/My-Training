@@ -131,12 +131,24 @@ namespace BL
             // create repository
             lock (orderSyncObj)
             {
+                var managerFactory = new DAL.ContextFactory();
+                managerFactory.ContextObject.ManagerSet.Add(new Model.Manager()
+                {
+                    SecondName = order.ManagerName
+                });
+                managerFactory.ContextObject.SaveChanges();
+                Console.WriteLine("{0} ", order.ManagerName);
+            }
+
+            lock (orderSyncObj)
+            {
                var customerFactory = new DAL.ContextFactory();
                 customerFactory.ContextObject.CustomerSet.Add(new Model.Customer()
                 {
                     SecondName = order.CustomerName
                 });
                 customerFactory.ContextObject.SaveChanges();
+                Console.WriteLine("{0} ", order.CustomerName);
                 // var customerRepository = new DAL.CustomerRepository<DTO, Entity, Context>(customerFactory);
                 // customerRepository.AddContext();
             }
@@ -149,17 +161,10 @@ namespace BL
                     Name = order.ProductName
                 });
                 productFactory.ContextObject.SaveChanges();
+                Console.WriteLine("{0} ", order.ProductName);
             }
 
-            lock (orderSyncObj)
-            {
-                var managerFactory = new DAL.ContextFactory();
-                managerFactory.ContextObject.ManagerSet.Add(new Model.Manager()
-                {
-                    SecondName = order.ManagerName
-                });
-                managerFactory.ContextObject.SaveChanges();
-            }
+            
             lock (orderSyncObj)
             {
                 var orderFactory = new DAL.ContextFactory();
@@ -172,6 +177,7 @@ namespace BL
                     Product = new Model.Product(order.ProductName)
                 });
                 orderFactory.ContextObject.SaveChanges();
+                Console.WriteLine("{0}|{1}|{2}|{3}|{4}", order.PurchaseDate.ToString(), order.ManagerName, order.CustomerName, order.ProductName, order.Amount);
             }
         }
         public void Run()
