@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PurchasesAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CustomerSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SecondName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ManagerSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SecondName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PurchaseDate" Type="datetime" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ManagerId" Type="int" Nullable="false" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PurchasesApp.dbo.vOrders' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vOrders">
+          <Key>
+            <PropertyRef Name="OrderId" />
+            <PropertyRef Name="PurchaseDate" />
+            <PropertyRef Name="ManagerId" />
+            <PropertyRef Name="ManagerName" />
+            <PropertyRef Name="CustomerId" />
+            <PropertyRef Name="CustomerName" />
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Amount" />
+          </Key>
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="PurchaseDate" Type="datetime" Nullable="false" />
+          <Property Name="ManagerId" Type="int" Nullable="false" />
+          <Property Name="ManagerName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CustomerOrder">
+          <End Role="CustomerSet" Type="Self.CustomerSet" Multiplicity="1" />
+          <End Role="OrderSet" Type="Self.OrderSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomerSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderSet">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ManagerOrder">
+          <End Role="ManagerSet" Type="Self.ManagerSet" Multiplicity="1" />
+          <End Role="OrderSet" Type="Self.OrderSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManagerSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderSet">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductOrder">
+          <End Role="ProductSet" Type="Self.ProductSet" Multiplicity="1" />
+          <End Role="OrderSet" Type="Self.OrderSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderSet">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PurchasesAppModelStoreContainer">
+          <EntitySet Name="CustomerSet" EntityType="Self.CustomerSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ManagerSet" EntityType="Self.ManagerSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderSet" EntityType="Self.OrderSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductSet" EntityType="Self.ProductSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vOrders" EntityType="Self.vOrders" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vOrders].[OrderId] AS [OrderId], 
+    [vOrders].[PurchaseDate] AS [PurchaseDate], 
+    [vOrders].[ManagerId] AS [ManagerId], 
+    [vOrders].[ManagerName] AS [ManagerName], 
+    [vOrders].[CustomerId] AS [CustomerId], 
+    [vOrders].[CustomerName] AS [CustomerName], 
+    [vOrders].[ProductId] AS [ProductId], 
+    [vOrders].[ProductName] AS [ProductName], 
+    [vOrders].[Amount] AS [Amount]
+    FROM [dbo].[vOrders] AS [vOrders]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_CustomerOrder" Association="Self.FK_CustomerOrder">
+            <End Role="CustomerSet" EntitySet="CustomerSet" />
+            <End Role="OrderSet" EntitySet="OrderSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ManagerOrder" Association="Self.FK_ManagerOrder">
+            <End Role="ManagerSet" EntitySet="ManagerSet" />
+            <End Role="OrderSet" EntitySet="OrderSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductOrder" Association="Self.FK_ProductOrder">
+            <End Role="ProductSet" EntitySet="ProductSet" />
+            <End Role="OrderSet" EntitySet="OrderSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PurchasesAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CustomerSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SecondName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="OrderSet" Relationship="Self.FK_CustomerOrder" FromRole="CustomerSet" ToRole="OrderSet" />
+        </EntityType>
+        <EntityType Name="ManagerSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SecondName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="OrderSet" Relationship="Self.FK_ManagerOrder" FromRole="ManagerSet" ToRole="OrderSet" />
+        </EntityType>
+        <EntityType Name="OrderSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PurchaseDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ManagerId" Type="Int32" Nullable="false" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CustomerSet" Relationship="Self.FK_CustomerOrder" FromRole="OrderSet" ToRole="CustomerSet" />
+          <NavigationProperty Name="ManagerSet" Relationship="Self.FK_ManagerOrder" FromRole="OrderSet" ToRole="ManagerSet" />
+          <NavigationProperty Name="ProductSet" Relationship="Self.FK_ProductOrder" FromRole="OrderSet" ToRole="ProductSet" />
+        </EntityType>
+        <EntityType Name="ProductSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="OrderSet" Relationship="Self.FK_ProductOrder" FromRole="ProductSet" ToRole="OrderSet" />
+        </EntityType>
+        <EntityType Name="vOrders">
+          <Key>
+            <PropertyRef Name="OrderId" />
+            <PropertyRef Name="PurchaseDate" />
+            <PropertyRef Name="ManagerId" />
+            <PropertyRef Name="ManagerName" />
+            <PropertyRef Name="CustomerId" />
+            <PropertyRef Name="CustomerName" />
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Amount" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="PurchaseDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ManagerId" Type="Int32" Nullable="false" />
+          <Property Name="ManagerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CustomerOrder">
+          <End Role="CustomerSet" Type="Self.CustomerSet" Multiplicity="1" />
+          <End Role="OrderSet" Type="Self.OrderSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomerSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderSet">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ManagerOrder">
+          <End Role="ManagerSet" Type="Self.ManagerSet" Multiplicity="1" />
+          <End Role="OrderSet" Type="Self.OrderSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManagerSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderSet">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductOrder">
+          <End Role="ProductSet" Type="Self.ProductSet" Multiplicity="1" />
+          <End Role="OrderSet" Type="Self.OrderSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderSet">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PurchasesAppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CustomerSet" EntityType="Self.CustomerSet" />
+          <EntitySet Name="ManagerSet" EntityType="Self.ManagerSet" />
+          <EntitySet Name="OrderSet" EntityType="Self.OrderSet" />
+          <EntitySet Name="ProductSet" EntityType="Self.ProductSet" />
+          <EntitySet Name="vOrders" EntityType="Self.vOrders" />
+          <AssociationSet Name="FK_CustomerOrder" Association="Self.FK_CustomerOrder">
+            <End Role="CustomerSet" EntitySet="CustomerSet" />
+            <End Role="OrderSet" EntitySet="OrderSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ManagerOrder" Association="Self.FK_ManagerOrder">
+            <End Role="ManagerSet" EntitySet="ManagerSet" />
+            <End Role="OrderSet" EntitySet="OrderSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductOrder" Association="Self.FK_ProductOrder">
+            <End Role="ProductSet" EntitySet="ProductSet" />
+            <End Role="OrderSet" EntitySet="OrderSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PurchasesAppModelStoreContainer" CdmEntityContainer="PurchasesAppEntities">
+          <EntitySetMapping Name="CustomerSet">
+            <EntityTypeMapping TypeName="PurchasesAppModel.CustomerSet">
+              <MappingFragment StoreEntitySet="CustomerSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ManagerSet">
+            <EntityTypeMapping TypeName="PurchasesAppModel.ManagerSet">
+              <MappingFragment StoreEntitySet="ManagerSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderSet">
+            <EntityTypeMapping TypeName="PurchasesAppModel.OrderSet">
+              <MappingFragment StoreEntitySet="OrderSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductSet">
+            <EntityTypeMapping TypeName="PurchasesAppModel.ProductSet">
+              <MappingFragment StoreEntitySet="ProductSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vOrders">
+            <EntityTypeMapping TypeName="PurchasesAppModel.vOrders">
+              <MappingFragment StoreEntitySet="vOrders">
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+                <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+                <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
