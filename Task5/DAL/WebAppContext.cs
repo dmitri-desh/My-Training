@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class WebAppContext :DbContext
+    class WebAppContext : DbContext
     {
         public WebAppContext() : base("PurchasesAppEntities")
         {
