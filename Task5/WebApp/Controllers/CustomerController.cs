@@ -15,12 +15,14 @@ namespace WebApp.Controllers
         private PurchasesAppEntities db = new PurchasesAppEntities();
 
         // GET: Customer
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.CustomerSet.ToList());
         }
 
         // GET: Customer/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +38,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Customer/Create
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Create()
         {
             return View();
@@ -46,6 +49,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Create([Bind(Include = "Id,SecondName")] CustomerSet customerSet)
         {
             if (ModelState.IsValid)
@@ -59,6 +63,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Customer/Edit/5
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +83,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Edit([Bind(Include = "Id,SecondName")] CustomerSet customerSet)
         {
             if (ModelState.IsValid)
@@ -90,6 +96,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Customer/Delete/5
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,6 +114,7 @@ namespace WebApp.Controllers
         // POST: Customer/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult DeleteConfirmed(int id)
         {
             CustomerSet customerSet = db.CustomerSet.Find(id);

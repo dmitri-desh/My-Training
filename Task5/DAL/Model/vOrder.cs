@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebApp.Models
 {
-    public class VOrder
+    public partial class VOrder
     {
         public int OrderId { get; set; }
         public DateTime PurchaseDate { get; set; }

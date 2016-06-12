@@ -15,6 +15,7 @@ namespace WebApp.Controllers
         private PurchasesAppEntities db = new PurchasesAppEntities();
 
         // GET: Orders
+        [Authorize]
         public ActionResult Index()
         {
             var orderSet = db.OrderSet.Include(o => o.CustomerSet).Include(o => o.ManagerSet).Include(o => o.ProductSet);
@@ -22,6 +23,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Orders/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Orders/Create
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Create()
         {
             ViewBag.CustomerId = new SelectList(db.CustomerSet, "Id", "SecondName");
@@ -50,6 +53,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Create([Bind(Include = "Id,PurchaseDate,Amount,ManagerId,CustomerId,ProductId")] OrderSet orderSet)
         {
             if (ModelState.IsValid)
@@ -66,6 +70,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Orders/Edit/5
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -88,6 +93,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Edit([Bind(Include = "Id,PurchaseDate,Amount,ManagerId,CustomerId,ProductId")] OrderSet orderSet)
         {
             if (ModelState.IsValid)
@@ -103,6 +109,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Orders/Delete/5
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -120,6 +127,7 @@ namespace WebApp.Controllers
         // POST: Orders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult DeleteConfirmed(int id)
         {
             OrderSet orderSet = db.OrderSet.Find(id);
