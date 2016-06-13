@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerRepository.cs" />
     <Compile Include="CustomerSet.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
@@ -84,6 +85,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ManagerRepository.cs" />
     <Compile Include="ManagerSet.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
@@ -92,9 +94,11 @@
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\vOrder.cs" />
+    <Compile Include="OrderRepository.cs" />
     <Compile Include="OrderSet.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProductRepository.cs" />
     <Compile Include="ProductSet.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>

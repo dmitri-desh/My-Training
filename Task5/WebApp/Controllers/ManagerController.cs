@@ -18,8 +18,13 @@ namespace WebApp.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            return View(db.ManagerSet.ToList());
+           return View(db.ManagerSet.ToList());
         }
+        public ActionResult ManagerList()
+        {
+           return PartialView("PartialManagerList", Index());
+        }
+
 
         // GET: Manager/Details/5
         [Authorize]
@@ -35,10 +40,11 @@ namespace WebApp.Controllers
                 return HttpNotFound();
             }
             return View(managerSet);
+          //  return PartialView("Details", managerSet);
         }
 
         // GET: Manager/Create
-        [Authorize (Roles = "AdminRole")]
+        [Authorize /*(Roles = "AdminRole", Users = "Dimon")*/]
         public ActionResult Create()
         {
             return View();
@@ -49,7 +55,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "AdminRole")]
+        [Authorize /*(Roles = "AdminRole", Users = "Dimon")*/]
         public ActionResult Create([Bind(Include = "Id,SecondName")] ManagerSet managerSet)
         {
             if (ModelState.IsValid)
@@ -63,7 +69,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Manager/Edit/5
-        [Authorize(Roles = "AdminRole")]
+        [Authorize /*(Roles = "AdminRole", Users = "Dimon")*/]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -83,7 +89,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "AdminRole")]
+        [Authorize /*(Roles = "AdminRole", Users = "Dimon")*/]
         public ActionResult Edit([Bind(Include = "Id,SecondName")] ManagerSet managerSet)
         {
             if (ModelState.IsValid)
@@ -96,7 +102,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Manager/Delete/5
-        [Authorize(Roles = "AdminRole")]
+        [Authorize /*(Roles = "AdminRole", Users = "Dimon")*/]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -114,7 +120,7 @@ namespace WebApp.Controllers
         // POST: Manager/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "AdminRole")]
+        [Authorize /*(Roles = "AdminRole", Users = "Dimon")*/]
         public ActionResult DeleteConfirmed(int id)
         {
             ManagerSet managerSet = db.ManagerSet.Find(id);
