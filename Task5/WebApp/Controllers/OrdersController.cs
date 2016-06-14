@@ -38,7 +38,7 @@ namespace WebApp.Controllers
             return View(orderSet);
         }
 
-        public ActionResult OrderList (DateTime from, DateTime to, double managerId, double customerId, double productId)
+        public ActionResult OrderList (DateTime from, DateTime to, int managerId, int customerId, int productId)
         {
             var item = new OrdersWithFilters().GetOrders(from, to, managerId, customerId, productId)
                                               .Select(x => new OrderSet() { Id = x.Id, Amount = x.Amount, PurchaseDate = x.PurchaseDate,

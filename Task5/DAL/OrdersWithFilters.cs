@@ -8,16 +8,25 @@ namespace DAL
 {
     public class OrdersWithFilters
     {
-        private static ICollection<Model.Order> orderList = new List<Model.Order>();
-        private static ICollection<Model.Manager> managerList = new List<Model.Manager>();
-        private static ICollection<Model.Product> productList = new List<Model.Product>();
-        private static ICollection<Model.Customer> customerList = new List<Model.Customer>();
-        public DateTime From { get; set; }
-        public DateTime To { get; set; }
-        public IEnumerable<Model.Order> GetOrders(DateTime from, DateTime to, double managerId, double customerId, double productId)
+        private static ICollection<OrderSet> orderList = new List<OrderSet>();
+        private static ICollection<ManagerSet> managerList = new List<ManagerSet>();
+        private static ICollection<ProductSet> productList = new List<ProductSet>();
+        private static ICollection<CustomerSet> customerList = new List<CustomerSet>();
+        private DateTime from;
+        public DateTime From
+            { get { return from; }
+              set { from = orderList.Min(x => x.PurchaseDate); }
+            }
+        private DateTime to;
+        public DateTime To
+        {
+            get { return to; }
+            set { to = orderList.Max(x => x.PurchaseDate); }
+        }
+        public IEnumerable<OrderSet> GetOrders(DateTime from, DateTime to, int managerId, int customerId, int productId)
         {
             var items = new OrderRepository().GetAll().ToList();
-            var curList = new List<Model.Order>();
+            var curList = new List<OrderSet>();
             if (from != null && to != null)
             {
                 foreach (var item in items)
@@ -110,15 +119,15 @@ namespace DAL
             }
             return orderList;
         }
-        public IEnumerable<Model.Manager> GetManagers()
+        public IEnumerable<ManagerSet> GetManagers()
         {
             return managerList;
         }
-        public IEnumerable<Model.Product> GetProducts()
+        public IEnumerable<ProductSet> GetProducts()
         {
             return productList;
         }
-        public IEnumerable<Model.Customer> GetCustomers()
+        public IEnumerable<CustomerSet> GetCustomers()
         {
             return customerList;
         }

@@ -1,42 +1,54 @@
-﻿@model IEnumerable<DAL.OrdersWithFilters>
+﻿@model DAL.OrdersWithFilters
 
-
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
-
 <section>
-    <div>
-       From @Html.TextBox(model => model.From, "From", htmlAttributes: new { @class = "control-label col-md-2" }) |
-        From @Html.TextBox(model => model.To, "To", htmlAttributes: new { @class = "control-label col-md-2" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.GetManagers(), "Manager", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("ManagerId", null, htmlAttributes: new { @class = "form-control" })
-            @*Html.ValidationMessageFor(model => model.ManagerId, "", new { @class = "text-danger" })*@
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.GetCustomers(), "Customer", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("CustomerId", null, htmlAttributes: new { @class = "form-control" })
-            @*Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })*@
-        </div>
-    </div>
+    @using (Html.BeginForm())
+    {
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.GetProducts(), "Product", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
-            @*Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })*@
+        <div>
+            From @Html.TextBox("From", Model.From, htmlAttributes: new { @class = "control-label col-md-2" }) |
+            To @Html.TextBox("To", Model.To, htmlAttributes: new { @class = "control-label col-md-2" })
         </div>
-    </div>
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.GetManagers(), "Manager", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ManagerId", null, htmlAttributes: new { @class = "form-control" })
+                @*Html.ValidationMessageFor(model => model.ManagerId, "", new { @class = "text-danger" })*@
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.GetCustomers(), "Customer", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CustomerId", null, htmlAttributes: new { @class = "form-control" })
+                @*Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })*@
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.GetProducts(), "Product", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
+                @*Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })*@
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+
+    }
 </section>
-    
+
 <section>
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -48,7 +60,8 @@
             Date
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Amount)
+            @*Html.DisplayNameFor(model => model.Amount)*@
+            Amount
         </th>
         <th>
           @* Html.DisplayNameFor(model => model.CustomerSet.SecondName) *@
@@ -66,7 +79,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model.GetOrders(Model.From, Model.To, ManagerId, CustomerId, ProductId)
+         ) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.PurchaseDate)
@@ -90,6 +104,5 @@
         </td>
     </tr>
 }
-
 </table>
 </section>
