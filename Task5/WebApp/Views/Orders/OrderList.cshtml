@@ -1,0 +1,91 @@
+﻿@model IEnumerable<DAL.OrdersWithFilters>
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<section id="Filters">
+    <div class="form-group">
+        @Html.LabelFor(model => model.GetManagers(), "Manager", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("ManagerId", null, htmlAttributes: new { @class = "form-control" })
+            @*Html.ValidationMessageFor(model => model.ManagerId, "", new { @class = "text-danger" })*@
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.GetCustomers(), "Customer", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("CustomerId", null, htmlAttributes: new { @class = "form-control" })
+            @*Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })*@
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.GetProducts, "Product", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
+            @*Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })*@
+        </div>
+    </div>
+</section>
+    
+<section id="OrderList">
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           @* Html.DisplayNameFor(model => model.PurchaseDate) *@
+            Date
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+          @* Html.DisplayNameFor(model => model.CustomerSet.SecondName) *@
+            Customer
+
+        </th>
+        <th>
+           @* Html.DisplayNameFor(model => model.ManagerSet.SecondName) *@
+            Manager
+        </th>
+        <th>
+           @* Html.DisplayNameFor(model => model.ProductSet.Name) *@
+            Product
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PurchaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerSet.SecondName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerSet.SecondName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductSet.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+</section>
