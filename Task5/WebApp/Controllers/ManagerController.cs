@@ -39,15 +39,15 @@ namespace WebApp.Controllers
             {
                 return HttpNotFound();
             }
-            return View(managerSet);
-          //  return PartialView("Details", managerSet);
+            //return View(managerSet);
+            return PartialView(managerSet);
         }
 
         // GET: Manager/Create
         [Authorize /*(Roles = "AdminRole", Users = "Dimon")*/]
         public ActionResult Create()
         {
-            return View();
+            return PartialView();
         }
 
         // POST: Manager/Create
@@ -65,7 +65,7 @@ namespace WebApp.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(managerSet);
+            return PartialView(managerSet);
         }
 
         // GET: Manager/Edit/5
@@ -76,12 +76,13 @@ namespace WebApp.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ManagerSet managerSet = db.ManagerSet.Find(id);
-            if (managerSet == null)
+            ManagerSet manager = db.ManagerSet.Find(id);
+            if (manager == null)
             {
                 return HttpNotFound();
             }
-            return View(managerSet);
+           // return View(manager);
+            return PartialView("Edit", manager);
         }
 
         // POST: Manager/Edit/5
@@ -90,15 +91,17 @@ namespace WebApp.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize /*(Roles = "AdminRole", Users = "Dimon")*/]
-        public ActionResult Edit([Bind(Include = "Id,SecondName")] ManagerSet managerSet)
+        public ActionResult Edit([Bind(Include = "Id,SecondName")] ManagerSet manager)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(managerSet).State = EntityState.Modified;
+                db.Entry(manager).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(managerSet);
+
+             return View(manager);
+          //  return PartialView("Edit",manager);
         }
 
         // GET: Manager/Delete/5
@@ -114,7 +117,8 @@ namespace WebApp.Controllers
             {
                 return HttpNotFound();
             }
-            return View(managerSet);
+            //return View(managerSet);
+            return PartialView(managerSet);
         }
 
         // POST: Manager/Delete/5
