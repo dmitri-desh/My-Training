@@ -5,7 +5,7 @@ using System.Web;
 
 namespace DAL.Model
 {
-    public partial class VOrder
+    public partial class vOrders
     {
         public int OrderId { get; set; }
         public DateTime PurchaseDate { get; set; }
@@ -17,8 +17,8 @@ namespace DAL.Model
         public string ProductName { get; set; }
         public decimal Amount { get; set; }
 
-        public virtual Customer CustomerSet { get; set; }
-        public virtual Manager ManagerSet { get; set; }
-        public virtual Product ProductSet { get; set; }
+        public virtual CustomerSet CustomerSet { get; set; }
+        public virtual ManagerSet ManagerSet { get; set; }
+        public virtual ProductSet ProductSet { get; set; }
     }
 }

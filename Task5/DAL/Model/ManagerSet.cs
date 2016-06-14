@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace DAL.Model
 {
-    public partial class Manager
+    public partial class ManagerSet
     {
         public int Id { get; set; }
         public string SecondName { get; set; }
-        public virtual ICollection<Order> OrderSet { get; set; }
+        public virtual ICollection<OrderSet> OrderSet { get; set; }
     }
 }

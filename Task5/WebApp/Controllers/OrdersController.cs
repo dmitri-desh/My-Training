@@ -38,6 +38,15 @@ namespace WebApp.Controllers
             return View(orderSet);
         }
 
+        public ActionResult OrderList (DateTime from, DateTime to, double managerId, double customerId, double productId)
+        {
+            var item = new OrdersWithFilters().GetOrders(from, to, managerId, customerId, productId)
+                                              .Select(x => new OrderSet() { Id = x.Id, Amount = x.Amount, PurchaseDate = x.PurchaseDate,
+                                                                            CustomerId = x.CustomerId, ManagerId = x.ManagerId, ProductId = x.ProductId });
+            return View(item);
+        }
+
+
         // GET: Orders/Create
         [Authorize /*(Roles = "AdminRole")*/]
         public ActionResult Create()

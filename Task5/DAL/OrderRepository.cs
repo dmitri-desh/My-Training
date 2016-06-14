@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class OrderRepository
+   public class OrderRepository
     {
-        private static ICollection<Model.Order> list = new List<Model.Order>();
+        private static ICollection<Model.OrderSet> list = new List<Model.OrderSet>();
 
-        public IEnumerable<Model.Order> GetAll()
+        public IEnumerable<Model.OrderSet> GetAll()
         {
             return list;
         }
