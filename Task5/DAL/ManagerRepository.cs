@@ -8,9 +8,9 @@ namespace DAL
 {
     public class ManagerRepository
     {
-        private static ICollection<Model.ManagerSet> list = new List<Model.ManagerSet>();
+        private static ICollection<Model.Manager> list = new List<Model.Manager>();
 
-        public IEnumerable<Model.ManagerSet> GetAll()
+        public IEnumerable<Model.Manager> GetAll()
         {
             return list;
         }

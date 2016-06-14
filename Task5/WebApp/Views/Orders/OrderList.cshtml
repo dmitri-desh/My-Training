@@ -8,7 +8,11 @@
 
 <h2>Index</h2>
 
-<section id="Filters">
+<section>
+    <div>
+       From @Html.TextBox(model => model.From, "From", htmlAttributes: new { @class = "control-label col-md-2" }) |
+        From @Html.TextBox(model => model.To, "To", htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
     <div class="form-group">
         @Html.LabelFor(model => model.GetManagers(), "Manager", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -33,7 +37,7 @@
     </div>
 </section>
     
-<section id="OrderList">
+<section>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>

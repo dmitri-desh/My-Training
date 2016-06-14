@@ -8,9 +8,9 @@ namespace DAL
 {
    public class OrderRepository
     {
-        private static ICollection<Model.OrderSet> list = new List<Model.OrderSet>();
+        private static ICollection<Model.Order> list = new List<Model.Order>();
 
-        public IEnumerable<Model.OrderSet> GetAll()
+        public IEnumerable<Model.Order> GetAll()
         {
             return list;
         }

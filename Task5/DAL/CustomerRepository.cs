@@ -8,9 +8,9 @@ namespace DAL
 {
    public class CustomerRepository
     {
-        private static ICollection<Model.CustomerSet> list = new List<Model.CustomerSet>();
+        private static ICollection<Model.Customer> list = new List<Model.Customer>();
 
-        public IEnumerable<Model.CustomerSet> GetAll()
+        public IEnumerable<Model.Customer> GetAll()
         {
             return list;
         }

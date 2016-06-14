@@ -8,14 +8,16 @@ namespace DAL
 {
     public class OrdersWithFilters
     {
-        private static ICollection<Model.OrderSet> orderList = new List<Model.OrderSet>();
-        private static ICollection<Model.ManagerSet> managerList = new List<Model.ManagerSet>();
-        private static ICollection<Model.ProductSet> productList = new List<Model.ProductSet>();
-        private static ICollection<Model.CustomerSet> customerList = new List<Model.CustomerSet>();
-        public IEnumerable<Model.OrderSet> GetOrders(DateTime from, DateTime to, double managerId, double customerId, double productId)
+        private static ICollection<Model.Order> orderList = new List<Model.Order>();
+        private static ICollection<Model.Manager> managerList = new List<Model.Manager>();
+        private static ICollection<Model.Product> productList = new List<Model.Product>();
+        private static ICollection<Model.Customer> customerList = new List<Model.Customer>();
+        public DateTime From { get; set; }
+        public DateTime To { get; set; }
+        public IEnumerable<Model.Order> GetOrders(DateTime from, DateTime to, double managerId, double customerId, double productId)
         {
             var items = new OrderRepository().GetAll().ToList();
-            var curList = new List<Model.OrderSet>();
+            var curList = new List<Model.Order>();
             if (from != null && to != null)
             {
                 foreach (var item in items)
@@ -108,15 +110,15 @@ namespace DAL
             }
             return orderList;
         }
-        public IEnumerable<Model.ManagerSet> GetManagers()
+        public IEnumerable<Model.Manager> GetManagers()
         {
             return managerList;
         }
-        public IEnumerable<Model.ProductSet> GetProducts()
+        public IEnumerable<Model.Product> GetProducts()
         {
             return productList;
         }
-        public IEnumerable<Model.CustomerSet> GetCustomers()
+        public IEnumerable<Model.Customer> GetCustomers()
         {
             return customerList;
         }

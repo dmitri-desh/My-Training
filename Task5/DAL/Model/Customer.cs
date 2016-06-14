@@ -5,10 +5,10 @@ using System.Web;
 
 namespace DAL.Model
 {
-    public partial class ProductSet
+    public partial class Customer
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public virtual ICollection<OrderSet> OrderSet { get; set; }
+        public string SecondName { get; set; }
+        public virtual ICollection<Order> OrderSet { get; set; }
     }
 }

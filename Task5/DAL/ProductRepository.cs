@@ -8,9 +8,9 @@ namespace DAL
 {
    public class ProductRepository
     {
-        private static ICollection<Model.ProductSet> list = new List<Model.ProductSet>();
+        private static ICollection<Model.Product> list = new List<Model.Product>();
 
-        public IEnumerable<Model.ProductSet> GetAll()
+        public IEnumerable<Model.Product> GetAll()
         {
             return list;
         }

@@ -89,11 +89,11 @@
     <Compile Include="ManagerSet.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\CustomerSet.cs" />
-    <Compile Include="Model\ManagerSet.cs" />
-    <Compile Include="Model\OrderSet.cs" />
-    <Compile Include="Model\ProductSet.cs" />
-    <Compile Include="Model\vOrders.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Manager.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\vOrder.cs" />
     <Compile Include="OrdersWithFilters.cs" />
     <Compile Include="OrderSet.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
