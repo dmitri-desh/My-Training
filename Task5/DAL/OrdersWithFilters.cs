@@ -8,10 +8,10 @@ namespace DAL
 {
     public class OrdersWithFilters
     {
-        private static ICollection<OrderSet> orderList = new List<OrderSet>();
-        private static ICollection<ManagerSet> managerList = new List<ManagerSet>();
-        private static ICollection<ProductSet> productList = new List<ProductSet>();
-        private static ICollection<CustomerSet> customerList = new List<CustomerSet>();
+        private ICollection<OrderSet> orderList = new List<OrderSet>();
+        private readonly ICollection<ManagerSet> managerList = new List<ManagerSet>();
+        private readonly ICollection<ProductSet> productList = new List<ProductSet>();
+        private readonly ICollection<CustomerSet> customerList = new List<CustomerSet>();
         private DateTime from;
         public DateTime From
             { get { return from; }
@@ -26,7 +26,7 @@ namespace DAL
         public int CurManagerId { get; set; }
         public int CurCustomerId { get; set; }
         public int CurProductId { get; set; }
-        public IEnumerable<OrderSet> GetOrders(DateTime from, DateTime to, int managerId, int customerId, int productId)
+        public IEnumerable<OrderSet> GetOrders(DateTime? from, DateTime? to, int? managerId, int? customerId, int? productId)
         {
             var items = new OrderRepository().GetAll().ToList();
             var curList = new List<OrderSet>();
