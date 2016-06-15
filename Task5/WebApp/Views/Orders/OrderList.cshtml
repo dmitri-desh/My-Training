@@ -18,24 +18,30 @@
             To @Html.TextBox("To", Model.To, htmlAttributes: new { @class = "control-label col-md-2" })
         </div>
         <div class="form-group">
-            @Html.LabelFor(Model => Model.GetManagers(), "Manager", htmlAttributes: new { @class = "control-label col-md-2" })
+            @*Html.LabelFor(Model => Model.GetManagers(), "Manager", htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Managers
             <div class="col-md-10">
-                @Html.DropDownList("ManagerId", null, htmlAttributes: new { @class = "form-control" })
+                @*Html.DropDownList("ManagerId", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.DropDownListFor(Model.CurManagerId, Model.GetManagers(), "Select Manager")
                 @*Html.ValidationMessageFor(model => model.ManagerId, "", new { @class = "text-danger" })*@
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(Model => Model.GetCustomers(), "Customer", htmlAttributes: new { @class = "control-label col-md-2" })
+            @*Html.LabelFor(Model => Model.GetCustomers(), "Customer", htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Customers
             <div class="col-md-10">
-                @Html.DropDownList("CustomerId", null, htmlAttributes: new { @class = "form-control" })
+                @*Html.DropDownList("CustomerId", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.DropDownListFor(Model.CurCustomerId, Model.GetCustomers(), "Select Customer")
                 @*Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })*@
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(Model => Model.GetProducts(), "Product", htmlAttributes: new { @class = "control-label col-md-2" })
+            @*Html.LabelFor(Model => Model.GetProducts(), "Product", htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Products
             <div class="col-md-10">
-                @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
+                @*Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.DropDownListFor(Model.CurProductId, Model.GetProducts(), "Select Product")
                 @*Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })*@
             </div>
         </div>
@@ -79,7 +85,7 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model.GetOrders(Model.From, Model.To, ManagerId, CustomerId, ProductId)
+@foreach (var item in Model.GetOrders(Model.From, Model.To, Model.CurManagerId, Model.CurCustomerId, Model.CurProductId)
          ) {
     <tr>
         <td>

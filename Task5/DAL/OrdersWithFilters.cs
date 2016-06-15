@@ -23,6 +23,9 @@ namespace DAL
             get { return to; }
             set { to = orderList.Max(x => x.PurchaseDate); }
         }
+        public int CurManagerId { get; set; }
+        public int CurCustomerId { get; set; }
+        public int CurProductId { get; set; }
         public IEnumerable<OrderSet> GetOrders(DateTime from, DateTime to, int managerId, int customerId, int productId)
         {
             var items = new OrderRepository().GetAll().ToList();
