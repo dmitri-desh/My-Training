@@ -145,6 +145,14 @@ namespace WebApp.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        [Authorize]
+        public JsonResult GetChartData()
+        {
+            var orderSet = db.OrderSet.Include(o => o.CustomerSet).Include(o => o.ManagerSet).Include(o => o.ProductSet)
+                  .Select(x => new object[] { x.ManagerSet.SecondName, x.Amount}).ToArray();
+            return Json(orderSet, JsonRequestBehavior.AllowGet);
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
