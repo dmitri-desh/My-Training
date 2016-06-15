@@ -42,7 +42,7 @@ namespace WebApp.Controllers
         {
             var item = new OrdersWithFilters().GetOrders(from, to, managerId, customerId, productId)
                                               .Select(x => new OrderSet() { Id = x.Id, Amount = x.Amount, PurchaseDate = x.PurchaseDate,
-                                                                            CustomerId = x.CustomerId, ManagerId = x.ManagerId, ProductId = x.ProductId });
+                                                                            CustomerId = x.CustomerId, ManagerId = x.ManagerId, ProductId = x.ProductId  });
             return PartialView("OrderList",item);
         }
 
