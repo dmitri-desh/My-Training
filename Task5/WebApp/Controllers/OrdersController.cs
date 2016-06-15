@@ -26,7 +26,7 @@ namespace WebApp.Controllers
            
             ViewBag.CurrentFilter = searchString;
 
-            int pageSize = 15;
+            int pageSize = 10;
             int pageNumber = (page ?? 1);
             var orderSet = db.OrderSet.Include(o => o.CustomerSet).Include(o => o.ManagerSet).Include(o => o.ProductSet);
             if (!String.IsNullOrEmpty(searchString))
