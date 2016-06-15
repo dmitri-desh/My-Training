@@ -14,7 +14,13 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
+@using (Html.BeginForm("Index", "Order", FormMethod.Get))
+{
+    <p>
+        Find by Manager: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <tr>
         <th>
@@ -76,5 +82,5 @@
 <section>
     Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, currentFilter = ViewBag.CurrentFilter }))
 </section>
