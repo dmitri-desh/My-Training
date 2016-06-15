@@ -1,5 +1,7 @@
-﻿@model IEnumerable<DAL.OrderSet>
-
+﻿@*model IEnumerable<DAL.OrderSet>*@
+@model PagedList.IPagedList<DAL.OrderSet>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 
 @{
@@ -12,6 +14,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -19,7 +22,8 @@
             Date
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Amount)
+            @*Html.DisplayNameFor(Model => Model.Amount)*@
+            Amount
         </th>
         <th>
           @* Html.DisplayNameFor(model => model.CustomerSet.SecondName) *@
@@ -68,4 +72,9 @@
     <div id="chart_div">
         @Html.Partial("OrderCharts", Model)
     </div>
+</section>
+<section>
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
 </section>

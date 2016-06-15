@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DAL;
+using PagedList;
 
 namespace WebApp.Controllers
 {
@@ -16,9 +17,12 @@ namespace WebApp.Controllers
 
         // GET: Customer
         [Authorize]
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            return View(db.CustomerSet.ToList());
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(db.CustomerSet.ToPagedList(pageNumber, pageSize));
+          //  return View(db.CustomerSet.ToList());
         }
 
         // GET: Customer/Details/5

@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DAL;
+using PagedList;
 
 namespace WebApp.Controllers
 {
@@ -16,10 +17,13 @@ namespace WebApp.Controllers
 
         // GET: Orders
         [Authorize]
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
             var orderSet = db.OrderSet.Include(o => o.CustomerSet).Include(o => o.ManagerSet).Include(o => o.ProductSet);
-            return View(orderSet.ToList());
+            // return View(orderSet.ToList());
+            return View(orderSet.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Orders/Details/5

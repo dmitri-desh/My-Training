@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DAL;
+using PagedList;
 
 namespace WebApp.Controllers
 {
@@ -16,13 +17,16 @@ namespace WebApp.Controllers
 
         // GET: Manager
         [Authorize]
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-           return View(db.ManagerSet.ToList());
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(db.ManagerSet.ToPagedList(pageNumber, pageSize));
+         //   return View(db.ManagerSet.ToList());
         }
-        public ActionResult ManagerList()
+        public ActionResult ManagerList(int? page)
         {
-           return PartialView("PartialManagerList", Index());
+           return PartialView("PartialManagerList", Index(page));
         }
 
 
