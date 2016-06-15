@@ -14,7 +14,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@using (Html.BeginForm("Index", "Order", FormMethod.Get))
+@using (Html.BeginForm("Index", "Orders", FormMethod.Get))
 {
     <p>
         Find by Manager: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
