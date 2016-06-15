@@ -38,6 +38,7 @@ namespace WebApp.Controllers
             return View(orderSet);
         }
 
+        [Authorize]
         public ActionResult OrderList (DateTime from, DateTime to, int managerId, int customerId, int productId)
         {
             var item = new OrdersWithFilters().GetOrders(from, to, managerId, customerId, productId)
