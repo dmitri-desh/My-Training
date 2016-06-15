@@ -19,11 +19,11 @@ namespace WebApp.Controllers
         [Authorize]
         public ActionResult Index(string searchString, int? page)
         {
-            if (searchString != null)
+           /* if (searchString != null)
             {
                 page = 1;
             }
-           
+           */
             ViewBag.CurrentFilter = searchString;
 
             int pageSize = 10;
