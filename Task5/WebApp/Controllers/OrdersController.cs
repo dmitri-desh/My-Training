@@ -26,7 +26,7 @@ namespace WebApp.Controllers
            
             ViewBag.CurrentFilter = searchString;
 
-            int pageSize = 3;
+            int pageSize = 15;
             int pageNumber = (page ?? 1);
             var orderSet = db.OrderSet.Include(o => o.CustomerSet).Include(o => o.ManagerSet).Include(o => o.ProductSet);
             if (!String.IsNullOrEmpty(searchString))
@@ -34,7 +34,8 @@ namespace WebApp.Controllers
                 orderSet = orderSet.Where(s => s.ManagerSet.SecondName.Contains(searchString));
             }
             // return View(orderSet.ToList());
-            return View(orderSet.ToPagedList(pageNumber, pageSize));
+            
+            return View(orderSet.OrderBy(x => x.Id).ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Orders/Details/5

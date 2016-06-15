@@ -19,9 +19,9 @@ namespace WebApp.Controllers
         [Authorize]
         public ActionResult Index(int? page)
         {
-            int pageSize = 3;
+            int pageSize = 10;
             int pageNumber = (page ?? 1);
-            return View(db.CustomerSet.ToPagedList(pageNumber, pageSize));
+            return View(db.CustomerSet.OrderBy(x => x.Id).ToPagedList(pageNumber, pageSize));
           //  return View(db.CustomerSet.ToList());
         }
 
