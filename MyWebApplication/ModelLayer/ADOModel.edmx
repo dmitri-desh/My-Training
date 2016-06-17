@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PurchasesAppModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="customers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="secondname" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="managers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="secondname" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="orders">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="managerid" Type="int" />
+          <Property Name="customerid" Type="int" />
+          <Property Name="productid" Type="int" />
+          <Property Name="purchasedate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="products">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="PurchasesAppModelStoreContainer">
+          <EntitySet Name="customers" EntityType="Self.customers" Schema="purchasesapp" store:Type="Tables" />
+          <EntitySet Name="managers" EntityType="Self.managers" Schema="purchasesapp" store:Type="Tables" />
+          <EntitySet Name="orders" EntityType="Self.orders" Schema="purchasesapp" store:Type="Tables" />
+          <EntitySet Name="products" EntityType="Self.products" Schema="purchasesapp" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PurchasesAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="secondname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="orders" Relationship="PurchasesAppModel.OrderCustomer" FromRole="customer" ToRole="order" />
+        </EntityType>
+        <EntityType Name="manager">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="secondname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="orders" Relationship="PurchasesAppModel.ManagerOrder" FromRole="manager" ToRole="order" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="amount" Type="Decimal" />
+          <Property Name="purchasedate" Type="DateTime" />
+          <NavigationProperty Name="product" Relationship="PurchasesAppModel.OrderProduct" FromRole="order" ToRole="product" />
+          <Property Name="productid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="manager" Relationship="PurchasesAppModel.ManagerOrder" FromRole="order" ToRole="manager" />
+          <Property Name="managerid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="customer" Relationship="PurchasesAppModel.OrderCustomer" FromRole="order" ToRole="customer" />
+          <Property Name="customerid" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="orders" Relationship="PurchasesAppModel.OrderProduct" FromRole="product" ToRole="order" />
+        </EntityType>
+        <EntityContainer Name="PurchasesAppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="customers" EntityType="Self.customer" />
+          <EntitySet Name="managers" EntityType="Self.manager" />
+          <EntitySet Name="orders" EntityType="Self.order" />
+          <EntitySet Name="products" EntityType="Self.product" />
+          <AssociationSet Name="OrderProduct" Association="PurchasesAppModel.OrderProduct">
+            <End Role="order" EntitySet="orders" />
+            <End Role="product" EntitySet="products" />
+          </AssociationSet>
+          <AssociationSet Name="ManagerOrder" Association="PurchasesAppModel.ManagerOrder">
+            <End Role="order" EntitySet="orders" />
+            <End Role="manager" EntitySet="managers" />
+          </AssociationSet>
+          <AssociationSet Name="OrderCustomer" Association="PurchasesAppModel.OrderCustomer">
+            <End Role="order" EntitySet="orders" />
+            <End Role="customer" EntitySet="customers" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="OrderProduct">
+          <End Type="PurchasesAppModel.order" Role="order" Multiplicity="*" />
+          <End Type="PurchasesAppModel.product" Role="product" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="productid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ManagerOrder">
+          <End Type="PurchasesAppModel.order" Role="order" Multiplicity="*" />
+          <End Type="PurchasesAppModel.manager" Role="manager" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="manager">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="managerid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="OrderCustomer">
+          <End Type="PurchasesAppModel.order" Role="order" Multiplicity="*" />
+          <End Type="PurchasesAppModel.customer" Role="customer" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="customerid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PurchasesAppModelStoreContainer" CdmEntityContainer="PurchasesAppEntities">
+          <EntitySetMapping Name="customers">
+            <EntityTypeMapping TypeName="PurchasesAppModel.customer">
+              <MappingFragment StoreEntitySet="customers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="secondname" ColumnName="secondname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="managers">
+            <EntityTypeMapping TypeName="PurchasesAppModel.manager">
+              <MappingFragment StoreEntitySet="managers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="secondname" ColumnName="secondname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orders">
+            <EntityTypeMapping TypeName="PurchasesAppModel.order">
+              <MappingFragment StoreEntitySet="orders">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="purchasedate" ColumnName="purchasedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="PurchasesAppModel.product">
+              <MappingFragment StoreEntitySet="products">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
