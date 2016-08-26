@@ -7,49 +7,49 @@
       <FileName>Class\Item.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Task1.Spice">
+  <Class Name="Task1.Spice" Collapsed="true">
     <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>gAAAAAAAAAAAAAAEAAAAAAQAgAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class\Spice.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Task1.Fish">
-    <Position X="0.5" Y="5.25" Width="1.5" />
+  <Class Name="Task1.Fish" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>oAAAAAAAAAgAAAAAAAAAAAQAgCAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>oAAAABAAAAgAAAAEAAAAAAQBgCAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class\Fish.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Task1.Meat">
-    <Position X="3" Y="2.75" Width="1.5" />
+  <Class Name="Task1.Meat" Collapsed="true">
+    <Position X="2" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAABAAAAAAAAAEAAAAAAQBACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class\Meat.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Task1.Vegetable">
-    <Position X="3" Y="5.25" Width="1.5" />
+  <Class Name="Task1.Vegetable" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>oAAAAAAAAAgAAAAAAAAAAAQAgCAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>oAAAABAAAAgAAAAEAAAAAAQBgAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>Class\Vegetable.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Task1.Fruit">
+  <Class Name="Task1.Fruit" Collapsed="true">
     <Position X="4.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>oAAAAAAAAAgAAAAAAAAAAAQAgCAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>oAAAABAAAAgAAAAEAAAAAAQBgAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class\Fruit.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Task1.Salad">
-    <Position X="6.25" Y="6.25" Width="1.5" />
+  <Class Name="Task1.Salad" Collapsed="true">
+    <Position X="9.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAADBQAAAABAQAABAAAgAEAAAgAABQIAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAADAQAAAABAUAABAAAgAEAAAgAABQIAA=</HashCode>
       <FileName>Class\Salad.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -57,14 +57,14 @@
   <Interface Name="Task1.IHasWeight">
     <Position X="7.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interface\IHasWeight.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Task1.IHasCalories">
     <Position X="7.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interface\IHasCalories.cs</FileName>
     </TypeIdentifier>
   </Interface>
