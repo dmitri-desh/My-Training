@@ -74,7 +74,7 @@ namespace Task2
      // ToDo   
         public void RemoveWordsBy (int length)
         {
-            /*
+            
             string pattern = @"[b-d f-h j-n p-t v-x z]";
             string target = "~";
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
@@ -84,7 +84,7 @@ namespace Task2
             var words = from sentence in sentences
                             where sentence.ToList().Any(x => (x is IWord ? (x as IWord).ToString().Length : 0) == length)
                             select sentence.ToList().ToString();
-         */
+        
         }
  // ToDo
         public void ReplaceSubstring (string substr)
