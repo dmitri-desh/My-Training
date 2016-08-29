@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace TrainBuilder
 {
-    public class OrderRepository
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }
