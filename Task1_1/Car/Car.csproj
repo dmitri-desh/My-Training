@@ -46,13 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Car.cs" />
+    <Compile Include="Enum\ComfortClass.cs" />
+    <Compile Include="Enum\CarType.cs" />
+    <Compile Include="Class\Locomotive.cs" />
+    <Compile Include="Interface\IHasComfortClass.cs" />
+    <Compile Include="Interface\IHasCarType.cs" />
+    <Compile Include="Interface\IHasBagage.cs" />
+    <Compile Include="Interface\IHasPower.cs" />
+    <Compile Include="Interface\IHasPassengers.cs" />
+    <Compile Include="Class\Mineral.cs" />
+    <Compile Include="Class\Passenger.cs" />
+    <Compile Include="Class\Postal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\Train.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\" />
-    <Folder Include="Enum\" />
-    <Folder Include="Interface\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
