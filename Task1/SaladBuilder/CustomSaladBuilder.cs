@@ -7,7 +7,7 @@ using Task1;
 
 namespace SaladBuilder
 {
-    public partial class CustomSaladBuilder
+    public class CustomSaladBuilder
     {
         private Salad _salad;
         public CustomSaladBuilder(Salad salad)
