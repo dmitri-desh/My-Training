@@ -10,15 +10,27 @@ namespace Car
     {
         public string Name;
         private List<Car> _cars;
+        private List<Car> _carsSorted = new List<Car>();
 
         public Train (string name)
         {
             this.Name = name;
             _cars = new List<Car>();
         }
-        public IEnumerable<Car> GetCars()
+        public IEnumerable<Car> GetCarsList()
         {
             return _cars.ToList();
+        }
+        public string GetCarInfo (Car car)
+        {
+            string strCarInfo = car.Name.ToString()+'\t';
+
+            strCarInfo = strCarInfo + (car is IHasPower ? (car as IHasPower).Power.ToString() + " коней" 
+                                                        : car is IHasCarType ? (car as IHasCarType).CarType == CarType.Freight ? "\tГруз. " + (car as IHasBagage).CntBagage.ToString().PadLeft(3, ' ') + " баг.мест"
+                                                                                                                               : "\tПасс. " + (car as IHasBagage).CntBagage.ToString().PadLeft(3, ' ') + " баг.мест\t" + (car as IHasPassengers).CntSeats.ToString().PadLeft(3, ' ') + " пасс.мест\t" + (car as IHasComfortClass).ComfortClass.ToString()
+                                                                             : "");
+            
+            return strCarInfo;
         }
         public IEnumerable<Car> GetPassangerCars()
         {
@@ -34,8 +46,11 @@ namespace Car
         }
         public void SortByComfortClass()
         {
-
-            _cars = _cars.OrderBy(x => x is IHasComfortClass ? (x as IHasComfortClass).ComfortClass : 0).ToList();
+           _carsSorted = _cars.Where(t => t is IHasComfortClass).OrderBy(t => t is IHasComfortClass ? (t as IHasComfortClass).ComfortClass : ComfortClass.Obcshak).ToList();
+        }
+        public IEnumerable<Car> GetSortedCars ()
+        {
+            return _carsSorted.ToList();
         }
         public IEnumerable<Car> FindCarsByPassengers (int from, int to)
         {
