@@ -14,6 +14,7 @@ namespace Car
         public Train (string name)
         {
             this.Name = name;
+            _cars = new List<Car>();
         }
         public IEnumerable<Car> GetCars()
         {
