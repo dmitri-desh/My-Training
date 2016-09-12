@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -36,8 +37,9 @@ namespace BL
                     {
                         using (var reader = new StreamReader(stream))
                         {
-                            ParseCsv(e.Name, reader, token);
-                           
+                            //ParseCsv(e.Name, reader, token);
+                            ParseHtml(e.Name, reader, token);
+
                         }
                     }
                 };
@@ -110,6 +112,86 @@ namespace BL
                 }
                 Console.WriteLine();
               */  
+                if (curRow != null && token.IsCancellationRequested)
+                {
+                    // Rollback
+                    Dispose();
+                }
+            }
+            catch (IOException e)
+            {
+                //Rollback
+                Dispose();
+            }
+
+
+        }
+        static string CapitalizeString(Match matchString)
+
+	  {
+
+	    var strTemp = matchString.ToString();
+
+	    strTemp = char.ToUpper(strTemp[0]) + strTemp.Substring(1, strTemp.Length - 1).ToLower();
+
+	    return strTemp;
+
+	  }
+    protected void ParseHtml(string name, TextReader reader, CancellationToken token)
+        {
+            try
+            {
+                var curName = name.Substring(0, name.LastIndexOf('-')).Replace('-',' ');
+                curName = Regex.Replace(curName, @"\w+", new MatchEvaluator(CapitalizeString));
+                var curId = name.Substring(name.LastIndexOf('-'), name.LastIndexOf('.'));
+                Console.WriteLine("{0}\t", curName);
+                string curRow = null;
+              
+                //  var customers = new List<string>();
+                //  var products = new List<string>();
+                //IFormatProvider culture = new System.Globalization.CultureInfo("ru-RU", true);
+                IFormatProvider culture = new System.Globalization.CultureInfo("en-US", true);
+                DateTime dateVal;
+                while ((curRow = reader.ReadLine()) != null && !token.IsCancellationRequested)
+                {
+                    var columns = curRow.Split(',').ToList();
+                    if (columns[0].Substring(1, 1) == ".")
+                    {
+                        columns[0] = "0" + columns[0];
+                    }
+                    dateVal = DateTime.ParseExact(columns[0], columns[0].Substring(4, 1) == "-" ? "yyyy-MM-dd HH:mm:ss" : "dd.MM.yyyy HH:mm:ss", culture);
+                    //    customers.Add(columns[1]);
+                    //   products.Add(columns[2]);
+                    //   orders.Add(new Order(dateVal, curName, columns[1], columns[2], columns[3]));
+
+                    AddToDAL(new Order(dateVal, curName, columns[1], columns[2], columns[3]));
+                    /*
+                                        for (int i = 0; i < columns.Count(); i++)
+                                        {
+                                            Console.Write("{0}|", columns[i]);
+                                        }
+                                        // Parse string
+                                        // add records to data context
+
+                                        // add Order
+                                        Console.WriteLine();
+                                        */
+                }
+
+                /*    foreach (var customer in customers.Distinct())
+                    {
+                        customersUniq.Add(customer);
+                     //   Console.Write("{0}|", customer);
+                    }
+                   // Console.WriteLine();
+
+                    foreach (var product in products.Distinct())
+                    {
+                        productsUniq.Add(product);
+                      // Console.Write("{0}|", product);
+                    }
+                    Console.WriteLine();
+                  */
                 if (curRow != null && token.IsCancellationRequested)
                 {
                     // Rollback
