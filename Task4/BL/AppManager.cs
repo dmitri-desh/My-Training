@@ -143,7 +143,7 @@ namespace BL
             {
                 var curName = name.Substring(0, name.LastIndexOf('-')).Replace('-',' ');
                 curName = Regex.Replace(curName, @"\w+", new MatchEvaluator(CapitalizeString));
-                var curId = name.Substring(name.LastIndexOf('-'), name.LastIndexOf('.'));
+               // var curId = name.Substring(name.LastIndexOf('-'), name.LastIndexOf('.'));
                 Console.WriteLine("{0}\t", curName);
                 string curRow = null;
               

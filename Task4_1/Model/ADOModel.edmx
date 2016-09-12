@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ADOModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ADOModelStoreContainer">
+    <EntitySet Name="MainCategories" EntityType="ADOModel.Store.MainCategories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Categories" EntityType="ADOModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubCategories" EntityType="ADOModel.Store.SubCategories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="ADOModel.Store.Products" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="MainCategorieCategorie" Association="ADOModel.Store.MainCategorieCategorie">
+      <End Role="MainCategorie" EntitySet="MainCategories" />
+      <End Role="Categorie" EntitySet="Categories" />
+    </AssociationSet>
+    <AssociationSet Name="CategorieSubCategorie" Association="ADOModel.Store.CategorieSubCategorie">
+      <End Role="Categorie" EntitySet="Categories" />
+      <End Role="SubCategorie" EntitySet="SubCategories" />
+    </AssociationSet>
+    <AssociationSet Name="SubCategorieProduct" Association="ADOModel.Store.SubCategorieProduct">
+      <End Role="SubCategorie" EntitySet="SubCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MainCategories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MainCategorieId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubCategories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategorieId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LinkId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Advertiser" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Link" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="decimal" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SubCategorieId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="MainCategorieCategorie">
+    <End Role="MainCategorie" Type="ADOModel.Store.MainCategories" Multiplicity="1" />
+    <End Role="Categorie" Type="ADOModel.Store.Categories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MainCategorie">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Categorie">
+        <PropertyRef Name="MainCategorieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategorieSubCategorie">
+    <End Role="Categorie" Type="ADOModel.Store.Categories" Multiplicity="1" />
+    <End Role="SubCategorie" Type="ADOModel.Store.SubCategories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SubCategorie">
+        <PropertyRef Name="CategorieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SubCategorieProduct">
+    <End Role="SubCategorie" Type="ADOModel.Store.SubCategories" Multiplicity="1" />
+    <End Role="Product" Type="ADOModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategorie">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="SubCategorieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ADOModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ADOModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MainCategories" EntityType="ADOModel.MainCategorie" />
+          <EntitySet Name="Categories" EntityType="ADOModel.Categorie" />
+          <AssociationSet Name="MainCategorieCategorie" Association="ADOModel.MainCategorieCategorie">
+            <End Role="MainCategorie" EntitySet="MainCategories" />
+            <End Role="Categorie" EntitySet="Categories" />
+          </AssociationSet>
+          <EntitySet Name="SubCategories" EntityType="ADOModel.SubCategorie" />
+          <AssociationSet Name="CategorieSubCategorie" Association="ADOModel.CategorieSubCategorie">
+            <End Role="Categorie" EntitySet="Categories" />
+            <End Role="SubCategorie" EntitySet="SubCategories" />
+          </AssociationSet>
+          <EntitySet Name="Products" EntityType="ADOModel.Product" />
+          <AssociationSet Name="SubCategorieProduct" Association="ADOModel.SubCategorieProduct">
+            <End Role="SubCategorie" EntitySet="SubCategories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MainCategorie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Categorie" Relationship="ADOModel.MainCategorieCategorie" FromRole="MainCategorie" ToRole="Categorie" />
+        </EntityType>
+        <EntityType Name="Categorie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="MainCategorie" Relationship="ADOModel.MainCategorieCategorie" FromRole="Categorie" ToRole="MainCategorie" />
+          <Property Name="MainCategorieId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SubCategorie" Relationship="ADOModel.CategorieSubCategorie" FromRole="Categorie" ToRole="SubCategorie" />
+        </EntityType>
+        <Association Name="MainCategorieCategorie">
+          <End Type="ADOModel.MainCategorie" Role="MainCategorie" Multiplicity="1" />
+          <End Type="ADOModel.Categorie" Role="Categorie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainCategorie">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Categorie">
+              <PropertyRef Name="MainCategorieId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SubCategorie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Categorie" Relationship="ADOModel.CategorieSubCategorie" FromRole="SubCategorie" ToRole="Categorie" />
+          <Property Name="CategorieId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="ADOModel.SubCategorieProduct" FromRole="SubCategorie" ToRole="Product" />
+        </EntityType>
+        <Association Name="CategorieSubCategorie">
+          <End Type="ADOModel.Categorie" Role="Categorie" Multiplicity="1" />
+          <End Type="ADOModel.SubCategorie" Role="SubCategorie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorie">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubCategorie">
+              <PropertyRef Name="CategorieId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="LinkId" Type="String" Nullable="false" />
+          <Property Name="Advertiser" Type="String" Nullable="false" />
+          <Property Name="Link" Type="String" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <NavigationProperty Name="SubCategorie" Relationship="ADOModel.SubCategorieProduct" FromRole="Product" ToRole="SubCategorie" />
+          <Property Name="SubCategorieId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="SubCategorieProduct">
+          <End Type="ADOModel.SubCategorie" Role="SubCategorie" Multiplicity="1" />
+          <End Type="ADOModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategorie">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="SubCategorieId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ADOModelStoreContainer" CdmEntityContainer="ADOModelContainer">
+    <EntitySetMapping Name="MainCategories">
+      <EntityTypeMapping TypeName="IsTypeOf(ADOModel.MainCategorie)">
+        <MappingFragment StoreEntitySet="MainCategories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="IsTypeOf(ADOModel.Categorie)">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MainCategorieId" ColumnName="MainCategorieId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategories">
+      <EntityTypeMapping TypeName="IsTypeOf(ADOModel.SubCategorie)">
+        <MappingFragment StoreEntitySet="SubCategories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategorieId" ColumnName="CategorieId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="IsTypeOf(ADOModel.Product)">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LinkId" ColumnName="LinkId" />
+          <ScalarProperty Name="Advertiser" ColumnName="Advertiser" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SubCategorieId" ColumnName="SubCategorieId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
