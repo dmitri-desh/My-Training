@@ -76,15 +76,40 @@ namespace Task2
         {
             
             string pattern = @"[b-d f-h j-n p-t v-x z]";
-            string target = "~";
-            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
             
-            var sentences = from sentence in TextResult.Sentences
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+            /*
+             var sentences = from sentence in TextResult.Sentences
                             select sentence;
+            // int i = 0;
+
             var words = from sentence in sentences
-                            where sentence.ToList().Any(x => (x is IWord ? (x as IWord).ToString().Length : 0) == length)
-                            select sentence.ToList().ToString();
-        
+                        where sentence.ToList().Any(x => (x is IWord ? (x as IWord).ToString().Length : 0) == length)
+                        select sentence.ToList().ToString();
+
+    */
+            foreach (var sentence in TextResult.Sentences)
+            {
+             foreach (var sentenceItem in sentence)
+                {
+                  //  Console.Write("{0} -> ",i);
+                    if (sentenceItem is IWord) // && (sentenceItem as IWord).ToString().Length == length)
+                    {
+                        var curWord = (sentenceItem as IWord).ToList().ToString();
+                        Match m = regex.Match((sentenceItem as IWord).ToList().ToString());
+                      //  if (m.Success)
+                       // {
+                            Console.Write("{0}, ", curWord);
+                       // }
+                    }
+                  //  i++;
+                }
+                Console.WriteLine("|");
+            }
+            //foreach (var word in words)
+            //{
+            //    Console.Write("{0} ", word);
+            //}
         }
  // ToDo
         public void ReplaceSubstring (string substr)

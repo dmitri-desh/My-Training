@@ -56,7 +56,7 @@ namespace TextBuilder1
             Int32.TryParse(ConfigurationManager.AppSettings["lengthWord"], out length);
             Result.GetWordsInInterrogationSentences(length);
             Console.WriteLine("Remove words >>>");
-            Result.RemoveWordsBy(6);
+            Result.RemoveWordsBy(4);
         }
     }
 }
