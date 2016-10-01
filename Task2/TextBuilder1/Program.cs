@@ -32,7 +32,7 @@ namespace TextBuilder1
 
 
 
-            Console.ReadLine();
+         //   Console.ReadLine();
         }
     }
 }
