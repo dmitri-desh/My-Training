@@ -47,6 +47,7 @@ namespace TextBuilder1
         public override void GetResult()
         {
             TextPresenter Result = new TextPresenter(text);
+            /*
             Console.WriteLine("Result text >>>");
             Result.ShowAll();
             Console.WriteLine("Ordered sentences (Cnt words asc) >>>");
@@ -55,6 +56,7 @@ namespace TextBuilder1
             int length;
             Int32.TryParse(ConfigurationManager.AppSettings["lengthWord"], out length);
             Result.GetWordsInInterrogationSentences(length);
+            */
             Console.WriteLine("Remove words >>>");
             Result.RemoveWordsByLength(5);
         }

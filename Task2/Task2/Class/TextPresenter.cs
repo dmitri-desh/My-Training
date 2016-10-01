@@ -78,16 +78,17 @@ namespace Task2
             string pattern = @"\b[b-d f-h j-n p-t v-x z]";
             
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-            /*
+            
              var sentences = from sentence in TextResult.Sentences
                             select sentence;
-            // int i = 0;
 
-            var words = from sentence in sentences
-                        where sentence.ToList().Any(x => (x is IWord ? (x as IWord).ToString().Length : 0) == length)
-                        select sentence.ToList().ToString();
+             var words = from sentence in sentences
+                        where sentence.ToList().Any(x => (x is IWord ? (x as IWord).Chars.Length : 0) == length)
+                        select sentence.ToList();
 
-    */
+
+
+            /*
             foreach (var sentence in TextResult.Sentences)
             {
              foreach (var sentenceItem in sentence)
@@ -122,10 +123,11 @@ namespace Task2
                 }
                 Console.WriteLine();
             }
-            //foreach (var word in words)
-            //{
-            //    Console.Write("{0} ", word);
-            //}
+            */
+            foreach (var word in words)
+            {
+                Console.Write("{0} ", word);
+            }
         }
  // ToDo
         public void ReplaceSubstring (string substr)
