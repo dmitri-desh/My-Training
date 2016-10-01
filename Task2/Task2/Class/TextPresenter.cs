@@ -72,10 +72,10 @@ namespace Task2
       
         }
      // ToDo   
-        public void RemoveWordsBy (int length)
+        public void RemoveWordsByLength (int length)
         {
             
-            string pattern = @"[b-d f-h j-n p-t v-x z]";
+            string pattern = @"\b[b-d f-h j-n p-t v-x z]";
             
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
             /*
@@ -92,19 +92,35 @@ namespace Task2
             {
              foreach (var sentenceItem in sentence)
                 {
-                  //  Console.Write("{0} -> ",i);
-                    if (sentenceItem is IWord) // && (sentenceItem as IWord).ToString().Length == length)
+                   if ((sentenceItem is IWord) && (sentenceItem.Chars.Length == length))
                     {
-                        var curWord = (sentenceItem as IWord).ToList().ToString();
-                        Match m = regex.Match((sentenceItem as IWord).ToList().ToString());
-                      //  if (m.Success)
-                       // {
-                            Console.Write("{0}, ", curWord);
-                       // }
+                        var curWord = sentenceItem.Chars;
+                        Match m = regex.Match(curWord);
+                        if (!m.Success)
+                        {
+                            Console.Write(" {0}", curWord);
+                            
+                        }
+                        else
+                        {
+                            Console.Write(" <Removed Word \"{0}\">", curWord);
+                        }
                     }
-                  //  i++;
+                   else
+                    {
+                        var curSentenceItem = sentenceItem.Chars;
+                        if (sentenceItem is IPunctuation)
+                        {
+                            Console.Write("{0}", curSentenceItem);
+                        }
+                        else
+                        {
+                            Console.Write(" {0}", curSentenceItem);
+                        }
+                    }
+              
                 }
-                Console.WriteLine("|");
+                Console.WriteLine();
             }
             //foreach (var word in words)
             //{
