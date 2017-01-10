@@ -5,18 +5,18 @@ using System.Text;
 
 namespace Task02
 {
-   static class Calculation
+   public static class Calculation
     {
-        static int GetFibonacci(int i)
+        public static int GetFibonacci(int i)
         {
             if (i <= 1) return i;
             else return GetFibonacci(i - 2) + GetFibonacci(i - 1);
         }
 
-        static int GetFactorial(int i)
+        public static ulong GetFactorial(ulong i)
         {
-            if (i == 1) return i;
-            else return GetFactorial(i - 1) * i;
+            if (i == 1) return (ulong)i;
+            else return GetFactorial(i - 1) *(ulong)i;
         }
     }
 }
