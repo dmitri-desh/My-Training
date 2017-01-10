@@ -16,13 +16,9 @@ namespace ModelLayer
     {
         public int id { get; set; }
         public Nullable<decimal> amount { get; set; }
+        public Nullable<int> managerid { get; set; }
+        public Nullable<int> customerid { get; set; }
+        public Nullable<int> productid { get; set; }
         public Nullable<System.DateTime> purchasedate { get; set; }
-        public int productid { get; set; }
-        public int managerid { get; set; }
-        public int customerid { get; set; }
-    
-        public virtual product product { get; set; }
-        public virtual manager manager { get; set; }
-        public virtual customer customer { get; set; }
     }
 }
