@@ -14,7 +14,7 @@ namespace Task02
             try
             {
                 int i = int.Parse(Console.ReadLine());
-                Console.WriteLine("{0}-ое число Фибоначчи = {1}", i, Task02.Calculation.GetFibonacci(i));
+                Console.WriteLine("{0}-ое число Фибоначчи = {1}", i, Calculation.GetFibonacci(i));
                 Console.WriteLine("{0}! = {1}", i, Calculation.GetFactorial(i));
             }
             catch (FormatException)
