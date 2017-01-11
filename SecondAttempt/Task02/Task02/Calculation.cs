@@ -13,7 +13,7 @@ namespace Task02
             else return GetFibonacci(i - 2) + GetFibonacci(i - 1);
         }
 
-        public static ulong GetFactorial(ulong i)
+        public static ulong GetFactorial(int i)
         {
             if (i == 1) return (ulong)i;
             else return GetFactorial(i - 1) *(ulong)i;
