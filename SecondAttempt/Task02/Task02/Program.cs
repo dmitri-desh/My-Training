@@ -14,12 +14,12 @@ namespace Task02
             Console.WriteLine("Введите число: ");
             try
             {
-                // Task02 Calculation
+                // Task02 Calculation.cs
                 int i = int.Parse(Console.ReadLine());
                 Console.WriteLine("{0}-ое число Фибоначчи = {1}", i, Calculation.GetFibonacci(i));
                 Console.WriteLine("{0}! = {1}", i, Calculation.GetFactorial(i));
 
-                // Task02 ObjCounter
+                // Task02 ObjCounter.cs
                 ObjCounter obj1 = new ObjCounter();
                 ObjCounter obj2 = new ObjCounter();
                 ObjCounter obj3 = new ObjCounter();
@@ -29,6 +29,15 @@ namespace Task02
                 obj1.Dispose();
                 obj3.Dispose();
                 Console.WriteLine("Образовано {0} объектов класса", obj1.GetObjectsCount());
+
+                // Task02  Order.cs; example of Nested Class
+                Order order = new Order();
+                order.AddOrderLine("Огурец", 5, 0.43);
+                order.AddOrderLine("Помидор", 3, 0.51);
+                order.AddOrderLine("Картофель", 10, 0.10);
+                Console.WriteLine("Заказ:");
+                order.GetOrder();
+                Console.WriteLine("Общая стоимость заказа: {0} руб.", order.GetOrderTotal());
             }
             catch (FormatException)
             {

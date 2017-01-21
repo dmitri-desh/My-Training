@@ -12,11 +12,13 @@ namespace Task02
         public ObjCounter ()
         {
             count++;
+            Console.WriteLine("Создан {0}-й объект", count);
         }
        
         public void Dispose()
         {
             count--;
+            Console.WriteLine("Уничтожен {0}-й объект", count);
         }
 
         public int GetObjectsCount ()
