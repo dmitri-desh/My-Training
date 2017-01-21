@@ -36,8 +36,12 @@ namespace Task02
                 order.AddOrderLine("Помидор", 3, 0.51);
                 order.AddOrderLine("Картофель", 10, 0.10);
                 Console.WriteLine("Заказ:");
+                Console.WriteLine("Наименование".PadRight(10)
+                       + "\tКол-во".PadRight(3)
+                       + "\tЦена".PadRight(5)
+                       + "\tСтоимость".PadRight(5));
                 order.GetOrder();
-                Console.WriteLine("Общая стоимость заказа: {0} руб.", order.GetOrderTotal());
+                Console.WriteLine("Общая стоимость заказа: {0:C2}", order.GetOrderTotal());
             }
             catch (FormatException)
             {
