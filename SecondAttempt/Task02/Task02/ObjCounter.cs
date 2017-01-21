@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Task02
 {
     class ObjCounter : IDisposable
-    {
+    { // 2.	Напишите класс, который умеет хранить информацию об общем количестве созданных экземпляров своего типа.
         static int count = 0;
         public ObjCounter ()
         {

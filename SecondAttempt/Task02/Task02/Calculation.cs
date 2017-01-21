@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 
 namespace Task02
-{
-   public static class Calculation
+{ // 1. Напишите класс для расчета ряда чисел Фибоначчи и факториала. Выберите правильный тип класса.
+    public static class Calculation
     {
         public static int GetFibonacci(int i)
         {

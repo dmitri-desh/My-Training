@@ -8,7 +8,7 @@ using System.Globalization;
 namespace Task02
 {
     class Order
-    {
+    { // 3.	Напишите пример использования nested класса. Обоснуйте свой выбор.
         private List<OrderLine> _orderLines = new List<OrderLine>();
 
         public void AddOrderLine(string product, int quantity, double price)
