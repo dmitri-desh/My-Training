@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task02.Keys
 {
-    class KeyMetal : CommonKey
+    public enum KeyType
     {
-
+        Metal=1, Magnetic, Contactless
     }
 }

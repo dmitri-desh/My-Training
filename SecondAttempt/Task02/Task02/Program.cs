@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Task02.Keys;
 
 namespace Task02
 {
@@ -42,6 +42,12 @@ namespace Task02
                        + "\tСтоимость".PadRight(5));
                 order.GetOrder();
                 Console.WriteLine("Общая стоимость заказа: {0:C2}", order.GetOrderTotal());
+
+                // Task02.Keys CommonKey.cs
+
+                CommonKey keyMetal = new CommonKey("Металлический ключ", KeyType.Metal);
+                CommonKey keyMagnetic = new CommonKey("Магнитная карта", KeyType.Magnetic);
+                CommonKey keyContactless = new CommonKey("Бесконтактный ключ", KeyType.Metal);
             }
             catch (FormatException)
             {

@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Calculation.cs" />
     <Compile Include="Keys\CommonKey.cs" />
-    <Compile Include="Keys\KeyMetal.cs" />
+    <Compile Include="Keys\KeyType.cs" />
     <Compile Include="ObjCounter.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Program.cs" />
