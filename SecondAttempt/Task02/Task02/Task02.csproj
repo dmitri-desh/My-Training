@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Calculation.cs" />
     <Compile Include="Keys\CommonKey.cs" />
+    <Compile Include="Keys\KeyContactless.cs" />
+    <Compile Include="Keys\KeyMagnetic.cs" />
+    <Compile Include="Keys\KeyMetal.cs" />
     <Compile Include="Keys\KeyType.cs" />
     <Compile Include="ObjCounter.cs" />
     <Compile Include="Order.cs" />

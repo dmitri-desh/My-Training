@@ -44,10 +44,13 @@ namespace Task02
                 Console.WriteLine("Общая стоимость заказа: {0:C2}", order.GetOrderTotal());
 
                 // Task02.Keys CommonKey.cs
+                KeyMetal keyMetal = new KeyMetal("Стальной ключ", KeyType.Metal);
+                keyMetal.UseKey();
 
-                CommonKey keyMetal = new CommonKey("Металлический ключ", KeyType.Metal);
-                CommonKey keyMagnetic = new CommonKey("Магнитная карта", KeyType.Magnetic);
-                CommonKey keyContactless = new CommonKey("Бесконтактный ключ", KeyType.Metal);
+                KeyMagnetic keyMagnetic = new KeyMagnetic("Магнитная карта", KeyType.Magnetic, "345345345rtertwetwetpupkin");
+                if (keyMagnetic.CheckLogin("popkin1234")) { keyMagnetic.UseKey(); }
+                if (keyMagnetic.CheckLogin("345345345rtertwetwetpupkin")) { keyMagnetic.UseKey(); }
+
             }
             catch (FormatException)
             {
