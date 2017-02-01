@@ -12,12 +12,18 @@ namespace Task02.Keys
         protected int Pin;
         public KeyContactless(string name, KeyType keyType, string id, int pin) : base (name, keyType)
         {
-            this.Id = id;
-            this.Pin = pin;
+            Id = id;
+            Pin = pin;
+        }
+        public bool CheckPin(string id, int pin)
+        {
+            Console.WriteLine("Checking PIN {0}...", id);
+            if (Id == id && Pin == pin) { Console.WriteLine("PIN is Ok!"); return true; }
+            else { Console.WriteLine("PIN Error!"); return false; }
         }
         public override void UseKey()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Используем {0} {1}", KeyType, Name);
         }
     }
 }

@@ -48,8 +48,12 @@ namespace Task02
                 keyMetal.UseKey();
 
                 KeyMagnetic keyMagnetic = new KeyMagnetic("Магнитная карта", KeyType.Magnetic, "345345345rtertwetwetpupkin");
-                if (keyMagnetic.CheckLogin("popkin1234")) { keyMagnetic.UseKey(); }
-                if (keyMagnetic.CheckLogin("345345345rtertwetwetpupkin")) { keyMagnetic.UseKey(); }
+                if (keyMagnetic.CheckLogin("popkin1234")) keyMagnetic.UseKey();
+                if (keyMagnetic.CheckLogin("345345345rtertwetwetpupkin")) keyMagnetic.UseKey();
+
+                KeyContactless keyContactless = new KeyContactless("Бесконтактный ключ", KeyType.Contactless, "jghsdsdfg6sd86g8sd6g8sd6g87s6df8g76sdf87g", 4321);
+                if (keyContactless.CheckPin("jhg34jg53j4g5j3g5jh34g5j34j5hg", 2342)) keyContactless.UseKey();
+                if (keyContactless.CheckPin("jghsdsdfg6sd86g8sd6g8sd6g87s6df8g76sdf87g", 4321)) keyContactless.UseKey();
 
             }
             catch (FormatException)

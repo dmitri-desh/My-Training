@@ -11,7 +11,7 @@ namespace Task02.Keys
         protected string Id;
         public KeyMagnetic (string name, KeyType keyType, string id) : base (name, keyType)
         {
-            this.Id = id;
+            Id = id;
             
         }
         public bool CheckLogin (string id)
