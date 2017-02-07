@@ -6,12 +6,22 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Task02.API
-{
+{           //5.	Напишите простейший API для работы с корзиной интернет-магазина. Доступны следующие операции: добавление товара, удаление товара, подсчет общей суммы заказа.
     class Card : ICollection<Item>
     {
         protected List<Item> _order;
 
         public string Id;
+
+        public Card (string id)
+        {
+           Id = id;
+            _order = new List<Item>();
+        }
+        public decimal GetTotal ()
+        {
+            return _order.Sum(t => t.GetAmount());
+        }
 
         public int Count
         {
@@ -23,10 +33,7 @@ namespace Task02.API
 
         public bool IsReadOnly
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            get { return true; }
         }
 
         public void Add(Item item)
@@ -46,7 +53,7 @@ namespace Task02.API
 
         public void CopyTo(Item[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            _order.CopyTo(array);
         }
 
         public bool Remove(Item item)
@@ -56,12 +63,20 @@ namespace Task02.API
 
         public IEnumerator<Item> GetEnumerator()
         {
-            return _order;
+            return _order.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return _order.GetEnumerator();
+        }
+        public IEnumerable<Item> GetItems()
+        {
+            return _order.ToList();
+        }
+        public override string ToString()
+        {
+            return Id;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task02.API;
 using Task02.Keys;
 
 namespace Task02
@@ -55,6 +56,31 @@ namespace Task02
                 if (keyContactless.CheckPin("jhg34jg53j4g5j3g5jh34g5j34j5hg", 2342)) keyContactless.UseKey();
                 if (keyContactless.CheckPin("jghsdsdfg6sd86g8sd6g8sd6g87s6df8g76sdf87g", 4321)) keyContactless.UseKey();
 
+                // Task02.API Card.cs
+                Card card = new Card("Моя корзина");
+                card.Add(new Item("Фигня1", 34.11m, 14));
+                card.Add(new Item("Фигня2", 23.54m, 18));
+                card.Add(new Item("Фигня3", 2.11m, 5));
+                card.Add(new Item("Фигня4", 3.61m, 7));
+                card.Add(new Item("Фигня5", 9.01m, 3));
+                card.Add(new Item("Фигня6", 4.21m, 6));
+
+                Console.WriteLine("{0}", card.ToString());
+                IEnumerable<Item> items = card.GetItems();
+                foreach (Item item in items)
+                {
+                    Console.WriteLine(item.ToString());
+                }
+                
+                Console.WriteLine("Удаляем элемент");
+                card.Remove(new Item("Фигня3", 2.11m, 5));
+                items = card.GetItems();
+                foreach (Item item in items)
+                {
+                    Console.WriteLine(item.ToString());
+                }
+
+                Console.WriteLine("Итоговая сумма:                 {0}", card.GetTotal());
             }
             catch (FormatException)
             {
