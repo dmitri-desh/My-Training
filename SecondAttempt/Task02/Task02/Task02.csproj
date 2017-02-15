@@ -46,6 +46,9 @@
     <Compile Include="API\Card.cs" />
     <Compile Include="API\Item.cs" />
     <Compile Include="Calculation.cs" />
+    <Compile Include="CreditCard\Account.cs" />
+    <Compile Include="CreditCard\OperationType.cs" />
+    <Compile Include="CreditCard\Transaction.cs" />
     <Compile Include="Keys\CommonKey.cs" />
     <Compile Include="Keys\KeyContactless.cs" />
     <Compile Include="Keys\KeyMagnetic.cs" />

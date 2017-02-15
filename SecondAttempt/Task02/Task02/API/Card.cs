@@ -9,7 +9,7 @@ namespace Task02.API
 {           //5.	Напишите простейший API для работы с корзиной интернет-магазина. Доступны следующие операции: добавление товара, удаление товара, подсчет общей суммы заказа.
     class Card : ICollection<Item>
     {
-        protected List<Item> _order;
+        private List<Item> _order;
 
         public string Id;
 
