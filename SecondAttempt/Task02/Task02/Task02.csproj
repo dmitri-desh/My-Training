@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\Card.cs" />
+    <Compile Include="API\Cart.cs" />
     <Compile Include="API\Item.cs" />
     <Compile Include="Calculation.cs" />
     <Compile Include="CreditCard\Account.cs" />

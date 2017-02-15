@@ -7,13 +7,21 @@ using System.Threading.Tasks;
 
 namespace Task02.CreditCard
 {
+    //6. Напишите класс для работы с транзакциями по банковской карте. Минимальный функционал должен содержать: список проведенных транзакций,
+    //   максимальная и минимальная транзакция из проведенных. Обоснуйте архитектуру.
     class Account : ICollection<Transaction>
     {
         public string Name;
-        public string Surname;
         public string AccNumber;
         public decimal Amount;
         private List<Transaction> _transactions = new List<Transaction>();
+
+        public Account (string name, string accNumber)
+        {
+            Name = name;
+            AccNumber = accNumber;
+            Amount = 0;
+        }
         public int Count
         {
             get
@@ -33,6 +41,8 @@ namespace Task02.CreditCard
         public void Add(Transaction item)
         {
             if (_transactions != null) _transactions.Add(item);
+            Amount =  Amount + (item.OperType == OperationType.Refill ? item.Amount : -item.Amount) ; 
+            
         }
 
         public void Clear()
@@ -71,6 +81,16 @@ namespace Task02.CreditCard
         public override string ToString()
         {
             return AccNumber + " " + Amount;
+        }
+        public Transaction GetMinTransaction ()
+        {
+            IEnumerable<Transaction> items = _transactions.OrderBy(t => t.Amount);
+            return items.First();
+        }
+        public Transaction GetMaxTransaction()
+        {
+            IEnumerable<Transaction> items = _transactions.OrderByDescending(t => t.Amount);
+            return items.First();
         }
     }
 }

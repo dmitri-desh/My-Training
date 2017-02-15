@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Task02.API;
+using Task02.CreditCard;
 using Task02.Keys;
 
 namespace Task02
@@ -57,7 +58,7 @@ namespace Task02
                 if (keyContactless.CheckPin("jghsdsdfg6sd86g8sd6g8sd6g87s6df8g76sdf87g", 4321)) keyContactless.UseKey();
 
                 // Task02.API Card.cs
-                Card card = new Card("Моя корзина");
+                Cart card = new Cart("Моя корзина");
                 card.Add(new Item("Фигня1", 34.11m, 14));
                 card.Add(new Item("Фигня2", 23.54m, 18));
                 card.Add(new Item("Фигня3", 2.11m, 5));
@@ -81,6 +82,29 @@ namespace Task02
                 }
 
                 Console.WriteLine("Итоговая сумма:                 {0}", card.GetTotal());
+
+                // Task02.CreditCard
+                Account account = new Account("Пупкин", "0000001");
+                account.Add(new Transaction(1, 1000m, OperationType.Refill));
+                account.Add(new Transaction(2, 500.60m, OperationType.Refill));
+                account.Add(new Transaction(3, 301m, OperationType.Refill));
+                account.Add(new Transaction(4, 101.34m, OperationType.Withdraw));
+                account.Add(new Transaction(5, 2301.1m, OperationType.Refill));
+                account.Add(new Transaction(6, 43.24m, OperationType.Withdraw));
+                account.Add(new Transaction(7, 671.32m, OperationType.Refill));
+                account.Add(new Transaction(8, 130m, OperationType.Refill));
+                account.Add(new Transaction(9, 678.9m, OperationType.Refill));
+                account.Add(new Transaction(10, 301.25m, OperationType.Withdraw));
+                account.Add(new Transaction(11, 125.47m, OperationType.Refill));
+
+                Console.WriteLine("Список транзакций:");
+                foreach (Transaction item in account.GetItems())
+                {
+                    Console.WriteLine(item.ToString());
+                }
+                Console.WriteLine("Баланс счёта {0} : {1}", account.AccNumber, account.Amount);
+                Console.WriteLine("Минимальная транзакция: {0}", account.GetMinTransaction());
+                Console.WriteLine("Максимальная транзакция: {0}", account.GetMaxTransaction());
             }
             catch (FormatException)
             {
