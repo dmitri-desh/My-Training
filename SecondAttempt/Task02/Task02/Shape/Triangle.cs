@@ -10,7 +10,7 @@ namespace Task02.Shape
     {
         public override void Draw()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Draw Triangle!");
         }
     public Triangle(double x, double y)
         {

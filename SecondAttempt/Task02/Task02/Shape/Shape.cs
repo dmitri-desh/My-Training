@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Task02.Shape
 {
-    abstract class Shape
+     class Shape
     {
         public double X { get; set; }
         public double Y { get; set; }
-        public abstract void Draw();
+        public virtual void Draw()
+        {
+            Console.WriteLine("Performing base class drawing tasks!");
+        }
         public virtual double GetArea()
         {
             return -1;

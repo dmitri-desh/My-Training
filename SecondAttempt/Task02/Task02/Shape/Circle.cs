@@ -11,6 +11,7 @@ namespace Task02.Shape
         public double R { get; set; }
         public override void Draw()
         {
+            Console.WriteLine("Draw Circle!");
             double x = 0;
             double y = Math.Sqrt(Math.Pow(R, 2) - Math.Pow(x, 2));
         }

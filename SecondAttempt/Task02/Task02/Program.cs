@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Task02.API;
 using Task02.CreditCard;
 using Task02.Keys;
+using Task02.Shape;
 
 namespace Task02
 {
@@ -105,6 +106,18 @@ namespace Task02
                 Console.WriteLine("Баланс счёта {0} : {1}", account.AccNumber, account.Amount);
                 Console.WriteLine("Минимальная транзакция: {0}", account.GetMinTransaction());
                 Console.WriteLine("Максимальная транзакция: {0}", account.GetMaxTransaction());
+
+                // Task02.Shape
+                List<Shape.Shape> shapes = new List<Shape.Shape>();
+                shapes.Add(new Circle(0, 0, 25));
+                shapes.Add(new Rectangle(5, 5, 11, 20));
+                shapes.Add(new Triangle(10, 10));
+                foreach (Shape.Shape shape in shapes)
+                {
+                    shape.Draw();
+                    Console.WriteLine("Area: {0}", shape.GetArea());
+                }
+
             }
             catch (FormatException)
             {
