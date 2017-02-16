@@ -14,7 +14,7 @@ namespace Task02.Shape
         {
             throw new NotImplementedException();
         }
-        public override double Area()
+        public override double GetArea()
         {
             return Width * Height;
         }

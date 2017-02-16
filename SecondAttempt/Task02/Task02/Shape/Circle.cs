@@ -14,7 +14,7 @@ namespace Task02.Shape
             double x = 0;
             double y = Math.Sqrt(Math.Pow(R, 2) - Math.Pow(x, 2));
         }
-        public override double Area()
+        public override double GetArea()
         {
             return Math.PI * Math.Pow(R, 2);
         }

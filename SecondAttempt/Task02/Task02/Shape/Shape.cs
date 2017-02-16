@@ -11,7 +11,7 @@ namespace Task02.Shape
         public double X { get; set; }
         public double Y { get; set; }
         public abstract void Draw();
-        public virtual double Area()
+        public virtual double GetArea()
         {
             return 0;
         }
