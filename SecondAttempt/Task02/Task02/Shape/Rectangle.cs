@@ -12,6 +12,7 @@ namespace Task02.Shape
         public double Height { get; set; }
         public override void Draw()
         {
+            base.Draw();
             Console.WriteLine("Draw Rectangle!");
         }
         public override double GetArea()

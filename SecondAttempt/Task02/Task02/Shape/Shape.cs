@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task02.Shape
 {
-     class Shape
+     class Shape : IDrawn
     {
         public double X { get; set; }
         public double Y { get; set; }

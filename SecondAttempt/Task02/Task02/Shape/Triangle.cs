@@ -10,6 +10,7 @@ namespace Task02.Shape
     {
         public override void Draw()
         {
+            base.Draw();
             Console.WriteLine("Draw Triangle!");
         }
     public Triangle(double x, double y)
