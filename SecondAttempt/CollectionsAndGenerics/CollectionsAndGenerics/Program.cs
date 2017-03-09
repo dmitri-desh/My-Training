@@ -75,7 +75,7 @@ namespace CollectionsAndGenerics
             var searchTime = newTime - oldTime1;
             if (res) { Console.WriteLine("Binago!!! Search Value '{0}' exists in table. Adding Time is {1} sec. Search Time is {2} sec", searchValue, addTime, searchTime); }
             else { Console.WriteLine("Error!!! Search Value '{0}' not exists in table", searchValue); }
-
+             
             // 2.	максимальная скорость сохранения данных в коллекции 
             IDictionary dict = new Dictionary<int, string>();
             dict.Add(1, "fdhkhdk sdhkhdfsksdfhkhdkdskhhasgdhoaweiuyaowqerrtoert49325034043 434m34n63m6m34n6m34n6346346 634 6 63 4634 634 6n34");
