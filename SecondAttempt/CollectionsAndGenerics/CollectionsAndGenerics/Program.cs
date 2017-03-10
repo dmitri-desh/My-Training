@@ -19,7 +19,7 @@ namespace CollectionsAndGenerics
             char ch;
             for (int i = 0; i < size; i++)
             {
-                ch = Convert.ToChar(random.Next(9, 256));
+                ch = Convert.ToChar(random.Next(13, 256));
                 builder.Append(ch);
             }
 
@@ -31,8 +31,9 @@ namespace CollectionsAndGenerics
             string searchValue = "";
             Hashtable table = new Hashtable();
             string curStr;
+            Console.WriteLine("Start generate strings...");
             var startAddTime = DateTime.Now;
-            for (int i = 1; i <= 50000; i++)
+            for (int i = 1; i <= 100000; i++)
             {
                 curStr = RandomString();
                 table.Add(i, curStr);
