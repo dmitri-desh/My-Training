@@ -15,6 +15,7 @@ namespace CollectionsAndGenerics
             Random random = new Random((int)DateTime.Now.Ticks);
             int size = random.Next(10, 20000);
             StringBuilder builder = new StringBuilder();
+            builder.Clear();
             char ch;
             for (int i = 0; i < size; i++)
             {
