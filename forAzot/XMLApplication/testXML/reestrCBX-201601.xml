@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NDS term_type="1" year="2016" period="01" kodIMNS="543" UNP="500036524" perehod="false" perehodKvart="false" perehodMes="false" roundToCash="false" utochRaschet1="false" utochRaschet2="false" utochRaschet1_2014="false" p5Art70Sign="false" errorSign="false" utochRaschet="false" type="NDS" version="3" xmlns="http://mns/edeclaration/xml/nds/ver3">
+  <NDS_v3_f001 xmlns="">Октябрьскому району г. Гродно</NDS_v3_f001>
+  <NDS_v3_f002 xmlns="">
+    <NDS_v3_f002_s1>Открытое акционерное общество "Гродно Азот"</NDS_v3_f002_s1>
+    <NDS_v3_f002_s2>пр.Космонавтов,д.100</NDS_v3_f002_s2>
+    <NDS_v3_f002_s3>Кузьмицкая Светлана Славомировна 8(0152)794096</NDS_v3_f002_s3>
+  </NDS_v3_f002>
+  <NDS_v3_part1 xmlns="">
+    <NDS_v3_part1_t001>
+      <NDS_v3_part1_t001_r1c2>4590070729648</NDS_v3_part1_t001_r1c2>
+      <NDS_v3_part1_t001_r2c2>0</NDS_v3_part1_t001_r2c2>
+      <NDS_v3_part1_t001_r3c2>0.000</NDS_v3_part1_t001_r3c2>
+      <NDS_v3_part1_t001_r4c2>0</NDS_v3_part1_t001_r4c2>
+      <NDS_v3_part1_t001_r5c2>0</NDS_v3_part1_t001_r5c2>
+      <NDS_v3_part1_t001_r6c2>5832018878786</NDS_v3_part1_t001_r6c2>
+      <NDS_v3_part1_t001_r7c2>41640662710</NDS_v3_part1_t001_r7c2>
+      <NDS_v3_part1_t001_r8c2>7801796633</NDS_v3_part1_t001_r8c2>
+      <NDS_v3_part1_t001_r9c2>3015840763</NDS_v3_part1_t001_r9c2>
+      <NDS_v3_part1_t001_r10c2>0</NDS_v3_part1_t001_r10c2>
+      <NDS_v3_part1_t001_r11c2>123110274683</NDS_v3_part1_t001_r11c2>
+      <NDS_v3_part1_t001_r12c2>10597658183223.000</NDS_v3_part1_t001_r12c2>
+      <NDS_v3_part1_t001_r1c4>765011788275</NDS_v3_part1_t001_r1c4>
+      <NDS_v3_part1_t001_r2c4>0</NDS_v3_part1_t001_r2c4>
+      <NDS_v3_part1_t001_r3c4>0</NDS_v3_part1_t001_r3c4>
+      <NDS_v3_part1_t001_r4c4>0</NDS_v3_part1_t001_r4c4>
+      <NDS_v3_part1_t001_r5c4>0</NDS_v3_part1_t001_r5c4>
+      <NDS_v3_part1_t001_r6c4>0</NDS_v3_part1_t001_r6c4>
+      <NDS_v3_part1_t001_r7c4>0</NDS_v3_part1_t001_r7c4>
+      <NDS_v3_part1_t001_r8c4>0</NDS_v3_part1_t001_r8c4>
+      <NDS_v3_part1_t001_r9c4>24622054934</NDS_v3_part1_t001_r9c4>
+      <NDS_v3_part1_t001_r10c4>789633843209</NDS_v3_part1_t001_r10c4>
+      <NDS_v3_part1_t001_r11c4>0</NDS_v3_part1_t001_r11c4>
+      <NDS_v3_part1_t001_r12c4>0</NDS_v3_part1_t001_r12c4>
+      <NDS_v3_part1_t001_r13c4>789633843209</NDS_v3_part1_t001_r13c4>
+      <NDS_v3_part1_t001_r13c4b>false</NDS_v3_part1_t001_r13c4b>
+      <NDS_v3_part1_t001_r14c4>1561946472042</NDS_v3_part1_t001_r14c4>
+      <NDS_v3_part1_t001_r15c4>0</NDS_v3_part1_t001_r15c4>
+      <NDS_v3_part1_t001_r16c4>0</NDS_v3_part1_t001_r16c4>
+      <NDS_v3_part1_t001_r17c4>1561946472042</NDS_v3_part1_t001_r17c4>
+      <NDS_v3_part1_t001_r18c4>-772312628833</NDS_v3_part1_t001_r18c4>
+      <NDS_v3_part1_t001_r19c4>0</NDS_v3_part1_t001_r19c4>
+      <NDS_v3_part1_t001_r20c4>0</NDS_v3_part1_t001_r20c4>
+      <NDS_v3_part1_t001_r21c4>-772312628833</NDS_v3_part1_t001_r21c4>
+      <NDS_v3_part1_t001_r22c4>-157433873324</NDS_v3_part1_t001_r22c4>
+      <NDS_v3_part1_t001_r23c4>0</NDS_v3_part1_t001_r23c4>
+      <NDS_v3_part1_t001_r24c4>0</NDS_v3_part1_t001_r24c4>
+      <NDS_v3_part1_t001_r25c4>-157433873324</NDS_v3_part1_t001_r25c4>
+      <NDS_v3_part1_t001_r26c4>-157433873324</NDS_v3_part1_t001_r26c4>
+      <NDS_v3_part1_t001_r27c4>0</NDS_v3_part1_t001_r27c4>
+    </NDS_v3_part1_t001>
+    <NDS_v3_part1_f002>2015-11-23+03:00</NDS_v3_part1_f002>
+    <NDS_v3_part1_t003>
+      <NDS_v3_part1_t003_r1c2>1563514196162</NDS_v3_part1_t003_r1c2>
+      <NDS_v3_part1_t003_r2c2>45314316916</NDS_v3_part1_t003_r2c2>
+      <NDS_v3_part1_t003_r2c2a>1445544577936</NDS_v3_part1_t003_r2c2a>
+      <NDS_v3_part1_t003_r2c2b>40301389661</NDS_v3_part1_t003_r2c2b>
+      <NDS_v3_part1_t003_r2c2c>77668228565</NDS_v3_part1_t003_r2c2c>
+      <NDS_v3_part1_t003_r3c2>0</NDS_v3_part1_t003_r3c2>
+      <NDS_v3_part1_t003_r4c2>0</NDS_v3_part1_t003_r4c2>
+      <NDS_v3_part1_t003_r4c2A>0</NDS_v3_part1_t003_r4c2A>
+      <NDS_v3_part1_t003_r5c2>870423592338</NDS_v3_part1_t003_r5c2>
+      <NDS_v3_part1_t003_r6c2>0</NDS_v3_part1_t003_r6c2>
+      <NDS_v3_part1_t003_r7c2>6034688438</NDS_v3_part1_t003_r7c2>
+      <NDS_v3_part1_t003_r8c2>0</NDS_v3_part1_t003_r8c2>
+      <NDS_v3_part1_t003_r8ac2>0</NDS_v3_part1_t003_r8ac2>
+      <NDS_v3_part1_t003_r8c2a>1567724120</NDS_v3_part1_t003_r8c2a>
+      <NDS_v3_part1_t003_r9c2>376591492734</NDS_v3_part1_t003_r9c2>
+      <NDS_v3_part1_t003_r10c2>373986600305</NDS_v3_part1_t003_r10c2>
+      <NDS_v3_part1_t003_r11c2>2604892429</NDS_v3_part1_t003_r11c2>
+      <NDS_v3_part1_t003_r11c2A>0</NDS_v3_part1_t003_r11c2A>
+      <NDS_v3_part1_t003_r12c2>0</NDS_v3_part1_t003_r12c2>
+      <NDS_v3_part1_t003_r13c2>0</NDS_v3_part1_t003_r13c2>
+      <NDS_v3_part1_t003_r14c2>0</NDS_v3_part1_t003_r14c2>
+      <NDS_v3_part1_t003_r15c2>0</NDS_v3_part1_t003_r15c2>
+      <NDS_v3_part1_t003_r16c2>0</NDS_v3_part1_t003_r16c2>
+    </NDS_v3_part1_t003>
+    <NDS_v3_part1_l4i>
+      <NDS_v3_part1_l4i_t001>
+        <NDS_v3_part1_l4i_t001_r1c2>0</NDS_v3_part1_l4i_t001_r1c2>
+        <NDS_v3_part1_l4i_t001_r2c2>0</NDS_v3_part1_l4i_t001_r2c2>
+        <NDS_v3_part1_l4i_t001_r3c2>0</NDS_v3_part1_l4i_t001_r3c2>
+        <NDS_v3_part1_l4i_t001_r4c2>0</NDS_v3_part1_l4i_t001_r4c2>
+        <NDS_v3_part1_l4i_t001_r5c2>0</NDS_v3_part1_l4i_t001_r5c2>
+        <NDS_v3_part1_l4i_t001_r6c2>0</NDS_v3_part1_l4i_t001_r6c2>
+        <NDS_v3_part1_l4i_t001_r1c4>0</NDS_v3_part1_l4i_t001_r1c4>
+        <NDS_v3_part1_l4i_t001_r2c4>0</NDS_v3_part1_l4i_t001_r2c4>
+        <NDS_v3_part1_l4i_t001_r3c4>0</NDS_v3_part1_l4i_t001_r3c4>
+        <NDS_v3_part1_l4i_t001_r4c4>0</NDS_v3_part1_l4i_t001_r4c4>
+        <NDS_v3_part1_l4i_t001_r5c4>0</NDS_v3_part1_l4i_t001_r5c4>
+        <NDS_v3_part1_l4i_t001_r6c4>0</NDS_v3_part1_l4i_t001_r6c4>
+        <NDS_v3_part1_l4i_t001_r7c4>0</NDS_v3_part1_l4i_t001_r7c4>
+        <NDS_v3_part1_l4i_t001_r8c4>0</NDS_v3_part1_l4i_t001_r8c4>
+        <NDS_v3_part1_l4i_t001_r9c4>0</NDS_v3_part1_l4i_t001_r9c4>
+      </NDS_v3_part1_l4i_t001>
+    </NDS_v3_part1_l4i>
+  </NDS_v3_part1>
+  <NDS_v3_part2 xmlns="">
+    <NDS_v3_part2_l1i>
+      <NDS_v3_part2_l1i_f001>643</NDS_v3_part2_l1i_f001>
+      <NDS_v3_part2_l1i_t002>
+        <NDS_v3_part2_l1i_t002_r1c2>26882458265</NDS_v3_part2_l1i_t002_r1c2>
+        <NDS_v3_part2_l1i_t002_r1c2A>0</NDS_v3_part2_l1i_t002_r1c2A>
+        <NDS_v3_part2_l1i_t002_r2c2>0</NDS_v3_part2_l1i_t002_r2c2>
+        <NDS_v3_part2_l1i_t002_r2c2A>0</NDS_v3_part2_l1i_t002_r2c2A>
+        <NDS_v3_part2_l1i_t002_r3c2>0</NDS_v3_part2_l1i_t002_r3c2>
+        <NDS_v3_part2_l1i_t002_r3c2A>0</NDS_v3_part2_l1i_t002_r3c2A>
+        <NDS_v3_part2_l1i_t002_r1c3>20</NDS_v3_part2_l1i_t002_r1c3>
+        <NDS_v3_part2_l1i_t002_r2c3>10</NDS_v3_part2_l1i_t002_r2c3>
+        <NDS_v3_part2_l1i_t002_r1c4>5376491653</NDS_v3_part2_l1i_t002_r1c4>
+        <NDS_v3_part2_l1i_t002_r1c4A>0</NDS_v3_part2_l1i_t002_r1c4A>
+        <NDS_v3_part2_l1i_t002_r2c4>0</NDS_v3_part2_l1i_t002_r2c4>
+        <NDS_v3_part2_l1i_t002_r2c4A>0</NDS_v3_part2_l1i_t002_r2c4A>
+        <NDS_v3_part2_l1i_t002_r3c4A>0</NDS_v3_part2_l1i_t002_r3c4A>
+        <NDS_v3_part2_l1i_t002_r4c4>5376491653</NDS_v3_part2_l1i_t002_r4c4>
+        <NDS_v3_part2_l1i_t002_r5c4>0</NDS_v3_part2_l1i_t002_r5c4>
+        <NDS_v3_part2_l1i_t002_r6c4>0</NDS_v3_part2_l1i_t002_r6c4>
+      </NDS_v3_part2_l1i_t002>
+    </NDS_v3_part2_l1i>
+    <NDS_v3_part2_f002>2015-11-20+03:00</NDS_v3_part2_f002>
+  </NDS_v3_part2>
+  <NDS_v3_f003 xmlns="">-157433873324</NDS_v3_f003>
+  <NDS_v3_f004 xmlns="">5376491653</NDS_v3_f004>
+  <NDS_v3_f005 xmlns="">Последняя Тамара Ивановна</NDS_v3_f005>
+  <NDS_v3_spravka_t001 xmlns="" />
+  <NDS_v3_reestr xmlns="" />
+  <NDS_v3_reestr0 xmlns="" />
+  <NDS_v3_reestr1 xmlns="" />
+  <NDS_v3_reestr2 xmlns="">
+    <NDS_v3_reestr2_t001>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007301</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №1 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324170</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>461468700</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007302</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №3 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324180</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007303</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №2 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324174</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007304</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №1 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324173</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>461468700</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007305</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №1 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324169</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>461468700</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007307</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №3 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324181</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007308</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №3 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324182</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007309</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №3 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324179</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007311</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №3 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324183</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007318</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №1 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324171</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>461468700</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007319</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №1 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324172</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>461468700</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007320</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-07+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №2 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324175</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006739</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-09+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №10 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-20+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015149</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-20+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006740</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-09+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №8 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-18+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015144</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-18+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479448000</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006741</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-09+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №10 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-20+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015150</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-20+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006744</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-09+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №8 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-18+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015145</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-18+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479448000</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006745</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-09+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №8 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-18+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015146</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-18+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479448000</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006790</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-11+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №10 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-20+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015152</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-20+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006791</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-11+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №10 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-20+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015151</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-20+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006793</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-11+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №8 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-18+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015147</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-18+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479448000</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006821</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-12+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №2 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324176</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006826</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-12+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №8 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-18+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015148</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-18+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479458747</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006828</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-12+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №2 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324178</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006833</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-12+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №10 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-20+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015153</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-20+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006839</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-12+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-08+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/985</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №2 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-05+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324177</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-05+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>439803760</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007439</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-12+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №11 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015154</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007440</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-12+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №5 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324184</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>458222351</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007441</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-12+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №6 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324197</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007442</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-12+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №6 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324195</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006858</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-13+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №6 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324196</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006864</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-13+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №5 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324186</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>458222351</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006870</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-13+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №12 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015160</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006872</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-13+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №9 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324193</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006876</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-13+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №5 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324185</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>458222351</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006883</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-13+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №5 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324187</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>458222351</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006887</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-13+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №7 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015143</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007485</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-13+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №11 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015155</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007486</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-13+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №5 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324188</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>458222351</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006900</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №7 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015141</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006901</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №6 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324194</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006903</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №7 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324200</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006904</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-04+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №4 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324164</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479448000</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006907</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №7 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015142</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006908</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №11 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015156</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006909</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №4 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324168</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479448000</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006911</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №4 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324167</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479448000</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006912</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №11 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015158</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007503</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №6 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324198</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007504</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №11 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015157</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007507</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-14+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №4 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324166</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479448000</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007518</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-15+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-02+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/972</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №4 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-06+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324165</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-06+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>479448000</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006951</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-17+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №9 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324190</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006954</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-17+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №9 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324191</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006955</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-17+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №9 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324192</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006958</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-17+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №12 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015162</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006963</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-17+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №12 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015163</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007586</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-17+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-07+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>392-15/991</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №9 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324189</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463577632</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006975</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-18+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №12 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015159</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16458/51007592</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-17+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-12-15+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/1014</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №12 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-27+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0015161</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-27+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>517683561</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_ri>
+        <NDS_v3_reestr2_t001_ric1>16445/51006998</NDS_v3_reestr2_t001_ric1>
+        <NDS_v3_reestr2_t001_ric2>2015-11-18+03:00</NDS_v3_reestr2_t001_ric2>
+        <NDS_v3_reestr2_t001_ric4a>2015-06-09+03:00</NDS_v3_reestr2_t001_ric4a>
+        <NDS_v3_reestr2_t001_ric4b>156-15/751</NDS_v3_reestr2_t001_ric4b>
+        <NDS_v3_reestr2_t001_ric5>Kитайская Народная Респулика</NDS_v3_reestr2_t001_ric5>
+        <NDS_v3_reestr2_t001_ric6a>2015-11-27+03:00</NDS_v3_reestr2_t001_ric6a>
+        <NDS_v3_reestr2_t001_ric6b>156-15/967</NDS_v3_reestr2_t001_ric6b>
+        <NDS_v3_reestr2_t001_ric7a>Акт №7 передачи товара, ТН</NDS_v3_reestr2_t001_ric7a>
+        <NDS_v3_reestr2_t001_ric7b>2016-01-12+03:00</NDS_v3_reestr2_t001_ric7b>
+        <NDS_v3_reestr2_t001_ric7c>0324199</NDS_v3_reestr2_t001_ric7c>
+        <NDS_v3_reestr2_t001_ric8>2016-01-12+03:00</NDS_v3_reestr2_t001_ric8>
+        <NDS_v3_reestr2_t001_ric9>463655647</NDS_v3_reestr2_t001_ric9>
+        <NDS_v3_reestr2_t001_ric10b />
+      </NDS_v3_reestr2_t001_ri>
+      <NDS_v3_reestr2_t001_rnc9>28240152002</NDS_v3_reestr2_t001_rnc9>
+    </NDS_v3_reestr2_t001>
+    <NDS_v3_reestr2_f002>Последняя Тамара Ивановна</NDS_v3_reestr2_f002>
+  </NDS_v3_reestr2>
+  <NDS_v3_reestr8 xmlns="" />
+</NDS>
