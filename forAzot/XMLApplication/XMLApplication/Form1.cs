@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
-using System.Xml.XPath;
+using System.IO;
+using System.Text.RegularExpressions;
+//using System.Xml;
+//using System.Xml.XPath;
 
 namespace XMLApplication
 {
@@ -21,8 +23,8 @@ namespace XMLApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // openFileDialog1.ShowDialog();
-            openFileDialog1.FileName = "N:\\MARKET\\ORACLE\\DeclRegister\\xsl-edecl\\3\\out-OPS$14010-17-03-10-31.xml";
+            //openFileDialog1.ShowDialog();
+             openFileDialog1.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\out-OPS$14010-17-03-10-31.xml";
             textBox1.Text = openFileDialog1.FileName;
             
         }
@@ -30,19 +32,62 @@ namespace XMLApplication
         private void button2_Click(object sender, EventArgs e)
         {
             //  openFileDialog2.ShowDialog();
-            openFileDialog2.FileName = "N:\\MARKET\\ORACLE\\DeclRegister\\xsl-edecl\\3\\edeclSNG-201702.xml";
+            openFileDialog2.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\out-OPS$14010-17-03-10-31.xml";
             textBox2.Text = openFileDialog1.FileName;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            StreamReader reader = null;
+            try
+            {
+                reader = File.OpenText(openFileDialog1.FileName);
+                int bufferLength = 10000;
+
+                string pattern = @"\s+";
+                string target = " ";
+                Regex regex = new Regex(pattern);
+                             
+                StringBuilder buffer = new StringBuilder(bufferLength);
+                buffer.Clear();
+                string currentString = reader.ReadLine();
+                var prevString = "";
+                currentString = regex.Replace(currentString, target);
+                buffer.Append(currentString + "\n");
+                while (currentString != null)
+                {
+                    prevString = currentString;
+                    currentString = reader.ReadLine();
+                    if (prevString == "<NDS_v3_reestr_t001>")
+                    {
+                        buffer.Append("Fuck!" + "\n");
+                    }
+                    else buffer.Append(currentString + "\n");
+                    
+                }
+                richTextBox1.Text = buffer.ToString();
+                buffer.Clear();
+             }
+            catch (IOException ee)
+            {
+                // Console.WriteLine("Error reading. {0}", ee.Message);
+                label1.Text = ee.Message;
+            }
+            finally
+            {
+                if (reader != null)
+                    reader.Dispose();
+            }
+            /*
             XmlDocument docAzot = new XmlDocument();
             docAzot.Load(openFileDialog1.FileName);
             XPathNavigator navigatorAzot = docAzot.CreateNavigator();
+            */
+            // XmlNamespaceManager managerAzot = new XmlNamespaceManager(navigatorAzot.NameTable);
+            // managerAzot.AddNamespace("bk", "");
+            //richTextBox1.Text = navigatorAzot.OuterXml.ToString();
 
-           // XmlNamespaceManager managerAzot = new XmlNamespaceManager(navigatorAzot.NameTable);
-           // managerAzot.AddNamespace("bk", "");
-            richTextBox1.Text = navigatorAzot.OuterXml.ToString();
+
 
             /*
             foreach (XPathNavigator navAzot in navigatorAzot.Select("//bk:NDS_v3_part1_t001", managerAzot))
