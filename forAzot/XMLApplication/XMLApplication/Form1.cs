@@ -57,7 +57,9 @@ namespace XMLApplication
                 while (currentString != null)
                 {
                     prevString = currentString;
+                    prevString = regex.Replace(prevString, target);
                     currentString = reader.ReadLine();
+                   
                     if (prevString == "<NDS_v3_reestr_t001>")
                     {
                         buffer.Append("Fuck!" + "\n");
