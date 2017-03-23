@@ -1,0 +1,114 @@
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <NDS_v3_reestr8 xmlns="">
+  <NDS_v3_reestr8_t001>  
+  <NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-02-10+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>3662100220170003</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>3662075395</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-02-10+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>16798.51</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-02-09+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>4632090220170012</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>4632205680</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-02-09+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>1921.6</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-01-20+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>5031200120170001</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>5031094336</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-01-20+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>249570.62</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-01-20+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>5031200120170002</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>5031094336</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-01-20+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>277791.22</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-01-20+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>5031200120170003</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>5031094336</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-01-20+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>157683.2</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-01-20+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>5031200120170004</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>5031094336</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-01-20+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>281986</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-01-11+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7719110120170008</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7719537140</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-01-11+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>52813.32</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-01-20+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7725200120170005</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7707551580</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-01-20+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>651597.6</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2016-11-24+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7733241120160001</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7733724198</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2016-11-24+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>70572.97</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2016-10-27+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7733271020160012</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7733724198</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2016-10-27+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>72453.85</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2016-10-27+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7733271020160015</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7733724198</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2016-10-27+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>72124.23</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-02-06+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7734060220170001</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7734197360</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-02-06+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>142804.87</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-02-06+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7734060220170004</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7734197360</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-02-06+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>70463.26</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-02-09+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7734090220170001</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7734197360</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-02-09+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>70877.31</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-02-17+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7734170220170004</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7734197360</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-02-17+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>68729.98</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_ri xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">
+        <NDS_v3_reestr8_t001_ric1d>2017-02-21+03:00</NDS_v3_reestr8_t001_ric1d>
+        <NDS_v3_reestr8_t001_ric1n>7734210220170001</NDS_v3_reestr8_t001_ric1n>
+        <NDS_v3_reestr8_t001_ric2>7734197360</NDS_v3_reestr8_t001_ric2>
+        <NDS_v3_reestr8_t001_ric3>2017-02-21+03:00</NDS_v3_reestr8_t001_ric3>
+        <NDS_v3_reestr8_t001_ric4>121809.86</NDS_v3_reestr8_t001_ric4>
+      </NDS_v3_reestr8_t001_ri><NDS_v3_reestr8_t001_rnc4 xmlns:auto-ns1="http://mns/edeclaration/xml/nds/ver3">2379998.4</NDS_v3_reestr8_t001_rnc4>
+  </NDS_v3_reestr8_t001>  
+ <NDS_v3_reestr8_f002>Последняя Тамара Ивановна</NDS_v3_reestr8_f002>
+ </NDS_v3_reestr8>
