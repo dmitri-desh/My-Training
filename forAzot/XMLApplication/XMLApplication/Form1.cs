@@ -146,7 +146,9 @@ namespace XMLApplication
                     currentString = reader.ReadLine();
                 }
                 richTextBox1.Text = buffer.ToString();
-                var saveTo = @Directory.GetCurrentDirectory() + @"\to-load-" + DateTime.Today.ToShortDateString()+".xml";
+
+                //var saveTo = @Directory.GetCurrentDirectory() + @"\to-load-" + DateTime.Today.ToShortDateString()+".xml";
+                var saveTo =  @"c:\to-load-" + DateTime.Today.ToShortDateString() + ".xml";
                 File.WriteAllText(saveTo, buffer.ToString());
                 label2.Text = "Файл сохранён: " + saveTo;
                 buffer.Clear();
