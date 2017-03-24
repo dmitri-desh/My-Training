@@ -126,6 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(111, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
@@ -147,7 +148,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Обработка данных";
             this.ResumeLayout(false);
             this.PerformLayout();
 

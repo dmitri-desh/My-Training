@@ -23,16 +23,16 @@ namespace XMLApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //openFileDialog1.ShowDialog();
-             openFileDialog1.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\out-OPS$14010-17-03-10-31.xml";
+            openFileDialog1.ShowDialog();
+           //  openFileDialog1.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\out-OPS$14010-17-03-10-31.xml";
             textBox1.Text = openFileDialog1.FileName;
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           //   openFileDialog2.ShowDialog();
-            openFileDialog2.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\reestrCBX-201601.xml";
+            openFileDialog2.ShowDialog();
+           // openFileDialog2.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\reestrCBX-201601.xml";
             textBox2.Text = openFileDialog2.FileName;
         }
 
@@ -68,13 +68,13 @@ namespace XMLApplication
                 while (currentString != null)
                 {
                     if (currentString.Trim() == startTag2) flag2 = true;
-                    if (currentString.Trim() == endTag2) flag2 = false;
+                    if (currentString.Trim() == endTag2)   flag2 = false;
                     if (currentString.Trim() == startTag8) flag8 = true;
-                    if (currentString.Trim() == endTag8) flag8 = false;
+                    if (currentString.Trim() == endTag8)   flag8 = false;
 
                     if (flag2)
                     {
-                        buffer.Append("Bingo2!" + "\n");
+                     //   buffer.Append("Bingo2!" + "\n");
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
@@ -94,6 +94,7 @@ namespace XMLApplication
                                 currentString2 = reader2.ReadLine();
                             }
                             flagCur = false;
+                            flag2 = false;
                         }
                         catch (IOException ee)
                         {
@@ -107,7 +108,8 @@ namespace XMLApplication
                     }
                     else if (flag8)
                     {
-                        buffer.Append("Bingo8!" + "\n");
+                       // buffer.Append("Bingo8!" + "\n");
+                        buffer.Append(currentString + "\n");
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
@@ -127,6 +129,7 @@ namespace XMLApplication
                                 currentString2 = reader2.ReadLine();
                             }
                             flagCur = false;
+                            flag8 = false;
                         }
                         catch (IOException ee)
                         {
@@ -143,6 +146,9 @@ namespace XMLApplication
                     currentString = reader.ReadLine();
                 }
                 richTextBox1.Text = buffer.ToString();
+                var saveTo = @Directory.GetCurrentDirectory() + @"\to-load-" + DateTime.Today.ToShortDateString()+".xml";
+                File.WriteAllText(saveTo, buffer.ToString());
+                label2.Text = "Файл сохранён: " + saveTo;
                 buffer.Clear();
              }
             catch (IOException ee)
