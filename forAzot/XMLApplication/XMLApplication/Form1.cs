@@ -31,41 +31,116 @@ namespace XMLApplication
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //  openFileDialog2.ShowDialog();
-            openFileDialog2.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\out-OPS$14010-17-03-10-31.xml";
-            textBox2.Text = openFileDialog1.FileName;
+           //   openFileDialog2.ShowDialog();
+            openFileDialog2.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\reestrCBX-201601.xml";
+            textBox2.Text = openFileDialog2.FileName;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             StreamReader reader = null;
+            StreamReader reader2 = null;
             try
             {
                 reader = File.OpenText(openFileDialog1.FileName);
-                int bufferLength = 10000;
 
+                int bufferLength = 30000;
                 string pattern = @"\s+";
                 string target = " ";
                 Regex regex = new Regex(pattern);
-                             
+
+               // var startTag1 = "<NDS_v3_reestr_t001>";
+               // var endTag1 = "</NDS_v3_reestr_t001>";
+
+                var startTag2 = "<NDS_v3_reestr2_t001>";
+                var endTag2 = "</NDS_v3_reestr2_t001>";
+                var startTag8 = "<NDS_v3_reestr8_t001>";
+                var endTag8 = "</NDS_v3_reestr8_t001>";
+                var flag2 = false;
+                var flag8 = false;
+
+
                 StringBuilder buffer = new StringBuilder(bufferLength);
                 buffer.Clear();
-                string currentString = reader.ReadLine();
-                var prevString = "";
+                string currentString = reader.ReadLine().Trim();
                 currentString = regex.Replace(currentString, target);
-                buffer.Append(currentString + "\n");
+                string currentString2;
                 while (currentString != null)
                 {
-                    prevString = currentString;
-                    prevString = regex.Replace(prevString, target);
-                    currentString = reader.ReadLine();
-                   
-                    if (prevString == "<NDS_v3_reestr_t001>")
+                    if (currentString.Trim() == startTag2) flag2 = true;
+                    if (currentString.Trim() == endTag2) flag2 = false;
+                    if (currentString.Trim() == startTag8) flag8 = true;
+                    if (currentString.Trim() == endTag8) flag8 = false;
+
+                    if (flag2)
                     {
-                        buffer.Append("Fuck!" + "\n");
+                        buffer.Append("Bingo2!" + "\n");
+                        try
+                        {
+                            reader2 = File.OpenText(openFileDialog2.FileName);
+                            currentString2 = reader2.ReadLine();
+                            currentString2 = regex.Replace(currentString2, target);
+                            var flagCur = false;
+                            while (currentString2 != null)
+                            {
+                                if (currentString2.Trim() == startTag2) flagCur = true;
+                                if (currentString2.Trim() == endTag2) flagCur = false;
+
+                                if (flagCur)
+                                {
+                                    buffer.Append(currentString2 + "\n");
+                                }
+
+                                currentString2 = reader2.ReadLine();
+                            }
+                            flagCur = false;
+                        }
+                        catch (IOException ee)
+                        {
+                            label1.Text = "2 " + ee.Message;
+                        }
+                        finally
+                        {
+                            if (reader2 != null)
+                                reader2.Dispose();
+                        }
+                    }
+                    else if (flag8)
+                    {
+                        buffer.Append("Bingo8!" + "\n");
+                        try
+                        {
+                            reader2 = File.OpenText(openFileDialog2.FileName);
+                            currentString2 = reader2.ReadLine();
+                            currentString2 = regex.Replace(currentString2, target);
+                            var flagCur = false;
+                            while (currentString2 != null)
+                            {
+                                if (currentString2.Trim() == startTag8) flagCur = true;
+                                if (currentString2.Trim() == endTag8) flagCur = false;
+
+                                if (flagCur)
+                                {
+                                    buffer.Append(currentString2 + "\n");
+                                }
+
+                                currentString2 = reader2.ReadLine();
+                            }
+                            flagCur = false;
+                        }
+                        catch (IOException ee)
+                        {
+                            label1.Text = "8 " + ee.Message;
+                        }
+                        finally
+                        {
+                            if (reader2 != null)
+                                reader2.Dispose();
+                        }
                     }
                     else buffer.Append(currentString + "\n");
-                    
+                    label2.Text = currentString;
+                    currentString = reader.ReadLine();
                 }
                 richTextBox1.Text = buffer.ToString();
                 buffer.Clear();
@@ -73,7 +148,7 @@ namespace XMLApplication
             catch (IOException ee)
             {
                 // Console.WriteLine("Error reading. {0}", ee.Message);
-                label1.Text = ee.Message;
+                label1.Text = "Main " + ee.Message;
             }
             finally
             {
