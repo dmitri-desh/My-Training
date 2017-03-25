@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
-//using System.Xml;
-//using System.Xml.XPath;
+using System.Configuration;
 
 namespace XMLApplication
 {
@@ -49,13 +48,18 @@ namespace XMLApplication
                 string target = " ";
                 Regex regex = new Regex(pattern);
 
-               // var startTag1 = "<NDS_v3_reestr_t001>";
-               // var endTag1 = "</NDS_v3_reestr_t001>";
+                /* var startTag1 = "<NDS_v3_reestr_t001>";
+                 var endTag1 = "</NDS_v3_reestr_t001>";
 
-                var startTag2 = "<NDS_v3_reestr2_t001>";
-                var endTag2 = "</NDS_v3_reestr2_t001>";
-                var startTag8 = "<NDS_v3_reestr8_t001>";
-                var endTag8 = "</NDS_v3_reestr8_t001>";
+                 var startTag2 = "<NDS_v3_reestr2_t001>";
+                 var endTag2 = "</NDS_v3_reestr2_t001>";
+                 var startTag8 = "<NDS_v3_reestr8_t001>";
+                 var endTag8 = "</NDS_v3_reestr8_t001>";
+                 */
+                var startTag2 = ConfigurationManager.AppSettings["startTag2"];
+                var endTag2 = ConfigurationManager.AppSettings["endTag2"];
+                var startTag8 = ConfigurationManager.AppSettings["startTag8"];
+                var endTag8 = ConfigurationManager.AppSettings["endTag8"];
                 var flag2 = false;
                 var flag8 = false;
 
@@ -74,7 +78,7 @@ namespace XMLApplication
 
                     if (flag2)
                     {
-                     //   buffer.Append("Bingo2!" + "\n");
+                       // buffer.Append("Bingo2!" + "\n");
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
@@ -89,6 +93,7 @@ namespace XMLApplication
                                 if (flagCur)
                                 {
                                     buffer.Append(currentString2 + "\n");
+                                   // richTextBox1.Text = buffer.ToString();
                                 }
 
                                 currentString2 = reader2.ReadLine();
@@ -109,7 +114,6 @@ namespace XMLApplication
                     else if (flag8)
                     {
                        // buffer.Append("Bingo8!" + "\n");
-                        buffer.Append(currentString + "\n");
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
@@ -124,6 +128,7 @@ namespace XMLApplication
                                 if (flagCur)
                                 {
                                     buffer.Append(currentString2 + "\n");
+                                   // richTextBox1.Text = buffer.ToString();
                                 }
 
                                 currentString2 = reader2.ReadLine();
@@ -141,14 +146,17 @@ namespace XMLApplication
                                 reader2.Dispose();
                         }
                     }
-                    else buffer.Append(currentString + "\n");
+                    else { buffer.Append(currentString + "\n");
+                          // richTextBox1.Text = buffer.ToString();
+                          }
                     label2.Text = currentString;
                     currentString = reader.ReadLine();
                 }
                 richTextBox1.Text = buffer.ToString();
 
                 //var saveTo = @Directory.GetCurrentDirectory() + @"\to-load-" + DateTime.Today.ToShortDateString()+".xml";
-                var saveTo =  @"c:\to-load-" + DateTime.Today.ToShortDateString() + ".xml";
+                var pathToSave = @ConfigurationManager.AppSettings["pathToSave"];
+                var saveTo = pathToSave + "to-load-" + DateTime.Today.ToShortDateString() + ".xml";
                 File.WriteAllText(saveTo, buffer.ToString());
                 label2.Text = "Файл сохранён: " + saveTo;
                 buffer.Clear();
