@@ -15,14 +15,28 @@ namespace XMLApplication
 {
     public partial class Form1 : Form
     {
+        private string fileNameIn;
+
         public Form1()
         {
+            this.fileNameIn = "";
             InitializeComponent();
+        }
+
+        public Form1(string fileName)
+        {
+            this.fileNameIn = fileName;
+            InitializeComponent();
+            if (this.fileNameIn.Length > 0)
+            {
+                openFileDialog1.FileName = this.fileNameIn;
+                textBox1.Text = openFileDialog1.FileName;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+            openFileDialog1.ShowDialog();  
            //  openFileDialog1.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\out-OPS$14010-17-03-10-31.xml";
             textBox1.Text = openFileDialog1.FileName;
             
@@ -30,6 +44,7 @@ namespace XMLApplication
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             openFileDialog2.ShowDialog();
            // openFileDialog2.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\reestrCBX-201601.xml";
             textBox2.Text = openFileDialog2.FileName;
