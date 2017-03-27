@@ -21,6 +21,9 @@ namespace XMLApplication
         {
             this.fileNameIn = "";
             InitializeComponent();
+            openFileDialog1.ShowDialog();
+            textBox1.Text = openFileDialog1.FileName;
+           
         }
 
         public Form1(string fileName)
@@ -32,6 +35,7 @@ namespace XMLApplication
                 openFileDialog1.FileName = this.fileNameIn;
                 textBox1.Text = openFileDialog1.FileName;
             }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
