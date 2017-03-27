@@ -37,7 +37,6 @@ namespace XMLApplication
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();  
-           //  openFileDialog1.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\out-OPS$14010-17-03-10-31.xml";
             textBox1.Text = openFileDialog1.FileName;
             
         }
@@ -46,7 +45,6 @@ namespace XMLApplication
         {
             
             openFileDialog2.ShowDialog();
-           // openFileDialog2.FileName = "S:\\Visual Studio 2015\\Projects\\My-Training\\forAzot\\XMLApplication\\testXML\\reestrCBX-201601.xml";
             textBox2.Text = openFileDialog2.FileName;
         }
 
@@ -63,14 +61,6 @@ namespace XMLApplication
                 string target = " ";
                 Regex regex = new Regex(pattern);
 
-                /* var startTag1 = "<NDS_v3_reestr_t001>";
-                 var endTag1 = "</NDS_v3_reestr_t001>";
-
-                 var startTag2 = "<NDS_v3_reestr2_t001>";
-                 var endTag2 = "</NDS_v3_reestr2_t001>";
-                 var startTag8 = "<NDS_v3_reestr8_t001>";
-                 var endTag8 = "</NDS_v3_reestr8_t001>";
-                 */
                 var startTag2 = ConfigurationManager.AppSettings["startTag2"];
                 var endTag2 = ConfigurationManager.AppSettings["endTag2"];
                 var startTag8 = ConfigurationManager.AppSettings["startTag8"];
@@ -108,7 +98,7 @@ namespace XMLApplication
                                 if (flagCur)
                                 {
                                     buffer.Append(currentString2 + "\n");
-                                   // richTextBox1.Text = buffer.ToString();
+                                 
                                 }
 
                                 currentString2 = reader2.ReadLine();
@@ -143,7 +133,7 @@ namespace XMLApplication
                                 if (flagCur)
                                 {
                                     buffer.Append(currentString2 + "\n");
-                                   // richTextBox1.Text = buffer.ToString();
+                                 
                                 }
 
                                 currentString2 = reader2.ReadLine();
@@ -162,15 +152,18 @@ namespace XMLApplication
                         }
                     }
                     else { buffer.Append(currentString + "\n");
-                          // richTextBox1.Text = buffer.ToString();
+                          
                           }
                     label2.Text = currentString;
                     currentString = reader.ReadLine();
                 }
                 richTextBox1.Text = buffer.ToString();
 
-                //var saveTo = @Directory.GetCurrentDirectory() + @"\to-load-" + DateTime.Today.ToShortDateString()+".xml";
                 var pathToSave = @ConfigurationManager.AppSettings["pathToSave"];
+                if (!Directory.Exists(pathToSave)) { var pathToTemp = @Path.GetTempPath();
+                                                         pathToSave = pathToTemp;
+                                                   }
+
                 var saveTo = pathToSave + "to-load-" + DateTime.Today.ToShortDateString() + ".xml";
                 File.WriteAllText(saveTo, buffer.ToString());
                 label2.Text = "Файл сохранён: " + saveTo;
@@ -186,31 +179,6 @@ namespace XMLApplication
                 if (reader != null)
                     reader.Dispose();
             }
-            /*
-            XmlDocument docAzot = new XmlDocument();
-            docAzot.Load(openFileDialog1.FileName);
-            XPathNavigator navigatorAzot = docAzot.CreateNavigator();
-            */
-            // XmlNamespaceManager managerAzot = new XmlNamespaceManager(navigatorAzot.NameTable);
-            // managerAzot.AddNamespace("bk", "");
-            //richTextBox1.Text = navigatorAzot.OuterXml.ToString();
-
-
-
-            /*
-            foreach (XPathNavigator navAzot in navigatorAzot.Select("//bk:NDS_v3_part1_t001", managerAzot))
-            {
-                label1.Text = navAzot.OuterXml;
-                Console.WriteLine(navigatorAzot.OuterXml);
-                 if (navAzot.Value == "63465184.84")
-                 {
-                     navAzot.SetValue("12.99");
-
-                
-            }
-            
-            Console.WriteLine(navigatorAzot.OuterXml);
-            */
         }
 
         private void button4_Click(object sender, EventArgs e)
