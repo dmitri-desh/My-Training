@@ -25,8 +25,9 @@ namespace CollectionsAndGenerics
 
             return builder.ToString();
         }
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
+           
            // 1.	максимальная скорость поиска и извлечения искомой строки  
             string searchValue = "";
             Hashtable table = new Hashtable();
@@ -81,6 +82,12 @@ namespace CollectionsAndGenerics
                 Console.WriteLine("{0}", searchValue);
                 Console.WriteLine("not exists in dictionary.");
             }
+            
+            // 3.Реализуйте свою коллекцию с итератором. Коллекция работает только с целыми числами.
+            //   При итерации проход по элементам должен заканчиваться, если встречается отрицательное число.
+            var randEnum = new MyEnumerator();
+            foreach (var cur in randEnum)
+                Console.Write("{0}, ", cur);
         }
 
     }
