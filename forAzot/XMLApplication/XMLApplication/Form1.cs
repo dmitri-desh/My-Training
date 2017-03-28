@@ -19,7 +19,7 @@ namespace XMLApplication
 
         public Form1()
         {
-            this.fileNameIn = "";
+            fileNameIn = "";
             InitializeComponent();
             openFileDialog1.ShowDialog();
             textBox1.Text = openFileDialog1.FileName;
@@ -28,11 +28,11 @@ namespace XMLApplication
 
         public Form1(string fileName)
         {
-            this.fileNameIn = fileName;
+            fileNameIn = fileName;
             InitializeComponent();
-            if (this.fileNameIn.Length > 0)
+            if (fileNameIn.Length > 0)
             {
-                openFileDialog1.FileName = this.fileNameIn;
+                openFileDialog1.FileName = fileNameIn;
                 textBox1.Text = openFileDialog1.FileName;
             }
             
