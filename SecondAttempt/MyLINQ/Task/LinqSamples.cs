@@ -26,7 +26,7 @@ namespace SampleQueries
 		private DataSource dataSource = new DataSource();
 
 		[Category("Restriction Operators")]
-		[Title("Where - Task 1")]
+		[Title("Where - Example 1")]
 		[Description("This sample uses the where clause to find all elements of an array with a value less than 5.")]
 		public void Linq1()
 		{
@@ -45,7 +45,7 @@ namespace SampleQueries
 		}
 
 		[Category("Restriction Operators")]
-		[Title("Where - Task 2")]
+		[Title("Where - Example 2")]
 		[Description("This sample return return all presented in market products")]
 
 		public void Linq2()
@@ -60,6 +60,36 @@ namespace SampleQueries
 				ObjectDumper.Write(p);
 			}
 		}
+        [Category("Aggregate Operators")]
+        [Title("Where - My Task 1")]
+        [Description("1. Выдайте список всех клиентов, чей суммарный оборот (сумма всех заказов) превосходит некоторую величину X. Продемонстрируйте выполнение запроса с различными X (подумайте, можно ли обойтись без копирования запроса несколько раз)")]
 
-	}
+        public void Linq3()
+        {
+            decimal X =  100M;
+            
+            var customers =
+                from c in dataSource.Customers
+                select c;
+            var orders =
+                from o in customers
+                select o.Orders;
+            var amounts =
+                from a in orders
+                select a.Sum(x => x.Total);
+            /*
+            var categories =
+                from prod in products
+                group prod by prod.Category into prodGroup
+                let minPrice = prodGroup.Min(p => p.UnitPrice)
+                select new { Category = prodGroup.Key, CheapestProducts = prodGroup.Where(p => p.UnitPrice == minPrice) };
+
+            ObjectDumper.Write(categories, 1);
+            */
+            foreach (var c in amounts)
+            {
+                ObjectDumper.Write(c, 1);
+            }
+        }
+    }
 }
