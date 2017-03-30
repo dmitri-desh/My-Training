@@ -60,7 +60,7 @@ namespace SampleQueries
 				ObjectDumper.Write(p);
 			}
 		}
-        [Category("Projection Operators")]
+        [Category("My Tasks")]
         [Title("Where - My Task 1")]
         [Description("1. Выдайте список всех клиентов, чей суммарный оборот (сумма всех заказов) превосходит некоторую величину X. Продемонстрируйте выполнение запроса с различными X (подумайте, можно ли обойтись без копирования запроса несколько раз)")]
 
@@ -77,16 +77,31 @@ namespace SampleQueries
                 where sumTotal > X
                 select new {CompanyName = customerGroup.Key, sumTotal };
 
-            /*
-            var categories =
-                from prod in products
-                group prod by prod.Category into prodGroup
-                let minPrice = prodGroup.Min(p => p.UnitPrice)
-                select new { Category = prodGroup.Key, CheapestProducts = prodGroup.Where(p => p.UnitPrice == minPrice) };
+            ObjectDumper.Write("Customers with Sum(Total) > " + X);
+            foreach (var c in customersList)
+            {
+                ObjectDumper.Write(c, 1);
+            }
+        }
 
-            ObjectDumper.Write(categories, 1);
-            */
-            ObjectDumper.Write("Customers with Sum Total > " + X);
+        [Category("My Tasks")]
+        [Title("Where - My Task 2")]
+        [Description("2. Для каждого клиента составьте список поставщиков, находящихся в той же стране и том же городе. Сделайте задания с использованием группировки и без.")]
+
+        public void Linq4()
+        {
+
+            decimal X = 10000M;
+
+            var customersList =
+                from customers in dataSource.Customers
+                from orders in customers.Orders
+                group orders by customers.CompanyName into customerGroup
+                let sumTotal = customerGroup.Sum(t => t.Total)
+                where sumTotal > X
+                select new { CompanyName = customerGroup.Key, sumTotal };
+
+            ObjectDumper.Write("Customers with Sum(Total) > " + X);
             foreach (var c in customersList)
             {
                 ObjectDumper.Write(c, 1);
