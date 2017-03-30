@@ -69,10 +69,10 @@ namespace SampleQueries
            
             decimal X =  10000M;
             
-            var orders =
-                from c in dataSource.Customers
-                from o in c.Orders
-                group o by c.CompanyName into customerGroup
+            var customersList =
+                from customers in dataSource.Customers
+                from orders in customers.Orders
+                group orders by customers.CompanyName into customerGroup
                 let sumTotal = customerGroup.Sum(t => t.Total)
                 where sumTotal > X
                 select new {CompanyName = customerGroup.Key, sumTotal };
@@ -86,8 +86,8 @@ namespace SampleQueries
 
             ObjectDumper.Write(categories, 1);
             */
-            ObjectDumper.Write("CUstomers with Sum Total > " + X);
-            foreach (var c in orders)
+            ObjectDumper.Write("Customers with Sum Total > " + X);
+            foreach (var c in customersList)
             {
                 ObjectDumper.Write(c, 1);
             }
