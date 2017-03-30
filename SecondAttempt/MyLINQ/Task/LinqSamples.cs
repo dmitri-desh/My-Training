@@ -60,23 +60,23 @@ namespace SampleQueries
 				ObjectDumper.Write(p);
 			}
 		}
-        [Category("Aggregate Operators")]
+        [Category("Projection Operators")]
         [Title("Where - My Task 1")]
         [Description("1. Выдайте список всех клиентов, чей суммарный оборот (сумма всех заказов) превосходит некоторую величину X. Продемонстрируйте выполнение запроса с различными X (подумайте, можно ли обойтись без копирования запроса несколько раз)")]
 
         public void Linq3()
         {
-            decimal X =  100M;
+           
+            decimal X =  10000M;
             
-            var customers =
-                from c in dataSource.Customers
-                select c;
             var orders =
-                from o in customers
-                select o.Orders;
-            var amounts =
-                from a in orders
-                select a.Sum(x => x.Total);
+                from c in dataSource.Customers
+                from o in c.Orders
+                group o by c.CompanyName into customerGroup
+                let sumTotal = customerGroup.Sum(t => t.Total)
+                where sumTotal > X
+                select new {CompanyName = customerGroup.Key, sumTotal };
+
             /*
             var categories =
                 from prod in products
@@ -86,7 +86,8 @@ namespace SampleQueries
 
             ObjectDumper.Write(categories, 1);
             */
-            foreach (var c in amounts)
+            ObjectDumper.Write("CUstomers with Sum Total > " + X);
+            foreach (var c in orders)
             {
                 ObjectDumper.Write(c, 1);
             }
