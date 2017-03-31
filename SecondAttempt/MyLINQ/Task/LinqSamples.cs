@@ -62,7 +62,8 @@ namespace SampleQueries
 		}
         [Category("My Tasks")]
         [Title("Where - My Task 1")]
-        [Description("1. Выдайте список всех клиентов, чей суммарный оборот (сумма всех заказов) превосходит некоторую величину X. Продемонстрируйте выполнение запроса с различными X (подумайте, можно ли обойтись без копирования запроса несколько раз)")]
+        [Description("1. Выдайте список всех клиентов, чей суммарный оборот (сумма всех заказов) превосходит некоторую величину X. " + 
+                     "Продемонстрируйте выполнение запроса с различными X (подумайте, можно ли обойтись без копирования запроса несколько раз)")]
 
         public void Linq3()
         {
@@ -77,6 +78,35 @@ namespace SampleQueries
                 select new {CompanyName = customerGroup.Key, sumTotal };
 
             ObjectDumper.Write("Customers with Sum Total > " + X);
+            foreach (var c in customersList)
+            {
+                ObjectDumper.Write(c, 1);
+            }
+        }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 2")]
+        [Description("2. Для каждого клиента составьте список поставщиков, находящихся в той же стране и том же городе. " + 
+                     "Сделайте задания с использованием группировки и без.")]
+
+        public void Linq4()
+        {
+            var customersList =
+                from customers in dataSource.Customers
+                from suppliers in dataSource.Suppliers
+                where customers.Country == suppliers.Country && customers.City == suppliers.City
+                select new {customers.CompanyName, customers.Country, customers.City, suppliers.SupplierName };
+
+            ObjectDumper.Write("Customers and Suppliers with equals City & Country (without grouping):");
+            foreach (var c in customersList)
+            {
+                ObjectDumper.Write(c, 1);
+            }
+            ObjectDumper.Write("Customers and Suppliers with equals City & Country (with join):");
+            customersList =
+               from customers in dataSource.Customers
+               join suppliers in dataSource.Suppliers on new { customers.Country, customers.City} equals new {suppliers.Country, suppliers.City}
+               select new { customers.CompanyName, customers.Country, customers.City, suppliers.SupplierName };
             foreach (var c in customersList)
             {
                 ObjectDumper.Write(c, 1);
