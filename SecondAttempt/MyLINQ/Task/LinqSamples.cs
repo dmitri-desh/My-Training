@@ -76,15 +76,6 @@ namespace SampleQueries
                 where sumTotal > X
                 select new {CompanyName = customerGroup.Key, sumTotal };
 
-            /*
-            var categories =
-                from prod in products
-                group prod by prod.Category into prodGroup
-                let minPrice = prodGroup.Min(p => p.UnitPrice)
-                select new { Category = prodGroup.Key, CheapestProducts = prodGroup.Where(p => p.UnitPrice == minPrice) };
-
-            ObjectDumper.Write(categories, 1);
-            */
             ObjectDumper.Write("Customers with Sum Total > " + X);
             foreach (var c in customersList)
             {
