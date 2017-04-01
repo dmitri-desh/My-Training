@@ -173,5 +173,23 @@ namespace SampleQueries
                 ObjectDumper.Write(c, 1);
             }
         }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 6")]
+        [Description("6. Укажите всех клиентов, у которых указан нецифровой код или не заполнен регион или в телефоне не указан код оператора" + 
+                     "(для простоты считаем, что это равнозначно «нет круглых скобочек в начале»).")]
+        public void Linq8()
+        {
+            var customersList = 
+                 from customers in dataSource.Customers
+                 where !customers.PostalCode.All(char.IsDigit) || customers.Region == null || customers.Phone.ToArray()[0] != '('
+                 select new { customers.CompanyName, customers.PostalCode, customers.Region, customers.Phone };
+
+            ObjectDumper.Write("Customers with Orders");
+            foreach (var c in customersList)
+            {
+                ObjectDumper.Write(c, 1);
+            }
+        }
     }
 }
