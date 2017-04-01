@@ -47,7 +47,6 @@ namespace SampleQueries
 		[Category("Restriction Operators")]
 		[Title("Where - Example 2")]
 		[Description("This sample return return all presented in market products")]
-
 		public void Linq2()
 		{
 			var products =
@@ -64,11 +63,9 @@ namespace SampleQueries
         [Title("Where - My Task 1")]
         [Description("1. Выдайте список всех клиентов, чей суммарный оборот (сумма всех заказов) превосходит некоторую величину X. " + 
                      "Продемонстрируйте выполнение запроса с различными X (подумайте, можно ли обойтись без копирования запроса несколько раз)")]
-
         public void Linq3()
         {
             decimal X =  10000M;
-            
             var customersList =
                 from customers in dataSource.Customers
                 from orders in customers.Orders
@@ -88,7 +85,6 @@ namespace SampleQueries
         [Title("Where - My Task 2")]
         [Description("2. Для каждого клиента составьте список поставщиков, находящихся в той же стране и том же городе. " + 
                      "Сделайте задания с использованием группировки и без.")]
-
         public void Linq4()
         {
             var customersList =
@@ -111,13 +107,11 @@ namespace SampleQueries
             {
                 ObjectDumper.Write(c, 1);
             }
-            
         }
 
         [Category("My Tasks")]
         [Title("Where - My Task 3")]
         [Description("3. Найдите всех клиентов, у которых были заказы, превосходящие по сумме величину X ")]
-
         public void Linq5()
         {
             decimal X = 1000M;
@@ -139,7 +133,6 @@ namespace SampleQueries
         [Title("Where - My Task 4")]
         [Description("4. Выдайте список клиентов с указанием, начиная с какого месяца какого года они стали клиентами " +
                      "(принять за таковые месяц и год самого первого заказа)")]
-
         public void Linq6()
         {
            var customersList =
@@ -148,6 +141,31 @@ namespace SampleQueries
                 group orders by customers.CompanyName into customerGroup
                 let minOrderDate = customerGroup.Min(d => d.OrderDate)
                 select new { CompanyName = customerGroup.Key, minOrderDate.Month, minOrderDate.Year };
+
+            ObjectDumper.Write("Customers with Orders");
+            foreach (var c in customersList)
+            {
+                ObjectDumper.Write(c, 1);
+            }
+        }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 5")]
+        [Description("5. Сделайте предыдущее задание, но выдайте список отсортированным по году, месяцу, оборотам клиента " +
+                        "(от максимального к минимальному) и имени клиента")]
+        public void Linq7()
+        {
+            var customersList = (
+                 from customers in dataSource.Customers
+                 from orders in customers.Orders
+                 group orders by customers.CompanyName into customerGroup
+                 let minOrderDate = customerGroup.Min(d => d.OrderDate)
+                 let sumTotal = customerGroup.Sum(t => t.Total)
+                 select new { minOrderDate.Year, minOrderDate.Month, sumTotal, CompanyName = customerGroup.Key})
+                 .OrderBy(year => year.Year)
+                 .ThenBy(month => month.Month)
+                 .ThenByDescending(total => total.sumTotal)
+                 .ThenBy(name => name.CompanyName);
 
             ObjectDumper.Write("Customers with Orders");
             foreach (var c in customersList)
