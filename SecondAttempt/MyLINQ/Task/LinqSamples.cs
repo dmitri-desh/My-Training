@@ -134,5 +134,26 @@ namespace SampleQueries
                 ObjectDumper.Write(c, 1);
             }
         }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 4")]
+        [Description("4. Выдайте список клиентов с указанием, начиная с какого месяца какого года они стали клиентами " +
+                     "(принять за таковые месяц и год самого первого заказа)")]
+
+        public void Linq6()
+        {
+           var customersList =
+                from customers in dataSource.Customers
+                from orders in customers.Orders
+                group orders by customers.CompanyName into customerGroup
+                let minOrderDate = customerGroup.Min(d => d.OrderDate)
+                select new { CompanyName = customerGroup.Key, minOrderDate.Month, minOrderDate.Year };
+
+            ObjectDumper.Write("Customers with Orders");
+            foreach (var c in customersList)
+            {
+                ObjectDumper.Write(c, 1);
+            }
+        }
     }
 }
