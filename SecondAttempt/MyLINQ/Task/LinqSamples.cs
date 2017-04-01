@@ -111,6 +111,28 @@ namespace SampleQueries
             {
                 ObjectDumper.Write(c, 1);
             }
+            
+        }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 3")]
+        [Description("3. Найдите всех клиентов, у которых были заказы, превосходящие по сумме величину X ")]
+
+        public void Linq5()
+        {
+            decimal X = 1000M;
+
+            var customersList = (
+                from customers in dataSource.Customers
+                from orders in customers.Orders
+                where orders.Total > X
+                select new { customers.CompanyName}).Distinct();
+
+            ObjectDumper.Write("Customers with Orders with Totals > " + X);
+            foreach (var c in customersList)
+            {
+                ObjectDumper.Write(c, 1);
+            }
         }
     }
 }
