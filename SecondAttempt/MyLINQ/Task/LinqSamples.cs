@@ -229,7 +229,7 @@ namespace SampleQueries
         public void Linq10()
         {
             var limBottom = 10.0000M;
-            var limTop = 40.0000M;
+            var limTop    = 40.0000M;
 
             var productsList = (
                  from products in dataSource.Products
@@ -244,6 +244,31 @@ namespace SampleQueries
 
             ObjectDumper.Write("Products");
             foreach (var c in productsList)
+            {
+                ObjectDumper.Write(c, 2);
+            }
+        }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 9")]
+        [Description("9. Рассчитайте среднюю прибыльность каждого города (среднюю сумму заказа по всем клиентам из данного города)" +
+                       " и среднюю интенсивность (среднее количество заказов, приходящееся на клиента из каждого города)")]
+        public void Linq11()
+        {
+            var customersList = 
+                from customers in dataSource.Customers
+                group customers by customers.City into cityGroup
+                let avgSumTotal = cityGroup.Average(o => o.Orders.Sum(t => t.Total))
+                let avgCntOrders = cityGroup.Average(o => o.Orders.Count()) / cityGroup.Count()
+                select new
+                {
+                   City = cityGroup.Key,
+                   avgSumTotal,
+                   avgCntOrders
+                }
+                ;
+                
+           foreach (var c in customersList)
             {
                 ObjectDumper.Write(c, 2);
             }
