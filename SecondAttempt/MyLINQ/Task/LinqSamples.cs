@@ -194,5 +194,33 @@ namespace SampleQueries
                 ObjectDumper.Write(c, 1);
             }
         }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 7")]
+        [Description("7. Сгруппируйте все продукты по категориям, внутри – по наличию на складе, внутри последней группы отсортируйте по стоимости")]
+        public void Linq9()
+        {
+            var productsList =
+                 from products in dataSource.Products
+                 group products by products.Category into categGroup
+                 select new { Category = categGroup.Key,
+                                 Stock = 
+                                        from inStock in categGroup
+                                        orderby inStock.UnitPrice
+                                        group inStock by (inStock.UnitsInStock == 0 ? "OutOfStock" : "InStock") into inStockGroup
+                                        select new {Stock = inStockGroup.Key, 
+                                                    //inStockGroup
+                                                    Prods =
+                                                            from prods in inStockGroup
+                                                            select new { prods.ProductID, prods.ProductName, prods.UnitPrice}
+                                                   }
+                             };
+
+            ObjectDumper.Write("Products");
+            foreach (var c in productsList)
+            {
+                ObjectDumper.Write(c, 2);
+            }
+        }
     }
 }
