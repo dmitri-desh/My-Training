@@ -222,5 +222,31 @@ namespace SampleQueries
                 ObjectDumper.Write(c, 2);
             }
         }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 8")]
+        [Description("8. Сгруппируйте товары по группам «дешевые», «средняя цена», «дорогие». Границы каждой группы задайте сами")]
+        public void Linq10()
+        {
+            var limBottom = 10.0000M;
+            var limTop = 40.0000M;
+
+            var productsList = (
+                 from products in dataSource.Products
+                 let range = (products.UnitPrice <= limBottom ? 1 : 
+                              products.UnitPrice > limBottom && products.UnitPrice <= limTop ? 2 :
+                              3
+                             )
+                 group products by range into priceGroup
+                 select new { Price = priceGroup.Key == 1 ? "Cheap" : priceGroup.Key == 2 ? "Average" : "Expensive", priceGroup})
+                 .OrderBy(p => p.priceGroup.Key)
+                 ;
+
+            ObjectDumper.Write("Products");
+            foreach (var c in productsList)
+            {
+                ObjectDumper.Write(c, 2);
+            }
+        }
     }
 }
