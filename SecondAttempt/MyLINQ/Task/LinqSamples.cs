@@ -191,5 +191,27 @@ namespace SampleQueries
                 ObjectDumper.Write(c, 1);
             }
         }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 7")]
+        [Description("7. Сгруппируйте все продукты по категориям, внутри – по наличию на складе, внутри последней группы отсортируйте по стоимости")]
+        public void Linq9()
+        {
+            var productsList =
+                 from products in dataSource.Products
+                 group products by products.Category into categoryGroup
+                 select new { ProdCategory = categoryGroup.Key,
+                                     Prods = 
+                                            from cG in categoryGroup
+                                            select new {cG.ProductName}
+
+                            };
+
+            ObjectDumper.Write("Products");
+            foreach (var p in productsList)
+            {
+                ObjectDumper.Write(p, 1);
+            }
+        }
     }
 }
