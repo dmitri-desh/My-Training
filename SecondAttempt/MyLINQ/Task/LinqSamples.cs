@@ -182,7 +182,10 @@ namespace SampleQueries
         {
             var customersList = 
                  from customers in dataSource.Customers
-                 where !customers.PostalCode.All(char.IsDigit) || customers.Region == null || customers.Phone.ToArray()[0] != '('
+                 where customers.PostalCode == null || ( !customers.PostalCode.All(char.IsDigit) 
+                                                         || customers.Region == null 
+                                                         || customers.Phone.ToArray()[0] != '('
+                                                        )
                  select new { customers.CompanyName, customers.PostalCode, customers.Region, customers.Phone };
 
             ObjectDumper.Write("Customers with Orders");
