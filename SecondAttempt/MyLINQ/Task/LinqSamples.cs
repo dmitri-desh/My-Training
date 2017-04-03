@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using SampleSupport;
 using Task.Data;
+using System.Globalization;
 
 // Version Mad01
 
@@ -271,6 +272,72 @@ namespace SampleQueries
            foreach (var c in customersList)
             {
                 ObjectDumper.Write(c, 2);
+            }
+        }
+
+        [Category("My Tasks")]
+        [Title("Where - My Task 10")]
+        [Description("10. Сделайте среднегодовую статистику активности клиентов по месяцам (без учета года), статистику по годам, по годам и месяцам" + 
+                     "    (т.е. когда один месяц в разные годы имеет своё значение).")]
+        public void Linq12()
+        {
+            var customersList =
+               from customers in dataSource.Customers
+               group customers by customers.CompanyName into custGroup
+               select new
+               {
+               Customer = custGroup.Key,
+               OrdersMonths =
+                        from orders in custGroup
+                        select new
+                        { 
+                            Month = 
+                            from months in orders.Orders
+                            orderby months.OrderDate.Month
+                            group months by months.OrderDate.ToString("MMMM", CultureInfo.CurrentCulture) into monthGroup
+                            let avgMonthTotal = monthGroup.Average(t => t.Total)
+                            select new
+                            {
+                               Month = monthGroup.Key,
+                               avgMonthTotal
+                            }
+                        },
+                   OrderYears = 
+                           from orders in custGroup
+                           select new
+                           {
+                               Year = 
+                                        from years in orders.Orders
+                                        orderby years.OrderDate.Year
+                                        group years by years.OrderDate.Year into yearGroup
+                                        let avgYearTotal = yearGroup.Average(t => t.Total)
+                                        select new
+                                        {
+                                            Year = yearGroup.Key,
+                                            avgYearTotal
+                                        }
+                           },
+                   OrderMonthsYears =
+                           from orders in custGroup
+                           select new
+                           {
+                               MonthYear =
+                                        from monthsYears in orders.Orders
+                                        orderby monthsYears.OrderDate.Year, monthsYears.OrderDate.Month
+                                        group monthsYears by monthsYears.OrderDate.ToString("MMMM yyyy", CultureInfo.CurrentCulture) into monthYearGroup
+                                        let avgMonthYearTotal = monthYearGroup.Average(t => t.Total)
+                                        select new
+                                        {
+                                            MonthYear = monthYearGroup.Key,
+                                            avgMonthYearTotal
+                                        }
+                           }
+               }
+               ;
+
+            foreach (var c in customersList)
+            {
+                ObjectDumper.Write(c, 3);
             }
         }
     }
