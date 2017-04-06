@@ -107,6 +107,11 @@ namespace Task02
                 Console.WriteLine("Минимальная транзакция: {0}", account.GetMinTransaction());
                 Console.WriteLine("Максимальная транзакция: {0}", account.GetMaxTransaction());
 
+                var findedTransaction = 51;
+                if (account.Check(findedTransaction)) Console.WriteLine("Транзакция №{0} существует", findedTransaction);
+                  else Console.WriteLine("Транзакция №{0} не существует", findedTransaction);
+
+
                 // Task02.Shape
                 List<Shape.Shape> shapes = new List<Shape.Shape>();
                 shapes.Add(new Circle(0, 0, 25));
