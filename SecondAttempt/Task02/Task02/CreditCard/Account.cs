@@ -36,9 +36,9 @@ namespace Task02.CreditCard
             Amount =  Amount + (item.OperType == OperationType.Refill ? item.Amount : -item.Amount) ; 
             
         }
-        public bool Contains(Transaction item)
+        public bool Check(int id)
         {
-           return _transactions.Contains(item);
+           return _transactions.Exists(x => x.Id == id);
         }
 
         public void CopyTo(Transaction[] array, int arrayIndex)
