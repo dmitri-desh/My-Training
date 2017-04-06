@@ -17,8 +17,8 @@ namespace Task02
        
         public void Dispose()
         {
-            count--;
-            Console.WriteLine("Уничтожен {0}-й объект", count);
+           // count--;
+           Console.WriteLine("Уничтожен {0}-й объект", count);
         }
 
         public int GetObjectsCount ()
