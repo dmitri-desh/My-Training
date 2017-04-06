@@ -9,7 +9,7 @@ namespace Task02.CreditCard
 {
     //6. Напишите класс для работы с транзакциями по банковской карте. Минимальный функционал должен содержать: список проведенных транзакций,
     //   максимальная и минимальная транзакция из проведенных. Обоснуйте архитектуру.
-    class Account : ICollection<Transaction>
+    class Account
     {
         public string Name;
         public string AccNumber;
@@ -29,27 +29,13 @@ namespace Task02.CreditCard
                 return _transactions.Count;
             }
         }
-
-        public bool IsReadOnly
-        {
-            get
-            {
-                return false;
-            }
-        }
-
+        
         public void Add(Transaction item)
         {
             if (_transactions != null) _transactions.Add(item);
             Amount =  Amount + (item.OperType == OperationType.Refill ? item.Amount : -item.Amount) ; 
             
         }
-
-        public void Clear()
-        {
-            _transactions.Clear();
-        }
-
         public bool Contains(Transaction item)
         {
            return _transactions.Contains(item);
@@ -61,16 +47,6 @@ namespace Task02.CreditCard
         }
 
         public IEnumerator<Transaction> GetEnumerator()
-        {
-            return _transactions.GetEnumerator();
-        }
-
-        public bool Remove(Transaction item)
-        {
-            return _transactions.Remove(item);
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
         {
             return _transactions.GetEnumerator();
         }
