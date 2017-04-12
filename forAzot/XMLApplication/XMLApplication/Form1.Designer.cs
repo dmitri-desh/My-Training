@@ -82,7 +82,7 @@
             // 
             // openFileDialog2
             // 
-            this.openFileDialog2.FileName = "edecl-*.xml";
+            this.openFileDialog2.FileName = "edecl*.xml";
             this.openFileDialog2.Filter = " XML-files (edecl*.xml)|edecl*.xml|All files (*.*)|*.*";
             // 
             // button3

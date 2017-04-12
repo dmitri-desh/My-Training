@@ -87,7 +87,8 @@ namespace XMLApplication
 
                     if (flag2)
                     {
-                       // buffer.Append("Bingo2!" + "\n");
+                        //buffer.Append("Bingo2!" + "\n");
+                        buffer.Append(currentString);
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
@@ -122,7 +123,7 @@ namespace XMLApplication
                     }
                     else if (flag8)
                     {
-                       // buffer.Append("Bingo8!" + "\n");
+                        //buffer.Append("Bingo8!" + "\n");
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
