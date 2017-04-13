@@ -124,6 +124,7 @@ namespace XMLApplication
                     else if (flag8)
                     {
                         //buffer.Append("Bingo8!" + "\n");
+                        //buffer.Append(currentString);
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
