@@ -9,7 +9,6 @@ namespace Methods
 {
     class FileSystemVisitor
     {
-        
         private ICollection<string> _dirsFiles = new List<string>();
         public FileSystemVisitor(DirectoryInfo root)
         {
