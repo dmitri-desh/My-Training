@@ -11,40 +11,6 @@ namespace Methods
 {
     class FileSystemVisitor
     {
-<<<<<<< HEAD
-        private string Root { get; set; }
-        static StringCollection log = new StringCollection();
-        private ICollection<string> _dirs = new List<string>();
-        //private Stack<string> _dirs = new Stack<string>();
-        public FileSystemVisitor (string root)
-        {
-            if (!Directory.Exists(root)) throw new ArgumentException();
-            else Root = root;
-        }
-        public void GetDirsFilesTree()
-        {
-            _dirs.Add(Root);
-            while (_dirs.Count > 0)
-            {
-                string currentDir = _dirs.GetEnumerator().Current;
-                string[] subDirs;
-                try
-                {
-                    subDirs = Directory.GetDirectories(currentDir);
-                }
-                catch (UnauthorizedAccessException e)
-                {
-                    Console.WriteLine(e.Message);
-                    continue;
-                }
-            }
-        }
-        public IEnumerable<string> PrintDirectoriesTree()
-        {
-            foreach (var curDir in _dirs)
-            {
-                yield return curDir.ToString();
-=======
         private ICollection<string> _dirsFiles = new List<string>();
         public FileSystemVisitor(DirectoryInfo root)
         {
@@ -85,7 +51,6 @@ namespace Methods
             foreach (var fd in _dirsFiles)
             {
                 yield return fd;
->>>>>>> origin/New
             }
         }
     }
