@@ -9,6 +9,7 @@ using System.Collections.Specialized;
 
 namespace Methods
 {
+    delegate string SetFilter();
     class FileSystemVisitor
     {
         private ICollection<string> _dirsFiles = new List<string>();
