@@ -12,12 +12,23 @@ namespace Methods
     class Program
     {
         public delegate string Filter(string dirsPattern, string filesPattern);
+        static string SetDirsPattern (string x, string y)
+        {
+            if (x == null) return "*";
+            return x;
+        }
+        static string SetFilesPattern(string x, string y)
+        {
+            if (y == null) return "*.*";
+            return y;
+        }
         static void Main(string[] args)
         {
             var root = new DirectoryInfo( @ConfigurationManager.AppSettings["root"]);
 
             if (root.Exists)
             {
+               
                 var dirsFiles = new FileSystemVisitor(root);
                 foreach (var fd in dirsFiles.GetTree())
                 {

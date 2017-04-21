@@ -20,6 +20,7 @@ namespace Methods
         public FileSystemVisitor(DirectoryInfo root, Program.Filter filter)
         {
             _dirsFiles.Add(root.FullName);
+            ExploreTree(root);
         }
         private void ExploreTree(DirectoryInfo root)
         {
