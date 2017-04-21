@@ -11,15 +11,14 @@ namespace Methods
 {
     class Program
     {
+        public delegate string Filter(string dirsPattern, string filesPattern);
         static void Main(string[] args)
         {
             var root = new DirectoryInfo( @ConfigurationManager.AppSettings["root"]);
-          
+
             if (root.Exists)
             {
                 var dirsFiles = new FileSystemVisitor(root);
-                dirsFiles.ExploreTree(root);
-                
                 foreach (var fd in dirsFiles.GetTree())
                 {
                     Console.WriteLine(fd.ToString());

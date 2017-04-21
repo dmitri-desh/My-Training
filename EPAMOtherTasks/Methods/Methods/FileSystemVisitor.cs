@@ -9,15 +9,19 @@ using System.Collections.Specialized;
 
 namespace Methods
 {
-    delegate string SetFilter();
     class FileSystemVisitor
     {
         private ICollection<string> _dirsFiles = new List<string>();
         public FileSystemVisitor(DirectoryInfo root)
         {
             _dirsFiles.Add(root.FullName);
+            ExploreTree(root);
         }
-        public void ExploreTree(DirectoryInfo root)
+        public FileSystemVisitor(DirectoryInfo root, Program.Filter filter)
+        {
+            _dirsFiles.Add(root.FullName);
+        }
+        private void ExploreTree(DirectoryInfo root)
         {
             ICollection<FileInfo> files = null;
             ICollection<DirectoryInfo> subDirs = null;
@@ -39,7 +43,7 @@ namespace Methods
                 {
                     _dirsFiles.Add(fi.FullName);
                 }
-                subDirs = root.GetDirectories();
+                subDirs = root.GetDirectories("*");
                 foreach (DirectoryInfo dirInfo in subDirs)
                 {
                      _dirsFiles.Add(dirInfo.FullName);
