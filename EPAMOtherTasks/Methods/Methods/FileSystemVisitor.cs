@@ -16,10 +16,18 @@ namespace Methods
             _dirsFiles.Add(root.FullName);
             ExploreTree(root);
         }
-        public FileSystemVisitor(DirectoryInfo root, Program.Filter filter)
+        public FileSystemVisitor(DirectoryInfo root, Filter paramFilter)
         {
             _dirsFiles.Add(root.FullName);
-            ExploreTree(root);
+          //  ExploreTree(root);
+        }
+        private ICollection<FileInfo> GetFilesFiltered (DirectoryInfo root)
+        {
+            return root.GetFiles("*.*");
+        }
+        private ICollection<DirectoryInfo> GetDirsFiltered(DirectoryInfo root)
+        {
+            return root.GetDirectories("*");
         }
         private void ExploreTree(DirectoryInfo root)
         {
@@ -27,7 +35,7 @@ namespace Methods
             ICollection<DirectoryInfo> subDirs = null;
             try
             {
-                files = root.GetFiles("*.*");
+                files = GetFilesFiltered(root);
             }
             catch (UnauthorizedAccessException e)
             {
@@ -43,7 +51,7 @@ namespace Methods
                 {
                     _dirsFiles.Add(fi.FullName);
                 }
-                subDirs = root.GetDirectories("*");
+                subDirs = GetDirsFiltered(root);
                 foreach (DirectoryInfo dirInfo in subDirs)
                 {
                      _dirsFiles.Add(dirInfo.FullName);
