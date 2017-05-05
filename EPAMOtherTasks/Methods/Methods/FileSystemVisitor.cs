@@ -19,7 +19,7 @@ namespace Methods
         public FileSystemVisitor(DirectoryInfo root, Filter paramFilter)
         {
             _dirsFiles.Add(root.FullName);
-          //  ExploreTree(root);
+          
         }
         private ICollection<FileInfo> GetFilesFiltered (DirectoryInfo root)
         {
