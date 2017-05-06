@@ -29,6 +29,16 @@ namespace Methods
         {
             return root.GetDirectories("*");
         }
+        static string SetDirsPattern(string x, string y)
+        {
+            if (x == null) return "*";
+            return x;
+        }
+        static string SetFilesPattern(string x, string y)
+        {
+            if (y == null) return "*.*";
+            return y;
+        }
         private void ExploreTree(DirectoryInfo root)
         {
             ICollection<FileInfo> files = null;

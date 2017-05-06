@@ -11,16 +11,6 @@ namespace Methods
 {
     class Program
     {
-        static string SetDirsPattern (string x, string y)
-        {
-            if (x == null) return "*";
-            return x;
-        }
-        static string SetFilesPattern(string x, string y)
-        {
-            if (y == null) return "*.*";
-            return y;
-        }
         static void Main(string[] args)
         {
             var root = new DirectoryInfo(@ConfigurationManager.AppSettings["root"]);
