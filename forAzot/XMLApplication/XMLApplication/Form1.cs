@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Configuration;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace XMLApplication
 {
@@ -37,6 +39,7 @@ namespace XMLApplication
             }
             
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -87,8 +90,8 @@ namespace XMLApplication
 
                     if (flag2)
                     {
-                        //buffer.Append("Bingo2!" + "\n");
-                        buffer.Append(currentString);
+                      //  buffer.Append("Bingo2!" + "\n");
+                       // buffer.Append(currentString);
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
@@ -123,8 +126,8 @@ namespace XMLApplication
                     }
                     else if (flag8)
                     {
-                        //buffer.Append("Bingo8!" + "\n");
-                        //buffer.Append(currentString);
+                       // buffer.Append("Bingo8!" + "\n");
+                       // buffer.Append(currentString);
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
@@ -174,7 +177,18 @@ namespace XMLApplication
                 File.WriteAllText(saveTo, buffer.ToString());
                 label2.Text = "Файл сохранён: " + saveTo;
                 buffer.Clear();
-             }
+                try
+                {
+                    XDocument xd1 = new XDocument();
+                    xd1 = XDocument.Load(saveTo);
+                }
+                catch (XmlException ee)
+                {
+                    
+                    label2.Text = "Сформирован некорректный XML-файл..." + saveTo;
+                }
+
+            }
             catch (IOException ee)
             {
                 // Console.WriteLine("Error reading. {0}", ee.Message);
