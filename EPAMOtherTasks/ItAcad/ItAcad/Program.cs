@@ -13,7 +13,7 @@ namespace ItAcad
         {
             int n = 23;
             int k = 3;
-            // формирую массив
+            // формирую список рандомных значений и их пар, соответсвенно 
             List<int> arrRand = new List<int>();
             Random rand = new Random((int)Stopwatch.GetTimestamp());
             for (int i = 0; i < k; i++)
@@ -23,15 +23,20 @@ namespace ItAcad
                 arrRand.Add(rand.Next());
                 arrRand.Add(arrRand[i]);
             }
+            // рандомно перетасовываем список
             var sorted = arrRand.OrderBy(a => Guid.NewGuid()).ToList();
             arrRand.Clear();
             arrRand.AddRange(sorted);
+            // исходный массив
             int[] arr = arrRand.ToArray();
             Console.WriteLine("Исходный массив:");
             for (int i = 0; i < n; i++)
-                 Console.Write("{0}", arr[i].ToString().PadLeft(14));
+            {
+                Console.Write("{0}", arr[i].ToString().PadLeft(14));
+                if (i > 0 && i % 4 == 0) Console.WriteLine();
+            }
             Console.WriteLine();
-            // массив сформирован
+            // формирование окончено
 
         }
     }
