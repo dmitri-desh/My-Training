@@ -27,9 +27,11 @@ namespace ItAcad
             arrRand.Clear();
             arrRand.AddRange(sorted);
             int[] arr = arrRand.ToArray();
+            Console.WriteLine("Исходный массив:");
             for (int i = 0; i < n; i++)
-                 Console.Write("{0} ", arr[i]);
-        // массив сформирован
+                 Console.Write("{0}", arr[i].ToString().PadLeft(14));
+            Console.WriteLine();
+            // массив сформирован
 
         }
     }
