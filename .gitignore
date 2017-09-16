@@ -279,3 +279,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/IT-Marathon/JavaApplication1/nbproject/private/
+/IT-Marathon/TextParser/nbproject/private/
