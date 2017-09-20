@@ -7,7 +7,7 @@ package textparser;
 
 /**
  *
- * @author Dmitri Deshko
+ * @author 14010
  */
 public class TextParser {
 

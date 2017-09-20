@@ -279,5 +279,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+<<<<<<< HEAD
 /IT-Marathon/JavaApplication1/nbproject/private/
 /IT-Marathon/TextParser/nbproject/private/
+=======
+/TextParser/nbproject/private/
+>>>>>>> 13e96b7e808d0a83e0d623b0764abbcbbfe52779
