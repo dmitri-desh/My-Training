@@ -15,7 +15,7 @@ namespace DAL
     public partial class vOrders
     {
         public int OrderId { get; set; }
-        public DateTime PurchaseDate { get; set; }
+        public System.DateTime PurchaseDate { get; set; }
         public int ManagerId { get; set; }
         public string ManagerName { get; set; }
         public int CustomerId { get; set; }
