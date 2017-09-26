@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/26/2017 08:53:02
+-- Date Created: 09/26/2017 09:23:50
 -- Generated from EDMX file: S:\Visual Studio 2015\Projects\My-Training\IntraVisionTask\IntraVisionTask\Models\Model.edmx
 -- --------------------------------------------------
 
@@ -29,14 +29,17 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_OperationProdLoad]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ProdLoads] DROP CONSTRAINT [FK_OperationProdLoad];
 GO
-IF OBJECT_ID(N'[dbo].[FK_ProductOrder]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Orders] DROP CONSTRAINT [FK_ProductOrder];
-GO
 IF OBJECT_ID(N'[dbo].[FK_CoinTypeOrderCoin]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[OrderCoins] DROP CONSTRAINT [FK_CoinTypeOrderCoin];
 GO
-IF OBJECT_ID(N'[dbo].[FK_OrderCoinOrder]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Orders] DROP CONSTRAINT [FK_OrderCoinOrder];
+IF OBJECT_ID(N'[dbo].[FK_ProductOrderProd]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[OrderProds] DROP CONSTRAINT [FK_ProductOrderProd];
+GO
+IF OBJECT_ID(N'[dbo].[FK_OrderOrderCoin]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[OrderCoins] DROP CONSTRAINT [FK_OrderOrderCoin];
+GO
+IF OBJECT_ID(N'[dbo].[FK_OrderOrderProd]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[OrderProds] DROP CONSTRAINT [FK_OrderOrderProd];
 GO
 
 -- --------------------------------------------------
@@ -64,6 +67,9 @@ GO
 IF OBJECT_ID(N'[dbo].[OrderCoins]', 'U') IS NOT NULL
     DROP TABLE [dbo].[OrderCoins];
 GO
+IF OBJECT_ID(N'[dbo].[OrderProds]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[OrderProds];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -72,16 +78,16 @@ GO
 -- Creating table 'Products'
 CREATE TABLE [dbo].[Products] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Name] nvarchar(max)  NOT NULL,
+    [Name] varchar(50)  NOT NULL,
     [Price] decimal(18,0)  NOT NULL,
-    [Picture] varbinary(max)  NOT NULL
+    [Picture] image  NULL
 );
 GO
 
 -- Creating table 'ProdLoads'
 CREATE TABLE [dbo].[ProdLoads] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Cnt] int  NOT NULL,
+    [Cnt] smallint  NOT NULL,
     [ProductId] int  NOT NULL,
     [OperationId] int  NOT NULL,
     [Date] datetime  NOT NULL
@@ -91,7 +97,7 @@ GO
 -- Creating table 'CoinLoads'
 CREATE TABLE [dbo].[CoinLoads] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Cnt] int  NOT NULL,
+    [Cnt] smallint  NOT NULL,
     [CoinTypeId] int  NOT NULL,
     [OperationId] int  NOT NULL,
     [Date] datetime  NOT NULL
@@ -116,7 +122,6 @@ GO
 -- Creating table 'Orders'
 CREATE TABLE [dbo].[Orders] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [OrderCoinId] int  NOT NULL,
     [Date] datetime  NOT NULL
 );
 GO
@@ -270,21 +275,6 @@ ON [dbo].[OrderCoins]
     ([CoinTypeId]);
 GO
 
--- Creating foreign key on [OrderCoinId] in table 'Orders'
-ALTER TABLE [dbo].[Orders]
-ADD CONSTRAINT [FK_OrderCoinOrder]
-    FOREIGN KEY ([OrderCoinId])
-    REFERENCES [dbo].[OrderCoins]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_OrderCoinOrder'
-CREATE INDEX [IX_FK_OrderCoinOrder]
-ON [dbo].[Orders]
-    ([OrderCoinId]);
-GO
-
 -- Creating foreign key on [ProductId] in table 'OrderProds'
 ALTER TABLE [dbo].[OrderProds]
 ADD CONSTRAINT [FK_ProductOrderProd]
@@ -298,6 +288,21 @@ GO
 CREATE INDEX [IX_FK_ProductOrderProd]
 ON [dbo].[OrderProds]
     ([ProductId]);
+GO
+
+-- Creating foreign key on [OrderId] in table 'OrderCoins'
+ALTER TABLE [dbo].[OrderCoins]
+ADD CONSTRAINT [FK_OrderOrderCoin]
+    FOREIGN KEY ([OrderId])
+    REFERENCES [dbo].[Orders]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_OrderOrderCoin'
+CREATE INDEX [IX_FK_OrderOrderCoin]
+ON [dbo].[OrderCoins]
+    ([OrderId]);
 GO
 
 -- Creating foreign key on [OrderId] in table 'OrderProds'
