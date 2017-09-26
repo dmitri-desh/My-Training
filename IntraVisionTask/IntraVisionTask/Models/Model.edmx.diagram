@@ -11,14 +11,16 @@
         <AssociationConnector Association="Model.ProductProdLoad" />
         <EntityTypeShape EntityType="Model.CoinType" Width="1.5" PointX="12.375" PointY="2" />
         <AssociationConnector Association="Model.CoinTypeCoinLoad" />
-        <EntityTypeShape EntityType="Model.Operation" Width="1.5" PointX="8.625" PointY="3.625" />
+        <EntityTypeShape EntityType="Model.Operation" Width="1.5" PointX="9.5" PointY="3.875" />
         <AssociationConnector Association="Model.OperationCoinLoad" />
         <AssociationConnector Association="Model.OperationProdLoad" />
         <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="5.25" PointY="5.125" />
-        <AssociationConnector Association="Model.ProductOrder" />
-        <EntityTypeShape EntityType="Model.OrderCoin" Width="1.5" PointX="7.75" PointY="6.375" />
+        <EntityTypeShape EntityType="Model.OrderCoin" Width="1.5" PointX="7.5" PointY="5.25" />
         <AssociationConnector Association="Model.CoinTypeOrderCoin" />
         <AssociationConnector Association="Model.OrderCoinOrder" />
+        <EntityTypeShape EntityType="Model.OrderProd" Width="1.5" PointX="2.75" PointY="5" />
+        <AssociationConnector Association="Model.ProductOrderProd" />
+        <AssociationConnector Association="Model.OrderOrderProd" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

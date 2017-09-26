@@ -246,6 +246,9 @@
     <Compile Include="Models\OrderCoin.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\OrderProd.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ProdLoad.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

@@ -18,7 +18,7 @@ namespace IntraVisionTask.Models
         public Product()
         {
             this.ProdLoad = new HashSet<ProdLoad>();
-            this.Order = new HashSet<Order>();
+            this.OrderProd = new HashSet<OrderProd>();
         }
     
         public int Id { get; set; }
@@ -29,6 +29,6 @@ namespace IntraVisionTask.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProdLoad> ProdLoad { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<OrderProd> OrderProd { get; set; }
     }
 }

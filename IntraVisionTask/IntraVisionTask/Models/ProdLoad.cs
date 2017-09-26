@@ -18,6 +18,7 @@ namespace IntraVisionTask.Models
         public int Cnt { get; set; }
         public int ProductId { get; set; }
         public int OperationId { get; set; }
+        public System.DateTime Date { get; set; }
     
         public virtual Product Product { get; set; }
         public virtual Operation Operation { get; set; }

@@ -32,5 +32,6 @@ namespace IntraVisionTask.Models
         public virtual DbSet<Operation> Operations { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderCoin> OrderCoins { get; set; }
+        public virtual DbSet<OrderProd> OrderProds { get; set; }
     }
 }

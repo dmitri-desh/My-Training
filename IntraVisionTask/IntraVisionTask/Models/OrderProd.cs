@@ -12,15 +12,14 @@ namespace IntraVisionTask.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CoinLoad
+    public partial class OrderProd
     {
         public int Id { get; set; }
-        public int Cnt { get; set; }
-        public int CoinTypeId { get; set; }
-        public int OperationId { get; set; }
-        public System.DateTime Date { get; set; }
+        public int ProductId { get; set; }
+        public short Cnt { get; set; }
+        public int OrderId { get; set; }
     
-        public virtual CoinType CoinType { get; set; }
-        public virtual Operation Operation { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Order Order { get; set; }
     }
 }
