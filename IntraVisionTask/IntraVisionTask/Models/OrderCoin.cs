@@ -14,19 +14,12 @@ namespace IntraVisionTask.Models
     
     public partial class OrderCoin
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public OrderCoin()
-        {
-            this.Order = new HashSet<Order>();
-        }
-    
         public int Id { get; set; }
         public int CoinTypeId { get; set; }
         public short Cnt { get; set; }
         public int OrderId { get; set; }
     
         public virtual CoinType CoinType { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

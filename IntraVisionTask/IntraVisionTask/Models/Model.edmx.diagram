@@ -17,9 +17,9 @@
         <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="5.25" PointY="5.125" />
         <EntityTypeShape EntityType="Model.OrderCoin" Width="1.5" PointX="7.5" PointY="5.25" />
         <AssociationConnector Association="Model.CoinTypeOrderCoin" />
-        <AssociationConnector Association="Model.OrderCoinOrder" />
         <EntityTypeShape EntityType="Model.OrderProd" Width="1.5" PointX="2.75" PointY="5" />
         <AssociationConnector Association="Model.ProductOrderProd" />
+        <AssociationConnector Association="Model.OrderOrderCoin" />
         <AssociationConnector Association="Model.OrderOrderProd" />
       </Diagram>
     </edmx:Diagrams>

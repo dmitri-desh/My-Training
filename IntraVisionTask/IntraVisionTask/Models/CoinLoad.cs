@@ -15,7 +15,7 @@ namespace IntraVisionTask.Models
     public partial class CoinLoad
     {
         public int Id { get; set; }
-        public int Cnt { get; set; }
+        public short Cnt { get; set; }
         public int CoinTypeId { get; set; }
         public int OperationId { get; set; }
         public System.DateTime Date { get; set; }

@@ -15,7 +15,7 @@ namespace IntraVisionTask.Models
     public partial class ProdLoad
     {
         public int Id { get; set; }
-        public int Cnt { get; set; }
+        public short Cnt { get; set; }
         public int ProductId { get; set; }
         public int OperationId { get; set; }
         public System.DateTime Date { get; set; }

@@ -17,14 +17,15 @@ namespace IntraVisionTask.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
+            this.OrderCoin = new HashSet<OrderCoin>();
             this.OrderProd = new HashSet<OrderProd>();
         }
     
         public int Id { get; set; }
-        public int OrderCoinId { get; set; }
         public System.DateTime Date { get; set; }
     
-        public virtual OrderCoin OrderCoin { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderCoin> OrderCoin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProd> OrderProd { get; set; }
     }
