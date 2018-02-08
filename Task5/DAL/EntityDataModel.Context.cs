@@ -29,6 +29,5 @@ namespace DAL
         public virtual DbSet<ManagerSet> ManagerSet { get; set; }
         public virtual DbSet<OrderSet> OrderSet { get; set; }
         public virtual DbSet<ProductSet> ProductSet { get; set; }
-        public virtual DbSet<vOrders> vOrders { get; set; }
     }
 }

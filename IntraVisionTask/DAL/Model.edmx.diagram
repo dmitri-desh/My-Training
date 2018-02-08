@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d7ef8984f6bf47cf875998d74e29cf4d" Name="Diagram1">
+        <EntityTypeShape EntityType="DAL.CoinLoad" Width="1.5" PointX="7.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.CoinType" Width="1.5" PointX="9.875" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Operation" Width="1.5" PointX="5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.OrderCoin" Width="1.5" PointX="11.875" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.OrderProd" Width="1.5" PointX="11.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Order" Width="1.5" PointX="14.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.ProdLoad" Width="1.5" PointX="7.125" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Product" Width="1.5" PointX="9.5" PointY="0.625" IsExpanded="true" />
+        <AssociationConnector Association="DAL.FK_CoinTypeCoinLoad" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.FK_OperationCoinLoad" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.FK_CoinTypeOrderCoin" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.FK_OperationProdLoad" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.FK_OrderOrderCoin" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.FK_OrderOrderProd" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.FK_ProductOrderProd" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.FK_ProductProdLoad" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

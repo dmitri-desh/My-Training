@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DAL.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CoinLoads">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cnt" Type="smallint" Nullable="false" />
+          <Property Name="CoinTypeId" Type="int" Nullable="false" />
+          <Property Name="OperationId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoinTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Dignity" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Operations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Sign" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderCoins">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CoinTypeId" Type="int" Nullable="false" />
+          <Property Name="Cnt" Type="smallint" Nullable="false" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderProds">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="Cnt" Type="smallint" Nullable="false" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProdLoads">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cnt" Type="smallint" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="OperationId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Picture" Type="image" />
+        </EntityType>
+        <Association Name="FK_CoinTypeCoinLoad">
+          <End Role="CoinTypes" Type="Self.CoinTypes" Multiplicity="1" />
+          <End Role="CoinLoads" Type="Self.CoinLoads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoinTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CoinLoads">
+              <PropertyRef Name="CoinTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CoinTypeOrderCoin">
+          <End Role="CoinTypes" Type="Self.CoinTypes" Multiplicity="1" />
+          <End Role="OrderCoins" Type="Self.OrderCoins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoinTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderCoins">
+              <PropertyRef Name="CoinTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OperationCoinLoad">
+          <End Role="Operations" Type="Self.Operations" Multiplicity="1" />
+          <End Role="CoinLoads" Type="Self.CoinLoads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CoinLoads">
+              <PropertyRef Name="OperationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OperationProdLoad">
+          <End Role="Operations" Type="Self.Operations" Multiplicity="1" />
+          <End Role="ProdLoads" Type="Self.ProdLoads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProdLoads">
+              <PropertyRef Name="OperationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderOrderCoin">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrderCoins" Type="Self.OrderCoins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderCoins">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderOrderProd">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrderProds" Type="Self.OrderProds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderProds">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductOrderProd">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="OrderProds" Type="Self.OrderProds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderProds">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductProdLoad">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="ProdLoads" Type="Self.ProdLoads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProdLoads">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DALStoreContainer">
+          <EntitySet Name="CoinLoads" EntityType="Self.CoinLoads" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CoinTypes" EntityType="Self.CoinTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Operations" EntityType="Self.Operations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderCoins" EntityType="Self.OrderCoins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderProds" EntityType="Self.OrderProds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProdLoads" EntityType="Self.ProdLoads" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CoinTypeCoinLoad" Association="Self.FK_CoinTypeCoinLoad">
+            <End Role="CoinTypes" EntitySet="CoinTypes" />
+            <End Role="CoinLoads" EntitySet="CoinLoads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CoinTypeOrderCoin" Association="Self.FK_CoinTypeOrderCoin">
+            <End Role="CoinTypes" EntitySet="CoinTypes" />
+            <End Role="OrderCoins" EntitySet="OrderCoins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OperationCoinLoad" Association="Self.FK_OperationCoinLoad">
+            <End Role="Operations" EntitySet="Operations" />
+            <End Role="CoinLoads" EntitySet="CoinLoads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OperationProdLoad" Association="Self.FK_OperationProdLoad">
+            <End Role="Operations" EntitySet="Operations" />
+            <End Role="ProdLoads" EntitySet="ProdLoads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderOrderCoin" Association="Self.FK_OrderOrderCoin">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderCoins" EntitySet="OrderCoins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderOrderProd" Association="Self.FK_OrderOrderProd">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderProds" EntitySet="OrderProds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductOrderProd" Association="Self.FK_ProductOrderProd">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="OrderProds" EntitySet="OrderProds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductProdLoad" Association="Self.FK_ProductProdLoad">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProdLoads" EntitySet="ProdLoads" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DAL" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CoinLoad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cnt" Type="Int16" Nullable="false" />
+          <Property Name="CoinTypeId" Type="Int32" Nullable="false" />
+          <Property Name="OperationId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CoinType" Relationship="Self.FK_CoinTypeCoinLoad" FromRole="CoinLoads" ToRole="CoinTypes" />
+          <NavigationProperty Name="Operation" Relationship="Self.FK_OperationCoinLoad" FromRole="CoinLoads" ToRole="Operations" />
+        </EntityType>
+        <EntityType Name="CoinType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Dignity" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="CoinLoads" Relationship="Self.FK_CoinTypeCoinLoad" FromRole="CoinTypes" ToRole="CoinLoads" />
+          <NavigationProperty Name="OrderCoins" Relationship="Self.FK_CoinTypeOrderCoin" FromRole="CoinTypes" ToRole="OrderCoins" />
+        </EntityType>
+        <EntityType Name="Operation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sign" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="CoinLoads" Relationship="Self.FK_OperationCoinLoad" FromRole="Operations" ToRole="CoinLoads" />
+          <NavigationProperty Name="ProdLoads" Relationship="Self.FK_OperationProdLoad" FromRole="Operations" ToRole="ProdLoads" />
+        </EntityType>
+        <EntityType Name="OrderCoin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CoinTypeId" Type="Int32" Nullable="false" />
+          <Property Name="Cnt" Type="Int16" Nullable="false" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CoinType" Relationship="Self.FK_CoinTypeOrderCoin" FromRole="OrderCoins" ToRole="CoinTypes" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_OrderOrderCoin" FromRole="OrderCoins" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="OrderProd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="Cnt" Type="Int16" Nullable="false" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_OrderOrderProd" FromRole="OrderProds" ToRole="Orders" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_ProductOrderProd" FromRole="OrderProds" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="OrderCoins" Relationship="Self.FK_OrderOrderCoin" FromRole="Orders" ToRole="OrderCoins" />
+          <NavigationProperty Name="OrderProds" Relationship="Self.FK_OrderOrderProd" FromRole="Orders" ToRole="OrderProds" />
+        </EntityType>
+        <EntityType Name="ProdLoad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cnt" Type="Int16" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="OperationId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Operation" Relationship="Self.FK_OperationProdLoad" FromRole="ProdLoads" ToRole="Operations" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_ProductProdLoad" FromRole="ProdLoads" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="OrderProds" Relationship="Self.FK_ProductOrderProd" FromRole="Products" ToRole="OrderProds" />
+          <NavigationProperty Name="ProdLoads" Relationship="Self.FK_ProductProdLoad" FromRole="Products" ToRole="ProdLoads" />
+        </EntityType>
+        <Association Name="FK_CoinTypeCoinLoad">
+          <End Role="CoinTypes" Type="Self.CoinType" Multiplicity="1" />
+          <End Role="CoinLoads" Type="Self.CoinLoad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoinTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CoinLoads">
+              <PropertyRef Name="CoinTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OperationCoinLoad">
+          <End Role="Operations" Type="Self.Operation" Multiplicity="1" />
+          <End Role="CoinLoads" Type="Self.CoinLoad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CoinLoads">
+              <PropertyRef Name="OperationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CoinTypeOrderCoin">
+          <End Role="CoinTypes" Type="Self.CoinType" Multiplicity="1" />
+          <End Role="OrderCoins" Type="Self.OrderCoin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoinTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderCoins">
+              <PropertyRef Name="CoinTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OperationProdLoad">
+          <End Role="Operations" Type="Self.Operation" Multiplicity="1" />
+          <End Role="ProdLoads" Type="Self.ProdLoad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProdLoads">
+              <PropertyRef Name="OperationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderOrderCoin">
+          <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderCoins" Type="Self.OrderCoin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderCoins">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderOrderProd">
+          <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderProds" Type="Self.OrderProd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderProds">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductOrderProd">
+          <End Role="Products" Type="Self.Product" Multiplicity="1" />
+          <End Role="OrderProds" Type="Self.OrderProd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderProds">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductProdLoad">
+          <End Role="Products" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProdLoads" Type="Self.ProdLoad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProdLoads">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="myEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CoinLoads" EntityType="Self.CoinLoad" />
+          <EntitySet Name="CoinTypes" EntityType="Self.CoinType" />
+          <EntitySet Name="Operations" EntityType="Self.Operation" />
+          <EntitySet Name="OrderCoins" EntityType="Self.OrderCoin" />
+          <EntitySet Name="OrderProds" EntityType="Self.OrderProd" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="ProdLoads" EntityType="Self.ProdLoad" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <AssociationSet Name="FK_CoinTypeCoinLoad" Association="Self.FK_CoinTypeCoinLoad">
+            <End Role="CoinTypes" EntitySet="CoinTypes" />
+            <End Role="CoinLoads" EntitySet="CoinLoads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OperationCoinLoad" Association="Self.FK_OperationCoinLoad">
+            <End Role="Operations" EntitySet="Operations" />
+            <End Role="CoinLoads" EntitySet="CoinLoads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CoinTypeOrderCoin" Association="Self.FK_CoinTypeOrderCoin">
+            <End Role="CoinTypes" EntitySet="CoinTypes" />
+            <End Role="OrderCoins" EntitySet="OrderCoins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OperationProdLoad" Association="Self.FK_OperationProdLoad">
+            <End Role="Operations" EntitySet="Operations" />
+            <End Role="ProdLoads" EntitySet="ProdLoads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderOrderCoin" Association="Self.FK_OrderOrderCoin">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderCoins" EntitySet="OrderCoins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderOrderProd" Association="Self.FK_OrderOrderProd">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderProds" EntitySet="OrderProds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductOrderProd" Association="Self.FK_ProductOrderProd">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="OrderProds" EntitySet="OrderProds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductProdLoad" Association="Self.FK_ProductProdLoad">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProdLoads" EntitySet="ProdLoads" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DALStoreContainer" CdmEntityContainer="myEntities">
+          <EntitySetMapping Name="CoinLoads">
+            <EntityTypeMapping TypeName="DAL.CoinLoad">
+              <MappingFragment StoreEntitySet="CoinLoads">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+                <ScalarProperty Name="CoinTypeId" ColumnName="CoinTypeId" />
+                <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoinTypes">
+            <EntityTypeMapping TypeName="DAL.CoinType">
+              <MappingFragment StoreEntitySet="CoinTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Dignity" ColumnName="Dignity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Operations">
+            <EntityTypeMapping TypeName="DAL.Operation">
+              <MappingFragment StoreEntitySet="Operations">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Sign" ColumnName="Sign" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderCoins">
+            <EntityTypeMapping TypeName="DAL.OrderCoin">
+              <MappingFragment StoreEntitySet="OrderCoins">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CoinTypeId" ColumnName="CoinTypeId" />
+                <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderProds">
+            <EntityTypeMapping TypeName="DAL.OrderProd">
+              <MappingFragment StoreEntitySet="OrderProds">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="DAL.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProdLoads">
+            <EntityTypeMapping TypeName="DAL.ProdLoad">
+              <MappingFragment StoreEntitySet="ProdLoads">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="DAL.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -10,7 +10,6 @@
     <EntitySet Name="ManagerSet" EntityType="PurchasesAppModel.Store.ManagerSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="OrderSet" EntityType="PurchasesAppModel.Store.OrderSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ProductSet" EntityType="PurchasesAppModel.Store.ProductSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="vOrders" EntityType="PurchasesAppModel.Store.vOrders" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_CustomerOrder" Association="PurchasesAppModel.Store.FK_CustomerOrder">
       <End Role="CustomerSet" EntitySet="CustomerSet" />
       <End Role="OrderSet" EntitySet="OrderSet" />
@@ -55,28 +54,6 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="vOrders">
-    <Key>
-      <PropertyRef Name="OrderId" />
-      <PropertyRef Name="PurchaseDate" />
-      <PropertyRef Name="ManagerId" />
-      <PropertyRef Name="ManagerName" />
-      <PropertyRef Name="CustomerId" />
-      <PropertyRef Name="CustomerName" />
-      <PropertyRef Name="ProductId" />
-      <PropertyRef Name="ProductName" />
-      <PropertyRef Name="Amount" />
-    </Key>
-    <Property Name="OrderId" Type="int" Nullable="false" />
-    <Property Name="PurchaseDate" Type="datetime" Nullable="false" />
-    <Property Name="ManagerId" Type="int" Nullable="false" />
-    <Property Name="ManagerName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CustomerId" Type="int" Nullable="false" />
-    <Property Name="CustomerName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ProductId" Type="int" Nullable="false" />
-    <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Amount" Type="decimal" Nullable="false" Precision="18" Scale="0" />
   </EntityType>
   <Association Name="FK_CustomerOrder">
     <End Role="CustomerSet" Type="PurchasesAppModel.Store.CustomerSet" Multiplicity="1" />
@@ -156,28 +133,6 @@
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="OrderSet" Relationship="Self.FK_ProductOrder" FromRole="ProductSet" ToRole="OrderSet" />
         </EntityType>
-        <EntityType Name="vOrders">
-          <Key>
-            <PropertyRef Name="OrderId" />
-            <PropertyRef Name="PurchaseDate" />
-            <PropertyRef Name="ManagerId" />
-            <PropertyRef Name="ManagerName" />
-            <PropertyRef Name="CustomerId" />
-            <PropertyRef Name="CustomerName" />
-            <PropertyRef Name="ProductId" />
-            <PropertyRef Name="ProductName" />
-            <PropertyRef Name="Amount" />
-          </Key>
-          <Property Name="OrderId" Type="Int32" Nullable="false" />
-          <Property Name="PurchaseDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="ManagerId" Type="Int32" Nullable="false" />
-          <Property Name="ManagerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="CustomerId" Type="Int32" Nullable="false" />
-          <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ProductId" Type="Int32" Nullable="false" />
-          <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-        </EntityType>
         <Association Name="FK_CustomerOrder">
           <End Role="CustomerSet" Type="Self.CustomerSet" Multiplicity="1" />
           <End Role="OrderSet" Type="Self.OrderSet" Multiplicity="*" />
@@ -219,7 +174,6 @@
           <EntitySet Name="ManagerSet" EntityType="Self.ManagerSet" />
           <EntitySet Name="OrderSet" EntityType="Self.OrderSet" />
           <EntitySet Name="ProductSet" EntityType="Self.ProductSet" />
-          <EntitySet Name="vOrders" EntityType="Self.vOrders" />
           <AssociationSet Name="FK_CustomerOrder" Association="Self.FK_CustomerOrder">
             <End Role="CustomerSet" EntitySet="CustomerSet" />
             <End Role="OrderSet" EntitySet="OrderSet" />
@@ -272,21 +226,6 @@
         <MappingFragment StoreEntitySet="ProductSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="vOrders">
-      <EntityTypeMapping TypeName="IsTypeOf(PurchasesAppModel.vOrders)">
-        <MappingFragment StoreEntitySet="vOrders">
-          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
-          <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
-          <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
-          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
-          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-          <ScalarProperty Name="Amount" ColumnName="Amount" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

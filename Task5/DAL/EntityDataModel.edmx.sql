@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/22/2017 15:26:05
+-- Date Created: 09/26/2017 13:43:36
 -- Generated from EDMX file: S:\Visual Studio 2015\Projects\My-Training\Task5\DAL\EntityDataModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [PurchasesApp];
+USE [tempdb];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -42,9 +42,6 @@ IF OBJECT_ID(N'[dbo].[OrderSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[ProductSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[ProductSet];
-GO
-IF OBJECT_ID(N'[PurchasesAppModelStoreContainer].[vOrders]', 'U') IS NOT NULL
-    DROP TABLE [PurchasesAppModelStoreContainer].[vOrders];
 GO
 
 -- --------------------------------------------------
@@ -83,20 +80,6 @@ CREATE TABLE [dbo].[ProductSet] (
 );
 GO
 
--- Creating table 'vOrders'
-CREATE TABLE [dbo].[vOrders] (
-    [OrderId] int  NOT NULL,
-    [PurchaseDate] datetime  NOT NULL,
-    [ManagerId] int  NOT NULL,
-    [ManagerName] nvarchar(max)  NOT NULL,
-    [CustomerId] int  NOT NULL,
-    [CustomerName] nvarchar(max)  NOT NULL,
-    [ProductId] int  NOT NULL,
-    [ProductName] nvarchar(max)  NOT NULL,
-    [Amount] decimal(18,0)  NOT NULL
-);
-GO
-
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -123,12 +106,6 @@ GO
 ALTER TABLE [dbo].[ProductSet]
 ADD CONSTRAINT [PK_ProductSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
--- Creating primary key on [OrderId], [PurchaseDate], [ManagerId], [ManagerName], [CustomerId], [CustomerName], [ProductId], [ProductName], [Amount] in table 'vOrders'
-ALTER TABLE [dbo].[vOrders]
-ADD CONSTRAINT [PK_vOrders]
-    PRIMARY KEY CLUSTERED ([OrderId], [PurchaseDate], [ManagerId], [ManagerName], [CustomerId], [CustomerName], [ProductId], [ProductName], [Amount] ASC);
 GO
 
 -- --------------------------------------------------

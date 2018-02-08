@@ -16,7 +16,7 @@ namespace DAL
 
         public DbSet<ManagerSet> ManagerSet { get; set; }
         public DbSet<OrderSet> OrderSet { get; set; }
-        public DbSet<vOrders> vOrders { get; set; }
+    //    public DbSet<vOrders> vOrders { get; set; }
         public DbSet<CustomerSet> CustomerSet { get; set; }
         public DbSet<ProductSet> ProductSet { get; set; }
 
