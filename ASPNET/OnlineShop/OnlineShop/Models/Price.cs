@@ -10,6 +10,8 @@ namespace OnlineShop.Models
         [Display(Name = "Price")]
         public double? UnitPrice { get; set; }
 
+        public string Currency { get; set; }
+
         [Display(Name = "Quantity")]
         public string Quantity { get; set; }
 
