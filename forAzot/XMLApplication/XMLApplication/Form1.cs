@@ -90,9 +90,9 @@ namespace XMLApplication
 
                     if (flag2)
                     {
-                        buffer.Append("Bingo20!" + "\n");
-                        buffer.Append(currentString);
-                        buffer.Append("\n" + "Bingo201!" + "\n");
+                       // buffer.Append("Bingo20!" + "\n");
+                     //   buffer.Append(currentString);
+                      //  buffer.Append("\n" + "Bingo201!" + "\n");
                         try
                         {
                             reader2 = File.OpenText(openFileDialog2.FileName);
@@ -114,9 +114,9 @@ namespace XMLApplication
                             }
                             flagCur = false;
                             flag2 = false;
-                             buffer.Append("Bingo21!" + "\n");
-                            buffer.Append(currentString2);
-                            buffer.Append("\n" + "Bingo22!" + "\n");
+                          //   buffer.Append("Bingo21!" + "\n");
+                          //  buffer.Append(currentString2);
+                         //   buffer.Append("\n" + "Bingo22!" + "\n");
                         }
                         catch (IOException ee)
                         {
