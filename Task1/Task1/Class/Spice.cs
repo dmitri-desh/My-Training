@@ -7,7 +7,7 @@ namespace Task1
 {
     public class Spice : Item
     {
-        public new string Name { get; protected set; }
+        public string Name { get; protected set; }
         public int Qty { get; protected set; }
         public Measures Measure { get; protected set; }
         public Spice (string name, int qty, Measures measure) : base(name)
