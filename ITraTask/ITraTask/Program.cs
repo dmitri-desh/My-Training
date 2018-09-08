@@ -17,20 +17,18 @@ namespace ConsoleApp
             {
                 var path = Directory.GetCurrentDirectory();
                 var targetDir = @ConfigurationManager.AppSettings["targetDirectory"];
-                var targetFile = @ConfigurationManager.AppSettings["targetFile"];
+                var inputFile = @ConfigurationManager.AppSettings["inputFile"];
+                
                 if (!Directory.Exists(targetDir))
                      Directory.CreateDirectory(targetDir);
                 Environment.CurrentDirectory = (targetDir);
 
-                var fileName = $@"{ Environment.CurrentDirectory }\{targetFile}";
+                var inputFileName = $@"{ Environment.CurrentDirectory }\{inputFile}";
+               
                 var text = new TextToDictionary();
-                var words = text.GetWords(fileName);
-                var dict = text.GetDictionary(words);
-/*
-                foreach (KeyValuePair<string, int> kvp in dict)
-                     Console.WriteLine($"{kvp.Key} {kvp.Value}");
-  */              
+                var words = text.GetWords(inputFileName);
 
+                text.GetDictionary(words);
             }
             catch (Exception e)
             {
