@@ -21,31 +21,16 @@ namespace ConsoleApp
                 if (!Directory.Exists(targetDir))
                      Directory.CreateDirectory(targetDir);
                 Environment.CurrentDirectory = (targetDir);
-               
-                var strToRemove1 =  "'s";
-                var strToRemove2 = "- ";
-                var pattern = @"\s+";
-                var defaultSeparator = " ";
-                Regex regex = new Regex(pattern);
-                char[] separators = { ' ', ',', '.', '!', '?', '"', '\'', ';', ':', '(', ')' };
-                var fileName = $@"{ Environment.CurrentDirectory }\{targetFile}";
 
-                using (StreamReader reader = new StreamReader(fileName))
-                {
-                    while (true)
-                    {
-                        string line = reader.ReadLine();
-                        if (line == null)
-                            break;
-                        line = line.Replace(strToRemove1, String.Empty);
-                        line = line.Replace(strToRemove2, String.Empty);
-                        line = regex.Replace(line, defaultSeparator);
-                        line = line.ToLower();
-                        var words = line.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-                        foreach (var word in words)
-                         Console.WriteLine(word);
-                    }
-                }
+                var fileName = $@"{ Environment.CurrentDirectory }\{targetFile}";
+                var text = new TextToDictionary();
+                var words = text.GetWords(fileName);
+                var dict = text.GetDictionary(words);
+/*
+                foreach (KeyValuePair<string, int> kvp in dict)
+                     Console.WriteLine($"{kvp.Key} {kvp.Value}");
+  */              
+
             }
             catch (Exception e)
             {
