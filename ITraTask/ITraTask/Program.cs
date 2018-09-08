@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
@@ -27,12 +23,13 @@ namespace ConsoleApp
                
                 var text = new TextToDictionary();
                 var words = text.GetWords(inputFileName);
-
-                text.GetDictionary(words);
+                if (words.Count() > 0)
+                  text.GetDictionary(words);
             }
             catch (Exception e)
             {
-                Console.WriteLine($"The process failed: {e.ToString()}");
+                // Console.WriteLine($"The process failed: {e.ToString()}");
+                return;
             }
             
         }

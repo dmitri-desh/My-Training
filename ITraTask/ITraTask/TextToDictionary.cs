@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
@@ -22,10 +18,12 @@ namespace ConsoleApp
             Regex regex = new Regex(pattern);
             char[] separators = { ' ', ',', '.', '!', '?', '"', '\'', ';', ':', '(', ')' };
             var words = new List<string>();
-            using (StreamReader reader = new StreamReader(fileName))
-            {
-                while (true)
+            if (File.Exists(fileName))
+                using (StreamReader reader = new StreamReader(fileName))
                 {
+                    //Console.WriteLine("Read text >>>>");
+                    while (true)
+                    {
                     var line = reader.ReadLine();
                     if (line == null)
                         break;
@@ -34,15 +32,19 @@ namespace ConsoleApp
                     line = regex.Replace(line, defaultSeparator);
                     line = line.ToLower();
                     var lineWords = line.Split(separators, StringSplitOptions.RemoveEmptyEntries).ToList();
-
-                    //Console.WriteLine("Read text >>>>");
+                   
                     //foreach (var word in lineWords)
                        //Console.WriteLine(word);
 
                     words.AddRange(lineWords);
-                }
+                    }
               //  Console.WriteLine($"Count Words: {words.Count()}");
                 return words;
+                }
+            else
+            {
+                Console.WriteLine($"{fileName} is not exists");
+                return null;
             }
         }
 
@@ -61,9 +63,8 @@ namespace ConsoleApp
             var result = dict.GroupBy(item => item.Key.ToString()[0])
                              .ToDictionary(key => key.Key,
                                            value => value
-                                                  .ToDictionary(key => key.Key, value1 => value1.Value)   
-                             .OrderByDescending(a => a.Value));
-
+                                                  .ToDictionary(key => key.Key, valueNew => valueNew.Value)   
+                             .OrderByDescending(v => v.Value));
            
             using (var sw = new StreamWriter(outputFileName, false))
             {
